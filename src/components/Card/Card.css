@@ -1,0 +1,42 @@
+.card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  background-color: aqua;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.card-banner{
+  height: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+.card-link{
+  color: black;
+  width: 50%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: auto;
+}
+
+@media (max-width: 650px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-banner{
+    width: 100%;
+  }
+
+  .card-link{
+    width: 95%;
+    padding: 5px 0;
+  }
+}
