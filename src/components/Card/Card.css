@@ -29,6 +29,7 @@
   .card {
     flex-direction: column;
     height: auto;
+    background-color: white;
   }
 
   .card-banner{

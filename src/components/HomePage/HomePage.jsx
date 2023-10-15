@@ -20,7 +20,10 @@ function HomePage() {
       <section className="home-content">
         {noticias.map((noticia, id) =>{
           return (
-            <Card data={noticia} key={id}/>
+            <React.Fragment key={id}>  
+              <Card data={noticia} key={id}/>
+              { ((id - 1)%3 === 0) && <div className="home-horizontal-ad" alt="AD#3"></div>}
+            </React.Fragment>
 
             // <React.Fragment key={id}>
             //   <div className="news-case">

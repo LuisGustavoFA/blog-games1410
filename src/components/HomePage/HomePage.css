@@ -11,6 +11,18 @@
 
 .home-vertical-ad {
   min-width: 15%;
+  background-image: url('https://www.egraphix.co.uk/wp/wp-content/uploads/2014/10/160x6001.gif');
+  background-size: contain;
+  background-position: top;
+  background-color: gray;
+}
+
+.home-horizontal-ad{
+  width: 100%;
+  aspect-ratio: auto 412 / 152;
+  background-image: url('https://bannerboo.com/upload/medialibrary/13a/851x315_b7f147f2ad77f-_15_.gif');
+  background-size: cover;
+  background-position: center;
   background-color: gray;
 }
 
@@ -50,11 +62,6 @@
   margin: auto;
 } */
 
-.home-horizontal-ad {
-  background-color: gray;
-  height: 200px;
-}
-
 @media (max-width: 650px) {
   .home-main {
     flex-direction: column;
@@ -63,6 +70,7 @@
 
   .home-content {
     width: 90%;
+    padding: 24px 0;
   }
   
   .home-vertical-ad {
