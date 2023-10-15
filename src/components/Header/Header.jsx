@@ -10,7 +10,7 @@ function Header() {
           <li><Link to={"/"}>Home</Link></li>
           <li><Link to={"/news"}>Noticias</Link></li>
           <li><Link to={"/reviews"}>Reviews</Link></li>
-          <li><Link to={"/lists"}>Listas</Link></li>
+          <li><Link to={"/tes"}>Listas</Link></li>
           <li><SearchBar/></li>
         </ul>
       </nav>
