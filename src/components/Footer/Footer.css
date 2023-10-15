@@ -1,0 +1,36 @@
+.footer {
+  background-color: aqua;
+  height: 72px;
+}
+
+.footer nav {
+  height: 100%;
+}
+
+.footer ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.footer li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 650px) {
+  .footer ul {
+    width: 90%;
+  }
+}

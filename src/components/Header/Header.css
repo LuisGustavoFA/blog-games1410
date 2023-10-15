@@ -1,0 +1,30 @@
+.header {
+  background-color: aqua;
+  height: 72px;
+}
+
+.header nav {
+  height: 100%;
+}
+
+.header ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 650px) {
+  .header ul {
+    width: 90%;
+  }
+}

@@ -1,0 +1,81 @@
+.sandwichButtonContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.sandwichButton {
+  margin: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sandwichButton::before,
+.sandwichButton::after {
+  content: '';
+  display: block;
+  margin-top: 6px;
+  top: -10px;
+  transition: 0.3s;
+}
+
+.sandwichButton,
+.sandwichButton::before,
+.sandwichButton::after {
+  width: 30px;
+  border-top: 4px solid #000000;
+}
+
+.sandwichButton.active {
+  border-color: #00000000;
+}
+
+.sandwichButton.active::before {
+  border-color: #FFFFFF;
+  transform: rotate(-45deg);
+}
+
+.sandwichButton.active::after {
+  border-color: #FFFFFF;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.sandwich {
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 70px);
+  width: calc(100% - 70px);
+  height: 100%;
+  background-color: #39393962;
+  transition: .3s;
+  z-index: 0;
+}
+
+.sandwich.active {
+  left: 0;
+}
+
+.sandwichList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  list-style: none;
+  font-size: 2rem;
+  padding: 0;
+  margin: auto;
+  margin-top: 70px;
+  color: white;
+  gap: 10px;
+}
+
+.sandwichList li{
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #000000;
+}
