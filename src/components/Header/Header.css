@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 650px) {
-  .header ul {
-    width: 90%;
+  .header {
+    display: none;
   }
 }

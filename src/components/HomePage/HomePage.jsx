@@ -1,35 +1,24 @@
 import { Link } from "react-router-dom"
 import React, { useEffect, useState } from "react";
-import "./HomePage.css"
+import "./HomePage.css";
+import { getData } from "../../database/DataApi";
 
 function HomePage() {
   document.title = "Blog";
-  const apiUrl = 'https://raw.githubusercontent.com/LuisGustavoFA/api-blog-games1410/main/api.json';
-  const [noticias, setNoticias] = useState("");
-  useEffect(() => {
-    fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Erro na requisição');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      setNoticias(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }, [])
+  const [noticias, setNoticias] = useState([]);
 
-  const noticiasFix = [...noticias];
+  useEffect(() => {
+    getData().then((resp) =>{
+      setNoticias(resp);
+    })
+  }, [])
 
   return (
     <>
     <main className="home-main">
       <div className="home-vertical-ad">AD#1</div>
       <section className="home-content">
-        {noticiasFix.map((noticia, id) =>{
+        {noticias.map((noticia, id) =>{
           return (
             <React.Fragment key={id}>
               <div className="news-case">
