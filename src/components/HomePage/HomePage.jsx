@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css"
 
 function HomePage() {
-
+  document.title = "Blog";
   const apiUrl = 'https://raw.githubusercontent.com/LuisGustavoFA/api-blog-games1410/main/api.json';
   const [noticias, setNoticias] = useState("");
   useEffect(() => {
@@ -34,7 +34,7 @@ function HomePage() {
             <React.Fragment key={id}>
               <div className="news-case">
                 <div className="news-banner" alt="banner da notícia" style={{backgroundImage: `url(${noticia.banner})`}}></div>
-                <Link className="news-link" to={`/article/${noticia.title.replace(/ /g, "-").toLowerCase()}`}>{noticia.title}</Link>
+                <Link className="news-link" to={`/article/${noticia.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticia.title}</Link>
               </div>
               { (id === 1 || id === 4) && <div className="home-horizontal-ad">AD#3</div>}
             </React.Fragment>
