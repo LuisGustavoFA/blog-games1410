@@ -33,7 +33,10 @@ function Article() {
 
   return (
     <>
-    <div className="article-banner" style={{backgroundImage: `url(${id?.banner})`}} alt="banner"></div>
+    <div className="article-banner-case">
+      <div className="article-banner-background" style={{backgroundImage: `url(${id?.banner})`}} alt="banner"></div>
+      <div className="article-banner" style={{backgroundImage: `url(${id?.banner})`}} alt="banner"></div>
+    </div>
     <main className="article-main">
       <div className="article-vertical-ad">AD#1</div>
       <section className="article-content">

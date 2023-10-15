@@ -1,6 +1,21 @@
-.article-banner {
+.article-banner-case {
   height: 400px;
-  background-color: black;
+  width: 100%;
+  position: relative;
+}
+
+.article-banner-background {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  filter: brightness(45%) grayscale(30%) blur(.2px);
+}
+
+.article-banner {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -29,6 +44,7 @@
   flex-direction: column;
   padding: 24px;
   justify-content: space-between;
+  gap: 80px;
 }
 
 .article-content-header {
@@ -61,13 +77,14 @@
 
 .article-content-main h5 {
   margin: 0;
+  margin-top: 32px;
   font-weight: 400;
   font-size: 14px;
 }
 
 @media (max-width: 650px) {
-  .article-banner {
-    height: 200px;
+  .article-banner-case {
+    height: 230px;
   }
 
   .article-main {
