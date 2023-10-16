@@ -1,5 +1,5 @@
 .header {
-  background-color: aqua;
+  background: var(--main-color);
   height: 72px;
   position: fixed;
   top: 0; bottom: 0;
@@ -24,6 +24,7 @@
 .header a {
   text-decoration: none;
   color: black;
+  text-shadow: var(--text-shadow-secondary);
 }
 
 @media (max-width: 650px) {

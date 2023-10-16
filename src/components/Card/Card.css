@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 200px;
-  background-color: aqua;
+  background: var(--gradient-color);
   border-radius: 8px;
   text-decoration: none;
 }
@@ -23,6 +23,7 @@
   font-size: 28px;
   font-weight: bold;
   margin: auto;
+  text-shadow: var(--text-shadow);
 }
 
 @media (max-width: 1000px) {

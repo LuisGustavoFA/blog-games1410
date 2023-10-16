@@ -1,5 +1,5 @@
 .footer {
-  background-color: aqua;
+  background: var(--main-color);
   height: 72px;
 }
 

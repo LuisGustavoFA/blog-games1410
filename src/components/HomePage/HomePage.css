@@ -45,7 +45,7 @@
   height: 340px;
   padding: 10px;
   border-radius: 8px;
-  background-color: aqua;
+  background: var(--secondary-color);
 }
 
 .list-card-header{
@@ -57,10 +57,14 @@
 .list-card-title{
   font-weight: bold;
   font-size: 2rem;
+  text-decoration: underline;
+  text-shadow: var(--text-shadow);
 }
 
 .list-card-link{
   font-size: 1.2rem;
+  color: black;
+  text-shadow: var(--text-shadow);
 }
 
 @media (max-width: 650px) {
