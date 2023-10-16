@@ -1,9 +1,8 @@
 :root {
   --main-color: rgb(0, 255, 255);
-  --secondary-color: rgb(0, 160, 255);
+  --secondary-color: rgb(0, 180, 255);
   --gradient-color: linear-gradient( to right, var(--main-color) 40%, var(--secondary-color) 60%);
-  --text-shadow: 2px 1px 2px var(--main-color);
-  --text-shadow-secondary: 2px 1px 2px var(--secondary-color);
+  --text-shadow: 1px 1px 2px var(--main-color);
 }
 
 body {

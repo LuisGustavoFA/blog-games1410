@@ -42,7 +42,7 @@ function SearchBar() {
   return (
     <div className={`${styles.searchBar} ${searchBarVisibility}`}>
       <BsSearch className={styles.searchButton}/>
-      <input id='searchInput' className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
+      <input placeholder='Pesquisar' id='searchInput' className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
     </div>
   )
 }
