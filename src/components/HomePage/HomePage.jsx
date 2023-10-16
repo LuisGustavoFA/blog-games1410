@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 import Slider from "../Slider/Slider";
 
 function HomePage() {
+  window.scrollTo(0, 0);
   document.title = "Blog";
   const [noticias, setNoticias] = useState([]);
 
