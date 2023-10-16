@@ -2,41 +2,62 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import { getData } from "../../database/DataApi";
 import Card from "../Card/Card";
+import Slider from "../Slider/Slider";
 
 function HomePage() {
   document.title = "Blog";
   const [noticias, setNoticias] = useState([]);
 
   useEffect(() => {
-    getData().then((resp) =>{
+    getData().then((resp) => {
       setNoticias(resp);
     })
   }, [])
 
   return (
     <>
-    <main className="home-main">
-      <div className="home-vertical-ad">AD#1</div>
-      <section className="home-content">
-        {noticias.map((noticia, id) =>{
-          return (
-            <React.Fragment key={id}>  
-              <Card data={noticia} key={id}/>
-              { ((id - 1)%3 === 0) && <div className="home-horizontal-ad" alt="AD#3"></div>}
-            </React.Fragment>
+      <main className="home">
+        {/* <Slider/> */}
 
-            // <React.Fragment key={id}>
-            //   <div className="news-case">
-            //     <div className="news-banner" alt="banner da notícia" style={{backgroundImage: `url(${noticia.banner})`}}></div>
-            //     <Link className="news-link" to={`/article/${noticia.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticia.title}</Link>
-            //   </div>
-            //   { (id === 1 || id === 4) && <div className="home-horizontal-ad">AD#3</div>}
-            // </React.Fragment>
-          )
-        })}
-      </section>
-      <div className="home-vertical-ad">AD#2</div>
-    </main>
+        <section className="home-content">
+          <section className="home-content-main">
+            {noticias.map((noticia, id) => {
+              return (
+                <React.Fragment key={id}>
+                  <Card data={noticia} key={id} />
+                  {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="AD#3"></div>}
+                </React.Fragment>
+              )
+            })}
+          </section>
+
+          <section className="home-content-secondary">
+            <div className="list-card">
+              <div className="list-card-header">
+                <span className="list-card-title">LISTAS</span>
+                <a href="#">Ver Mais +</a>
+              </div>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos para celular</a>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos multiplayer</a>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos soulslike</a>
+              <a className="list-card-link" href='#'>Lista: Melhores lançamentos do mês de setembro</a>
+              <a className="list-card-link" href='#'>Lista: Melhores lançamentos da Nintendo em 2023</a>
+            </div>
+
+            <div className="list-card">
+              <div className="list-card-header">
+                <span className="list-card-title">LISTAS</span>
+                <a href="#">Ver Mais +</a>
+              </div>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos para celular</a>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos multiplayer</a>
+              <a className="list-card-link" href='#'>Lista: Melhores jogos soulslike</a>
+              <a className="list-card-link" href='#'>Lista: Melhores lançamentos do mês de setembro</a>
+              <a className="list-card-link" href='#'>Lista: Melhores lançamentos da Nintendo em 2023</a>
+            </div>
+          </section>
+        </section>
+      </main>
     </>
   )
 }

@@ -19,12 +19,15 @@ function Article() {
 
   return (
     <>
-    <div className="article-banner-case">
-      <div className="article-banner-background" style={{backgroundImage: `url(${article.banner})`}} alt="banner"></div>
-      <div className="article-banner" style={{backgroundImage: `url(${article.banner})`}} alt="banner"></div>
+    <div className="article-banner-case-case">
+      <div className="article-banner-case">
+        <div className="article-banner-background" style={{backgroundImage: `url(${article.banner})`}} alt="banner"></div>
+        <div className="article-banner" style={{backgroundImage: `url(${article.banner})`}} alt="banner"></div>
+      </div>
     </div>
+    
+
     <main className="article-main">
-      <div className="article-vertical-ad">AD#1</div>
       <section className="article-content">
         <div className="article-content-header">
           <h1>{article.title}</h1>
@@ -36,7 +39,6 @@ function Article() {
           <h5>{article.info}</h5>
         </div>
       </section>
-      <div className="article-vertical-ad">AD#2</div>
     </main>
     </>
   )

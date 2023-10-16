@@ -1,6 +1,9 @@
 .header {
   background-color: aqua;
   height: 72px;
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
 }
 
 .header nav {
@@ -13,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  width: 70%;
+  width: 80%;
   height: 100%;
   margin: auto;
 }

@@ -1,0 +1,65 @@
+:root {
+  /*JS VARIABLES*/
+  --current_frame: 0;
+  --radioBox_width: 0;
+  /*CSS VARIABLES*/
+  --slider_width: 100vw;
+  --slider_height: 60vh;
+  --radio_size: 20px;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--slider_width);
+  height: var(--slider_height);
+  background-color: green;
+}
+
+.slider__body {
+  width: 900%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.slider__body--img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  left: var(--current_frame);
+  transition: 2s;
+}
+
+.slider__radioBox {
+  position: absolute;
+  left: calc((var(--slider_width) - var(--radioBox_width)) / 2);
+  bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: var(--radioBox_width);
+}
+
+.slider__radioBox--radio {
+  display: none;
+}
+
+.slider__radioBox--label {
+  width: var(--radio_size);
+  aspect-ratio: 1/1;
+  border: solid white;
+  border-radius: 50%;
+  background-color: #00000033;
+  box-shadow: 0 0 2px black;
+}
+
+.slider__radioBox--radio:checked+
+.slider__radioBox--label {
+  background-image: radial-gradient(ellipse at center, #fff 50%, #00000033 50%);
+}

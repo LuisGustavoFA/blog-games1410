@@ -1,20 +1,23 @@
-.home-banner {
-  height: 400px;
-}
-
-.home-main {
+.home {
+  margin-top: 72px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   min-height: calc(100vh - 72px);
 }
 
-.home-vertical-ad {
-  min-width: 15%;
-  background-image: url('https://www.egraphix.co.uk/wp/wp-content/uploads/2014/10/160x6001.gif');
-  background-size: contain;
-  background-position: top;
-  background-color: gray;
+.home-content{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.home-content-main {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 16px;
 }
 
 .home-horizontal-ad{
@@ -24,43 +27,41 @@
   background-size: cover;
   background-position: center;
   background-color: gray;
+  margin: 24px 0;
 }
 
-.home-content {
-  width: 70%;
+.home-content-secondary{
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  width: 33%;
+  padding: 24px 0;
   gap: 10px;
 }
 
-/* .news-case {
-  height: 200px;
+.list-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  padding: 10px;
+  border-radius: 8px;
   background-color: aqua;
-  border-radius: 16px;
+}
+
+.list-card-header{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 }
 
-.news-banner {
-  height: 100%;
-  width: 50%;
-  background-size: cover;
-  background-position: center;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+.list-card-title{
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-.news-link {
-  text-decoration: none;
-  color: black;
-  width: 50%;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 400;
-  margin: auto;
-} */
+.list-card-link{
+  font-size: 1.2rem;
+}
 
 @media (max-width: 650px) {
   .home-main {
@@ -70,10 +71,27 @@
 
   .home-content {
     width: 90%;
-    padding: 24px 0;
+  }
+
+  .home-content-main{
+    width: 100%;
+  }
+
+  .home-content-secondary{
+    display: none;
   }
   
   .home-vertical-ad {
     display: none;
+  }
+
+  .list-card {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .list-card{
+    height: 460px;
   }
 }

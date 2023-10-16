@@ -4,7 +4,7 @@
   align-items: center;
   height: 200px;
   background-color: aqua;
-  border-radius: 16px;
+  border-radius: 8px;
   text-decoration: none;
 }
 
@@ -13,7 +13,7 @@
   aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .card-link{
@@ -25,7 +25,7 @@
   margin: auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
   .card {
     flex-direction: column;
     height: auto;
