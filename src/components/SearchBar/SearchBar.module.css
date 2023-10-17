@@ -74,3 +74,21 @@
     width: 160px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .searchButton, .searchInput {
+    font-size: 1.8rem;
+  }
+
+  .searchInput {
+    margin-left: 32px;
+  }
+
+  .searchBar {
+    width: 28px;
+  }
+
+  .searchBarOpen {
+    width: 80%;
+  }
+}

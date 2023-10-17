@@ -3,15 +3,17 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/HomePage/HomePage';
 import Article from './components/Article/Article';
-import SandwichMenu from './components/SandwichMenu';
+import TemplatePage from './components/TemplatePage/TemplatePage'
 
 function App() {
   return (
     <Router>
-      <SandwichMenu/>
       <Header/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
+        <Route path='/news' element={<TemplatePage/>}/>
+        <Route path='/reviews' element={<TemplatePage/>}/>
+        <Route path='/lists' element={<TemplatePage/>}/>
         <Route path='/article/:title' element={<Article/>}/>
       </Routes>
       <Footer/>

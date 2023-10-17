@@ -1,0 +1,83 @@
+.sandwichButton {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sandwichButton::before,
+.sandwichButton::after {
+  content: '';
+  display: block;
+  margin-top: 6px;
+  top: -10px;
+  transition: 0.3s;
+}
+
+.sandwichButton,
+.sandwichButton::before,
+.sandwichButton::after {
+  width: 30px;
+  border-top: 4px solid #000000;
+}
+
+.sandwichButton.active {
+  border-color: #00000000;
+}
+
+.sandwichButton.active::before {
+  border-color: #000000;
+  transform: rotate(-45deg);
+}
+
+.sandwichButton.active::after {
+  border-color: #000000;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.sandwich {
+  position: fixed;
+  top: 64px;
+  left: calc(-100% - 80px);
+  width: calc(100% - 80px);
+  height: 100%;
+  background-color: #000000cd;
+  transition: .3s;
+  z-index: 1;
+}
+
+.sandwich.active {
+  left: 0;
+}
+
+.sandwichList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  list-style: none;
+  font-size: 2rem;
+  padding: 0;
+  margin: auto;
+  margin-top: 16px;
+  color: white;
+  gap: 10px;
+}
+
+.sandwichLinks {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  background: var(--main-color);
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+@media (min-width: 650px) {
+  .sandwichButtonContainer, .sandwich {
+    display: none;
+  }
+}

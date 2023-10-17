@@ -25,7 +25,6 @@ function Article() {
         <div className="article-banner" style={{backgroundImage: `url(${article.banner})`}} alt="banner"></div>
       </div>
     </div>
-    
 
     <main className="article-main">
       <section className="article-content">

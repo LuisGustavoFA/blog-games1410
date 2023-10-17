@@ -7,11 +7,11 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <Link className="link" to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">
+          <Link className="footer-link" to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">
             <AiFillGithub size={30}/>
             João Gabriel
           </Link>
-          <Link className="link" to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">
+          <Link className="footer-link" to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">
             <AiFillGithub size={30}/>
             Luis Gustavo
           </Link>
