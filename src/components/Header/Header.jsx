@@ -11,7 +11,7 @@ function Header() {
           <li><Link to={"/news"}>Noticias</Link></li>
           <li><Link to={"/reviews"}>Reviews</Link></li>
           <li><Link to={"/lists"}>Listas</Link></li>
-          <li><SearchBar className="search-bar" /></li>
+          <li><SearchBar/></li>
         </ul>
       </nav>
     </header>
