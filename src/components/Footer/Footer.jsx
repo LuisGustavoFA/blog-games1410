@@ -7,14 +7,14 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <li>
-            <AiFillGithub size={30} />
-            <Link to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">João Gabriel</Link>
-          </li>
-          <li>
-            <AiFillGithub size={30} />
-            <Link to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">Luis Gustavo</Link>
-          </li>
+          <Link className="link" to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">
+            <AiFillGithub size={30}/>
+            João Gabriel
+          </Link>
+          <Link className="link" to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">
+            <AiFillGithub size={30}/>
+            Luis Gustavo
+          </Link>
         </ul>
       </nav>
     </footer>

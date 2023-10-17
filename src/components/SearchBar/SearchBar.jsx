@@ -9,9 +9,8 @@ function SearchBar() {
 
   const navigate = useNavigate();
   const [input, setInput] = useState(searchBarContent);
-  const [searchBarIsOpen, setSearchBarIsOpen] = useState(true);
-  const [searchInputVisibility, setSearchInputVisibility] = useState(styles.searchInputOpen);
-  const [searchBarVisibility, setSearchBarVisibility] = useState(styles.searchBarOpen);
+  const [searchInputVisibility, setSearchInputVisibility] = useState(styles.searchInput);
+  const [searchBarVisibility, setSearchBarVisibility] = useState(styles.searchBar);
 
   useEffect(() => {
     setInput(searchBarContent);
@@ -26,23 +25,22 @@ function SearchBar() {
     setInput(value);
   };
 
-  const openSearchBar = () => {
-    if(!searchBarIsOpen){
-      setSearchInputVisibility(styles.searchInputOpen);
-      setSearchBarVisibility(styles.searchBarOpen);
-      setSearchBarIsOpen(true);
-      document.getElementById('searchInput').focus();
-    } else {
-      setSearchInputVisibility(styles.searchInputClosed);
-      setSearchBarVisibility(styles.searchBarClosed);
-      setSearchBarIsOpen(false);
-    };
-  };
+  const openBar = () => {
+    setSearchBarVisibility(styles.searchBarOpen);
+    document.getElementById('searchInput').focus();
+    setSearchInputVisibility(styles.searchInputOpen);
+  }
+
+  const closeBar = () => {
+    setSearchBarVisibility(styles.searchBar);
+    document.getElementById('searchInput').blur();
+    setSearchInputVisibility(styles.searchInput);
+  }
 
   return (
-    <div className={`${styles.searchBar} ${searchBarVisibility}`}>
+    <div onMouseEnter={openBar} onClick={openBar} onBlur={closeBar} className={`${styles.searchBar} ${searchBarVisibility}`}>
       <BsSearch className={styles.searchButton}/>
-      <input placeholder='Pesquisar' id='searchInput' className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
+      <input id='searchInput' className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
     </div>
   )
 }

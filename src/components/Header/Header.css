@@ -41,7 +41,6 @@
 }
 
 .header a:hover {
-  text-decoration: none;
   /*text-decoration: underline 2px var(--main-color);*/
   box-shadow: inset 150px 0 0 0 rgba(255, 255, 255, 0.9);
   font-size: 1.8rem;
