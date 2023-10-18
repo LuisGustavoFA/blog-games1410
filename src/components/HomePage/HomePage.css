@@ -38,35 +38,6 @@
   gap: 10px;
 }
 
-.list-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 340px;
-  padding: 10px;
-  border-radius: 8px;
-  background: var(--secondary-color);
-}
-
-.list-card-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-}
-
-.list-card-title{
-  font-weight: bold;
-  font-size: 2rem;
-  text-decoration: underline;
-  text-shadow: var(--text-shadow);
-}
-
-.list-card-link{
-  font-size: 1.2rem;
-  color: black;
-  text-shadow: var(--text-shadow);
-}
-
 @media (max-width: 650px) {
   .home-main {
     flex-direction: column;
@@ -87,15 +58,5 @@
   
   .home-vertical-ad {
     display: none;
-  }
-
-  .list-card {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  .list-card{
-    height: 460px;
   }
 }

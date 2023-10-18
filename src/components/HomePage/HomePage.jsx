@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { getData } from "../../database/DataApi";
 import Card from "../Card/Card";
 import Slider from "../Slider/Slider";
+import ListCard from "../ListCard/ListCard";
 
 function HomePage() {
   window.scrollTo(0, 0);
@@ -32,30 +33,10 @@ function HomePage() {
         </section>
 
         <section className="home-content-secondary">
-          <div className="list-card">
-            <div className="list-card-header">
-              <span className="list-card-title">LISTAS</span>
-              <a href="#">Ver Mais +</a>
-            </div>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos para celular</a>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos multiplayer</a>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos soulslike</a>
-            <a className="list-card-link" href='#'>Lista: Melhores lançamentos do mês de setembro</a>
-            <a className="list-card-link" href='#'>Lista: Melhores lançamentos da Nintendo em 2023</a>
-          </div>
-
-          <div className="list-card">
-            <div className="list-card-header">
-              <span className="list-card-title">LISTAS</span>
-              <a href="#">Ver Mais +</a>
-            </div>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos para celular</a>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos multiplayer</a>
-            <a className="list-card-link" href='#'>Lista: Melhores jogos soulslike</a>
-            <a className="list-card-link" href='#'>Lista: Melhores lançamentos do mês de setembro</a>
-            <a className="list-card-link" href='#'>Lista: Melhores lançamentos da Nintendo em 2023</a>
-          </div>
+          <ListCard/>
+          <ListCard/>
         </section>
+
       </section>
     </main>
   )

@@ -17,7 +17,7 @@ export const findArticle = async (title) => {
     const article = data.find((item) => item["title"].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(title));
     return article;
   } catch (error) {
-    console.log('ARTICLE NOT FIND, ERROR: ' + error)
+    console.log('ARTICLE NOT FOUND, ERROR: ' + error)
     return [];
   }
 }

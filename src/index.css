@@ -1,6 +1,6 @@
 :root {
-  --main-color: rgb(0, 255, 255);
-  --secondary-color: rgb(0, 200, 200);
+  --main-color: rgb(55, 255, 0);
+  --secondary-color: rgb(47, 175, 0);
   --gradient-color: linear-gradient( to right, var(--main-color) 40%, var(--secondary-color) 60%);
   --text-shadow: 1px 1px 2px var(--main-color);
 }
