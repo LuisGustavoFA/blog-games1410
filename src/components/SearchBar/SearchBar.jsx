@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SearchBar.module.css';
-import {BsSearch} from 'react-icons/bs';
+import { BsSearch } from 'react-icons/bs';
 
-function SearchBar({id}) {
+function SearchBar({ id }) {
   const searchBarContent = localStorage.getItem('SearchBarContent') ?? '';
   localStorage.setItem('SearchBarContent', searchBarContent);
 
@@ -15,7 +15,7 @@ function SearchBar({id}) {
   useEffect(() => {
     setInput(searchBarContent);
     // if (localStorage.getItem('SearchBarContent').length > 0) {
-    //   navigate(`/s/${input}`);
+    //   navigate(`/?s=${input}`);
     // };
   }, [input, navigate]);
 
@@ -37,11 +37,19 @@ function SearchBar({id}) {
     setSearchInputVisibility(styles.searchInput);
   }
 
+  const search = () => {
+    navigate(`/search/${searchBarContent.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`);
+  }
+
   return (
-    <div onMouseEnter={openBar} onClick={openBar} onBlur={closeBar} className={`${styles.searchBar} ${searchBarVisibility}`}>
-      <BsSearch className={styles.searchButton}/>
+    <form onMouseEnter={openBar} onClick={openBar} onBlur={closeBar} className={`${styles.searchBar} ${searchBarVisibility}`}
+      onSubmit={(e) => {
+        e.preventDefault();
+        search();
+      }}>
+      <BsSearch className={styles.searchButton} />
       <input id={id} className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
-    </div>
+    </form>
   )
 }
 

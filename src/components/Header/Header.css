@@ -45,8 +45,20 @@
 
 .pc a:hover {
   /*text-decoration: underline 2px var(--main-color);*/
-  box-shadow: inset 200px 0 0 0 var(--secondary-color);
-  font-size: 1.8rem;
+  /* box-shadow: inset 200px 0 0 0 var(--secondary-color);
+  font-size: 1.8rem; */
+}
+
+.pc a::after{
+  content: '';
+  display: block;
+  width: 0;
+  border-top: 3px solid #000000;
+  transition: .5s;
+}
+
+.pc a:hover::after {
+  width: 100%;
 }
 
 .mobile {
