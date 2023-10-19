@@ -17,6 +17,7 @@
 
 .searchButton {
   position: absolute;
+  cursor: pointer;
 }
 
 .searchInput {
@@ -33,6 +34,11 @@
   box-shadow: inset 0 0 0 0 var(--theme-color);
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   outline: none;
+}
+
+.searchInput::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .searchInputOpen {

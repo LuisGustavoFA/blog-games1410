@@ -9,8 +9,7 @@ function SearchBar({ id, iconSize }) {
 
   const navigate = useNavigate();
   const [input, setInput] = useState(searchBarContent);
-  const [searchInputVisibility, setSearchInputVisibility] = useState(styles.searchInput);
-  const [searchBarVisibility, setSearchBarVisibility] = useState(styles.searchBar);
+  const [barOpen, setBarOpen] = useState(false);
 
   useEffect(() => {
     setInput(searchBarContent);
@@ -25,30 +24,27 @@ function SearchBar({ id, iconSize }) {
     setInput(value);
   };
 
-  const openBar = () => {
-    setSearchBarVisibility(styles.searchBarOpen);
-    document.getElementById(id).focus();
-    setSearchInputVisibility(styles.searchInputOpen);
+  const handleSearchBar = () => {
+    const int = setInterval(() => {
+      setBarOpen(!barOpen);
+      if (barOpen) document.getElementById(id).blur();
+      else document.getElementById(id).focus();
+      clearInterval(int);
+    }, 90); 
   }
-
-  const closeBar = () => {
-    setSearchBarVisibility(styles.searchBar);
-    document.getElementById(id).blur();
-    setSearchInputVisibility(styles.searchInput);
-  }
-
+  
   const search = () => {
     navigate(`/search/${searchBarContent.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`);
   }
 
   return (
-    <form onClick={openBar} onBlur={closeBar} autoComplete='off' className={`${styles.searchBar} ${searchBarVisibility}`}
+    <form onBlur={handleSearchBar} autoComplete='off' className={`${styles.searchBar} ${barOpen ? styles.searchBarOpen : styles.searchBar}`}
       onSubmit={(event) => {
         event.preventDefault();
         search();
       }}>
-      <BsSearch size={iconSize} className={styles.searchButton} />
-      <input id={id} className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
+      <BsSearch onClick={handleSearchBar} size={iconSize} className={styles.searchButton} />
+      <input id={id} className={`${styles.searchInput} ${barOpen ? styles.searchInputOpen : styles.searchInput}`} type='text' placeholder='Pesquisar' value={input} onChange={handleChange}></input>
     </form>
   )
 }
