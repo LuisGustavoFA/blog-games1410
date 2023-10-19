@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { getData } from '../../database/DataApi';
-import Card from '../../components/Card/Card';
+import Card from '../Card/Card';
 
 import './SearchPage.css';
 
@@ -9,7 +9,7 @@ function SearchPage() {
   const { search } = useParams();
 
   useEffect(() => {
-    document.title = search;
+    document.title = "Busca: " + search;
   }, [search])
 
   const [noticias, setNoticias] = useState([]);
@@ -21,7 +21,6 @@ function SearchPage() {
   }, [])
 
   const SearchNews = (noticia) => {
-    console.log(noticia?.title, search)
     return noticia?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
       || noticia?.subtitle.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
       || noticia?.text.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
@@ -30,6 +29,7 @@ function SearchPage() {
 
   return (
     <main className='search-main'>
+      <div className='search-main-header'>{`Mostrando resultados para "${search}"`}</div>
       {noticias.map((noticia, id) => {
         return (
           <React.Fragment key={id}>

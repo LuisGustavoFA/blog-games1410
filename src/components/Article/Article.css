@@ -34,7 +34,8 @@
   margin-top: 472px;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: var(--theme-color);
+  transition: background-color .2s ease-in-out;
 }
 
 .article-horizontal-ad{
@@ -53,6 +54,8 @@
   padding: 24px 0;
   justify-content: space-between;
   gap: 80px;
+  color: var(--text-color);
+  transition: color .2s ease-in-out;
 }
 
 .article-content-header {

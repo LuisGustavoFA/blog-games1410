@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.pc {
+.header-pc {
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -23,55 +23,47 @@
   gap: 6px;
 }
 
-.pc li {
+.header-pc li {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.pc a {
+.header-pc a {
   padding: 2px 12px;
   font-size: 1.4rem;
   text-decoration: none;
-  /*text-decoration: underline 2px var(--main-color);*/
   color: black;
   text-shadow: var(--text-shadow);
   border-radius: 8px;
   box-shadow: inset 0 0 0 0 var(--secondary-color);
   transition: box-shadow .2s ease-in-out, font-size .2s ease-in-out;
-  /*transition: text-decoration .2s ease-in-out, box-shadow .2s ease-in-out;*/
   text-wrap: nowrap;
 }
 
-.pc a:hover {
-  /*text-decoration: underline 2px var(--main-color);*/
-  /* box-shadow: inset 200px 0 0 0 var(--secondary-color);
-  font-size: 1.8rem; */
-}
-
-.pc a::after{
+.header-pc a::after{
   content: '';
   display: block;
   width: 0;
   border-top: 3px solid #000000;
-  transition: .5s;
+  transition: .3s;
 }
 
-.pc a:hover::after {
+.header-pc a:hover::after {
   width: 100%;
 }
 
-.mobile {
+.header-pc-night {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header-mobile {
   display: none;
 }
 
 @media (max-width: 1000px) {
-  .pc a:hover {
-    box-shadow: inset 0 0 0 0 var(--secondary-color);
-    font-size: 1.4rem;
-  }
-
-  .pc {
+  .header-pc {
     justify-content: space-around;
   }
 }
@@ -85,11 +77,11 @@
     position: absolute;
   }
 
-  .pc {
+  .header-pc {
     display: none;
   }
 
-  .mobile {
+  .header-mobile {
     display: flex;
     list-style: none;
     padding: 0;
@@ -97,13 +89,20 @@
     height: 100%;
     width: 100%;
     margin: auto;
+    position: relative;
   }
 
-  .mobile li {
+  .header-mobile li {
     display: flex;
     align-items: center;
     height: 100%;
     width: auto;
     padding-left: 24px;
+  }
+
+  .header-mobile-night {
+    position: absolute;
+    right: 15px;
+    top: 15px;
   }
 }

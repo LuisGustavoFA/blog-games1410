@@ -26,7 +26,7 @@ function HomePage() {
             return (
               <React.Fragment key={id}>
                 <Card data={noticia} key={id} />
-                {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="AD#3"></div>}
+                {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
               </React.Fragment>
             )
           })}

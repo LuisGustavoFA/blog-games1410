@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './SearchBar.module.css';
 import { BsSearch } from 'react-icons/bs';
 
-function SearchBar({ id }) {
+function SearchBar({ id, iconSize }) {
   const searchBarContent = localStorage.getItem('SearchBarContent') ?? '';
   localStorage.setItem('SearchBarContent', searchBarContent);
 
@@ -42,12 +42,12 @@ function SearchBar({ id }) {
   }
 
   return (
-    <form onMouseEnter={openBar} onClick={openBar} onBlur={closeBar} className={`${styles.searchBar} ${searchBarVisibility}`}
-      onSubmit={(e) => {
-        e.preventDefault();
+    <form onClick={openBar} onBlur={closeBar} autoComplete='off' className={`${styles.searchBar} ${searchBarVisibility}`}
+      onSubmit={(event) => {
+        event.preventDefault();
         search();
       }}>
-      <BsSearch className={styles.searchButton} />
+      <BsSearch size={iconSize} className={styles.searchButton} />
       <input id={id} className={`${styles.searchInput} ${searchInputVisibility}`} type='text' value={input} onChange={handleChange}></input>
     </form>
   )

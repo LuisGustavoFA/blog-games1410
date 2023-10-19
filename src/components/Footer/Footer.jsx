@@ -15,7 +15,7 @@ function Footer() {
             <AiFillGithub size={30}/>
             Luis Gustavo
           </Link>
-          <li>V1.02 18/10/23</li>
+          <li>V1.03 19/10/23</li>
         </ul>
       </nav>
     </footer>
