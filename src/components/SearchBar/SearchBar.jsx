@@ -25,12 +25,12 @@ function SearchBar({ id, iconSize }) {
   };
 
   const handleSearchBar = () => {
-    const int = setInterval(() => {
+    const it = setInterval(() => {
       setBarOpen(!barOpen);
       if (barOpen) document.getElementById(id).blur();
       else document.getElementById(id).focus();
-      clearInterval(int);
-    }, 90); 
+      clearInterval(it);
+    }, 0);
   }
   
   const search = () => {
@@ -43,7 +43,7 @@ function SearchBar({ id, iconSize }) {
         event.preventDefault();
         search();
       }}>
-      <BsSearch onClick={handleSearchBar} size={iconSize} className={styles.searchButton} />
+      <BsSearch onMouseDown={handleSearchBar} size={iconSize} className={styles.searchButton} />
       <input id={id} className={`${styles.searchInput} ${barOpen ? styles.searchInputOpen : styles.searchInput}`} type='text' placeholder='Pesquisar' value={input} onChange={handleChange}></input>
     </form>
   )

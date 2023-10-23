@@ -20,7 +20,7 @@ function Header() {
     <header className="header">
       <nav>
         <ul className="header-pc">
-          <li><Link to={"/"}>Página Inicial</Link></li>
+          <li><Link to={"/home"}>Página Inicial</Link></li>
           <li><Link to={"/news"}>Notícias</Link></li>
           <li><Link to={"/reviews"}>Reviews</Link></li>
           <li><Link to={"/lists"}>Listas</Link></li>

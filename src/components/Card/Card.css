@@ -1,4 +1,4 @@
-.card{
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@
   text-shadow: var(--text-shadow);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .card {
     flex-direction: column;
     height: auto;

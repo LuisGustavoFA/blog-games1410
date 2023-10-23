@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Card({data}) {
   const {banner, title} = data;
-  const title_url = title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+  const title_url = title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   return (
     <Link className="card" to={`/article/${title_url}`}>

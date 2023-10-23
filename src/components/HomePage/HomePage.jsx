@@ -19,13 +19,12 @@ function HomePage() {
   return (
     <main className="home">
       {/* <Slider/> */}
-
       <section className="home-content">
         <section className="home-content-main">
           {noticias.map((noticia, id) => {
             return (
               <React.Fragment key={id}>
-                <Card data={noticia} key={id} />
+                <Card data={noticia} key={id}/>
                 {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
               </React.Fragment>
             )
