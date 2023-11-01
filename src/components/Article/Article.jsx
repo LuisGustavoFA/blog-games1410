@@ -33,7 +33,7 @@ function Article() {
         <div className="article-horizontal-ad"></div>
         <div className="article-content-main">
           <p>{article.text}</p>
-          <h5>{article.info}</h5>
+          <h5>Por {article?.info?.autor}, {article?.info?.data}.</h5>
         </div>
       </section>
     </main>
