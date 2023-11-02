@@ -21,8 +21,8 @@ function Header() {
       <nav>
         <ul className="header-pc">
           <li><Link to={"/home"}>Página Inicial</Link></li>
-          <li><Link to={"/news"}>Notícias</Link></li>
-          <li><Link to={"/reviews"}>Reviews</Link></li>
+          <li><Link to={"/search/noticia"}>Notícias</Link></li>
+          <li><Link to={"/search/review"}>Reviews</Link></li>
           <li><Link to={"/lists"}>Listas</Link></li>
           <li><SearchBar id="pc-search-input" iconSize={25} /></li>
           <div onClick={handleTheme} className="header-pc-night">
