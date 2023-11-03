@@ -38,7 +38,7 @@ function SearchBar({ id, iconSize }) {
   }
 
   return (
-    <form onBlur={handleSearchBar} autoComplete='off' className={`${styles.searchBar} ${barOpen ? styles.searchBarOpen : styles.searchBar}`}
+    <form onBlur={handleSearchBar} onFocus={handleSearchBar} autoComplete='off' className={`${styles.searchBar} ${barOpen ? styles.searchBarOpen : styles.searchBar}`}
       onSubmit={(event) => {
         event.preventDefault();
         search();
