@@ -8,18 +8,20 @@ import './SearchPage.css';
 function SearchPage() {
   window.scrollTo(0, 0);
   const { search } = useParams();
-
-  useEffect(() => {
-    document.title = "Busca: " + search;
-  }, [search])
-
+  const [found, setFound] = useState(0);
   const [noticias, setNoticias] = useState([]);
-
+  
   useEffect(() => {
     getData().then((resp) => {
       setNoticias(resp);
     })
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    document.title = "Busca: " + search;
+    const count = noticias.reduce((acc, noticia) => (SearchNews(noticia) ? acc + 1 : acc), 0);
+    setFound(count);
+  }, [noticias, search]);
 
   const checkTag = (noticia) => {
     return noticia?.tags.some((tag) => {
@@ -39,11 +41,11 @@ function SearchPage() {
 
   return (
     <main className='search-main'>
-      <div className='search-main-header'>{`Mostrando resultados para "${search}"`}</div>
+      <div className='search-main-header'>{`Mostrando ${found} resultados para "${search}"`}</div>
       {noticias.map((noticia, id) => {
         return (
           <React.Fragment key={id}>
-            {SearchNews(noticia) && <Card data={noticia} key={id} />}
+            {SearchNews(noticia) && <Card data={noticia} key={id}/>}
           </React.Fragment>
         )
       })}

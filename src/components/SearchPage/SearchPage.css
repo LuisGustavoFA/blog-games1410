@@ -8,6 +8,11 @@
   gap: 16px;
 }
 
+.search-main-header {
+  color: var(--text-color);
+  transition: .2s ease-in-out;
+}
+
 @media (max-width: 650px) {
   .search-main {
     width: 90%;
