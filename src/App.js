@@ -13,8 +13,6 @@ function App() {
       <Routes>
         <Route path='' element={<HomePage/>}/>
         <Route path='/home' element={<HomePage/>}/>
-        {/* <Route path='/news' element={<TemplatePage/>}/> */}
-        {/* <Route path='/reviews' element={<TemplatePage/>}/> */}
         <Route path='/lists' element={<TemplatePage/>}/>
         <Route path='/article/:title' element={<Article/>}/>
         <Route path='/search/' element={<TemplatePage/>}/>

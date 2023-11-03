@@ -44,6 +44,7 @@
 .header-pc a::after{
   content: '';
   display: block;
+  margin: auto;
   width: 0;
   border-top: 3px solid #000000;
   transition: .3s;

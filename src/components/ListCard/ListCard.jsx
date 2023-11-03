@@ -4,11 +4,11 @@ function ListCard() {
   return (
     <div className="list-card">
       <span className="list-card-title">LISTAS</span>
-      <a className="list-card-link" href='#'>Melhores jogos para celular</a>
-      <a className="list-card-link" href='#'>Melhores jogos multiplayer</a>
-      <a className="list-card-link" href='#'>Melhores jogos soulslike</a>
-      <a className="list-card-link" href='#'>Melhores lançamentos do mês de setembro</a>
-      <a className="list-card-link" href='#'>Melhores lançamentos da Nintendo em 2023</a>
+      <a className="list-card-link" href='#'>MELHORES JOGOS MOBILE DE OUTUBRO</a>
+      <a className="list-card-link" href='#'>MELHORES JOGOS MULTIPLAYER DO ANO</a>
+      <a className="list-card-link" href='#'>MELHORES JOGOS EXCLUSIVOS DE PS5 EM 2023</a>
+      <a className="list-card-link" href='#'>JOGOS CONFIRMADOS PARA ESSE MÊS</a>
+      <a className="list-card-link" href='#'>TUDO QUE VAZOU NESSA ÚLTIMA SEMANA</a>
     </div>
   )
 }

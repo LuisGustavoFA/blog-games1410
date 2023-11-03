@@ -5,33 +5,50 @@
   height: auto;
   padding: 10px;
   gap: 4px;
-  border-radius: 8px;
-  background: var(--secondary-color);
-  box-shadow: inset 0 0 0 0 var(--main-color);
-  transition: box-shadow .2s ease-in-out, height .2s ease-in-out;
 }
 
 .list-card-title{
-  font-weight: bold;
-  font-size: 2rem;
-  text-decoration: underline;
-  text-shadow: var(--text-shadow);
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
   cursor: default;
+  transition: color .2s ease-in-out;
+}
+
+.list-card-title::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: -2px;
+  width: 25%;
+  border-top: 3px solid var(--text-color);
+  transition: .3s;
 }
 
 .list-card-link{
-  font-size: 1.2rem;
-  text-shadow: var(--text-shadow);
+  font-size: 1rem;
+  font-weight: 600;
   padding: 8px;
-  color: black;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-color);
   border-radius: 8px;
-  box-shadow: inset 0 0 0 0 var(--main-color);
-  transition: box-shadow .2s ease-in-out, font-size .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-.list-card-link:hover {
-  box-shadow: inset 500px 0 0 0 var(--main-color);
-  font-size: 1.4rem;
+.list-card-link::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: 2px;
+  width: 8px;
+  border-top: 3px solid var(--text-color);
+  transition: .3s;
+}
+
+.list-card-link:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 650px) {
