@@ -23,7 +23,7 @@
   gap: 8px;
 }
 
-.card-tags{
+.card-tags-case{
   display: flex;
   flex-direction: row;
   gap: 6px;
@@ -55,19 +55,22 @@
 
 .card-info{
   color: var(--text-color);
-  transition: color .2s ease-in-out;
   align-self: flex-end;
   margin-top: auto;
   font-size: .9rem;
   font-weight: bold;
+  transition: color .2s ease-in-out;
 }
 
 .card-info a{
+  border-bottom: 2px solid var(--text-color);
+  color: var(--text-color);
   text-decoration: none;
+  transition: .1s ease-in-out;
 }
 
 .card-info a:hover{
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 4px solid var(--main-color);
 }
 
 .card-underline{

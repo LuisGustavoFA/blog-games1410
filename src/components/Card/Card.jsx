@@ -9,10 +9,10 @@ function Card({ data }) {
       <Link className="card" to={`/article/${title_url}`}>
         <div className="card-banner" alt="banner da notícia" style={{ backgroundImage: `url(${banner})` }}></div>
         <div className='card-data'>
-          <span className="card-tags">
+          <span className="card-tags-case">
             {tags.map((tag, id) => {
               return (
-                <Link className='card-tag' to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
+                <Link className='card-tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
               )
             })}
           </span>
