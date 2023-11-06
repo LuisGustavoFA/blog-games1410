@@ -1,31 +1,3 @@
-.list-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: auto;
-  padding: 10px;
-  gap: 4px;
-}
-
-.list-card-title{
-  color: var(--text-color);
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.8rem;
-  cursor: default;
-  transition: color .2s ease-in-out;
-}
-
-.list-card-title::after{
-  content: '';
-  display: block;
-  margin: auto;
-  margin-top: -2px;
-  width: 25%;
-  border-top: 3px solid var(--text-color);
-  transition: .3s;
-}
-
 .list-card-link{
   font-size: 1rem;
   font-weight: 600;
@@ -49,10 +21,4 @@
 
 .list-card-link:hover::after {
   width: 100%;
-}
-
-@media (max-width: 650px) {
-  .list-card {
-    display: none;
-  }
 }

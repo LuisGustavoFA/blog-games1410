@@ -6,7 +6,7 @@ import { findArticle } from "../../database/DataApi";
 function Article() {
   window.scrollTo(0, 0);
   
-  const {title} = useParams();  
+  const {title} = useParams();
   const [article, setArticle] = useState([]);
 
   document.title = article.title;

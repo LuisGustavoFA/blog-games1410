@@ -1,0 +1,122 @@
+.list-banner-case {
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  top: 72px;
+  z-index: -1;
+}
+
+.list-banner-background {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  filter: brightness(45%) grayscale(30%) blur(.2px);
+}
+
+.list-banner {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.list-main {
+  margin-top: 472px;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--theme-color);
+  transition: background-color .2s ease-in-out;
+}
+
+.list-horizontal-ad{
+  width: 100%;
+  aspect-ratio: 4/1;
+  background-image: url('https://bannerboo.com/upload/medialibrary/13a/851x315_b7f147f2ad77f-_15_.gif');
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+}
+
+.list-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  justify-content: space-between;
+  gap: 80px;
+  color: var(--text-color);
+  transition: color .2s ease-in-out;
+}
+
+.list-content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.list-content-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.list-content-main {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.list-content-main h5 {
+  margin: 0;
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-item div {
+  margin: 0 72px;
+  aspect-ratio: 16/9;
+  background-size: 100% 100%;
+}
+
+.list-item p {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 650px) {
+  .list-banner-case {
+    height: 230px;
+    top: 64px;
+  }
+
+  .list-main {
+    margin-top: 294px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .list-content {
+    width: 90%;
+    gap: 48px;
+  }
+
+  .list-item div {
+    margin: 0;
+  }
+
+  .list-vertical-ad {
+    display: none;
+  }
+}

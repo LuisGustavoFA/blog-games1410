@@ -41,6 +41,34 @@
   transition: .2s ease-in-out;
 }
 
+.list-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  padding: 10px;
+  gap: 4px;
+}
+
+.list-card-title{
+  color: var(--text-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: default;
+  transition: color .2s ease-in-out;
+}
+
+.list-card-title::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-top: -2px;
+  width: 25%;
+  border-top: 3px solid var(--text-color);
+  transition: .3s;
+}
+
 @media (max-width: 650px) {
   .home-content {
     width: 90%;
@@ -51,6 +79,10 @@
   }
 
   .home-content-secondary{
+    display: none;
+  }
+
+  .list-card {
     display: none;
   }
   

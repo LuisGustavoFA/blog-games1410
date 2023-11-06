@@ -1,15 +1,12 @@
+import { Link } from "react-router-dom"
 import './ListCard.css';
 
-function ListCard() {
+function ListCard({ data }) {
+  const title_url = data.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const title = data.title.toUpperCase();
+
   return (
-    <div className="list-card">
-      <span className="list-card-title">LISTAS</span>
-      <a className="list-card-link" href='#'>MELHORES JOGOS MOBILE DE OUTUBRO</a>
-      <a className="list-card-link" href='#'>MELHORES JOGOS MULTIPLAYER DO ANO</a>
-      <a className="list-card-link" href='#'>MELHORES JOGOS EXCLUSIVOS DE PS5 EM 2023</a>
-      <a className="list-card-link" href='#'>JOGOS CONFIRMADOS PARA ESSE MÊS</a>
-      <a className="list-card-link" href='#'>TUDO QUE VAZOU NESSA ÚLTIMA SEMANA</a>
-    </div>
+    <Link to={`/list/${title_url}`} className="list-card-link" href='#'>{title}</Link>
   )
 }
 

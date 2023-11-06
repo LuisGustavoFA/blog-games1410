@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
-import { getData } from "../../database/DataApi";
+import { getData, getListData } from "../../database/DataApi";
 import Card from "../Card/Card";
 import Slider from "../Slider/Slider";
 import ListCard from "../ListCard/ListCard";
@@ -9,12 +9,19 @@ function HomePage() {
   window.scrollTo(0, 0);
   document.title = "Blog";
   const [noticias, setNoticias] = useState([]);
+  const [lists, setLists] = useState([]);
 
   useEffect(() => {
     getData().then((resp) => {
       setNoticias(resp);
     })
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    getListData().then((resp) => {
+      setLists(resp);
+    })
+  }, []);
 
   return (
     <main className="home">
@@ -32,8 +39,14 @@ function HomePage() {
         </section>
 
         <section className="home-content-secondary">
-          <ListCard/>
-          <ListCard/>
+          <div className="list-card">
+            <span className="list-card-title">LISTAS</span>
+            {lists.map((list, id) => {
+              return (
+                <ListCard data={list} key={id}/>
+              )
+            })}
+          </div>
         </section>
 
       </section>
