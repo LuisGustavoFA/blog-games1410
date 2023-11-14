@@ -16,8 +16,8 @@
   display: flex;
   align-items: center;
   width: 75%;
-  height: 80%;
-  background: linear-gradient(to right, #000000d4, #0000009d);
+  height: 60vh;
+  background: linear-gradient(to right, #000000c1, #00000089);
   border: 2px solid var(--main-color);
   border-radius: 12px;
 }
@@ -25,7 +25,7 @@
 .bannerSlider-container-title{
   width: 55%;
   color: #FFF;
-  font-size: 3rem;
+  font-size: 3.5vw;
   font-weight: bold;
   padding: 40px;
   text-align: center;
@@ -41,21 +41,21 @@
 .bannerSlider-container-buttons{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-left: auto;
   padding: 40px;
-  gap: 4px;
+  height: 100%;
 }
 
 .bannerSlider-container-buttons div{
   background-color: #FFF;
-  border: 1px solid #000;
+  border: 1px solid var(--main-color);
   width: 200px;
   aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0px 0px 1px 1px var(--main-color);
 }
 
 .bannerSlider-container-middleButton{
@@ -89,7 +89,7 @@
   background-color: var(--secondary-color);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   .bannerSlider{
     height: calc(50vw + 40px);
   }
@@ -117,9 +117,9 @@
     width: 100%;
   }
 
-  .bannerSlider-container-button{
+  .bannerSlider-container-buttons div{
     width: 80vw;
-    box-shadow: 0px 0px 1px .8px var(--main-color);
+    border: .5px solid var(--main-color);
   }
 
   .bannerSlider-container-arrows{

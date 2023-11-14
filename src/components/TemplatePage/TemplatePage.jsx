@@ -1,9 +1,11 @@
 import './TemplatePage.css';
+import { GoCloudOffline } from "react-icons/go";
 
 const TemplatePage = () => {
   return(
     <main className='temp-main'>
-      <h1 style={{color: 'gray', textShadow: '1px 1px 2px black', opacity: '80%', zIndex: '-1'}}>Ainda não há nada aqui.</h1>
+      <GoCloudOffline size={64} className='temp-main-cloud'/>
+      <h1>Página não encontrada.</h1>
     </main>
   )
 }

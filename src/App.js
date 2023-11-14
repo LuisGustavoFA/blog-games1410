@@ -11,15 +11,14 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Routes>
-        <Route path='' element={<HomePage/>}/>
-        <Route path='/home' element={<HomePage/>}/>
-        <Route path='/lists' element={<TemplatePage/>}/>
-        <Route path='/article/:title' element={<Article/>}/>
-        <Route path='/list/:title' element={<ListPage/>}/>
-        <Route path='/search/' element={<TemplatePage/>}/>
-        <Route path='/search/:search' element={<SearchPage/>}/>
-      </Routes>
+        <Routes>
+          <Route path='' element={<HomePage/>}/>
+          <Route path='/home' element={<HomePage/>}/>
+          <Route path='/article/:title' element={<Article/>}/>
+          <Route path='/list/:title' element={<ListPage/>}/>
+          <Route path='/search/:search' element={<SearchPage/>}/>
+          <Route path='*' element={<TemplatePage/>}/>
+        </Routes>
       <Footer/>
     </Router>
   );

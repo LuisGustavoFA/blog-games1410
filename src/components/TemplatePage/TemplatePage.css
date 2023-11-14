@@ -1,6 +1,18 @@
 .temp-main {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.temp-main h1 {
+  color: gray;
+  z-index: -1;
+}
+
+.temp-main-cloud {
+  color: gray;
+  z-index: -1;
 }

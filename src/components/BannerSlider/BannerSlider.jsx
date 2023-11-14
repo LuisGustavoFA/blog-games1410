@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getData } from "../../database/DataApi";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -6,8 +7,9 @@ import './BannerSlider.css';
 
 function BannerSlider() {
   const [noticias, setNoticias] = useState([]);
-  const [actualSlide, setActualSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderSize = 6;
+  const navigate = useNavigate();
 
   useEffect(() => {
     getData().then((resp) => {
@@ -16,11 +18,11 @@ function BannerSlider() {
   }, []);
 
   const nextSlide = () => {
-    actualSlide >= sliderSize ? setActualSlide(0) : setActualSlide(actualSlide + 1);
+    currentSlide >= sliderSize ? setCurrentSlide(0) : setCurrentSlide(currentSlide + 1);
   }
 
   const lastSlide = () => {
-    actualSlide === 0 ? setActualSlide(sliderSize) : setActualSlide(actualSlide - 1);
+    currentSlide === 0 ? setCurrentSlide(sliderSize) : setCurrentSlide(currentSlide - 1);
   }
 
   useEffect(()=> {
@@ -30,14 +32,14 @@ function BannerSlider() {
     return () => {
       clearInterval(inter);
     };
-  }, [actualSlide]);
+  }, [currentSlide]);
 
   return (
-    <div className='bannerSlider' style={{ backgroundImage: `url(${noticias[actualSlide]?.banner})` }}>
+    <div className='bannerSlider' style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
       <div className='bannerSlider-container'>
-        <Link to={`/article/${noticias[actualSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`} className='bannerSlider-container-title'>{noticias[actualSlide]?.title}</Link>
+        <Link to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`} className='bannerSlider-container-title'>{noticias[currentSlide]?.title}</Link>
         <span className="banner-tags-case">
-            {noticias[actualSlide]?.tags.map((tag, id) => {
+            {noticias[currentSlide]?.tags.map((tag, id) => {
               return (
                 <Link className='banner-tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
               )
@@ -47,16 +49,16 @@ function BannerSlider() {
           <BiSolidUpArrow size={28} onClick={lastSlide} className="bannerSlider-container-arrows"></BiSolidUpArrow>
           <div 
             onClick={lastSlide} 
-            style={{ backgroundImage: `url(${noticias[actualSlide === 0 ? sliderSize : actualSlide - 1]?.banner})` }}>
+            style={{ backgroundImage: `url(${noticias[currentSlide === 0 ? sliderSize : currentSlide - 1]?.banner})` }}>
           </div>
           <div 
             className='bannerSlider-container-middleButton' 
-            onClick={() =>  window.location.href=`/article/${noticias[actualSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}
-            style={{ backgroundImage: `url(${noticias[actualSlide]?.banner})` }}>
+            onClick={() => navigate(`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`)}
+            style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
           </div>
           <div 
             onClick={nextSlide} 
-            style={{ backgroundImage: `url(${noticias[actualSlide === sliderSize ? 0 : actualSlide + 1]?.banner})` }}>
+            style={{ backgroundImage: `url(${noticias[currentSlide === sliderSize ? 0 : currentSlide + 1]?.banner})` }}>
           </div>
           <BiSolidDownArrow size={28} onClick={nextSlide} className="bannerSlider-container-arrows"></BiSolidDownArrow>
         </div>
