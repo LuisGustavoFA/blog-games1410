@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import { getData, getListData } from "../../database/DataApi";
 import Card from "../Card/Card";
-import Slider from "../Slider/Slider";
 import ListCard from "../ListCard/ListCard";
+import BannerSlider from "../BannerSlider/BannerSlider";
 
 function HomePage() {
   window.scrollTo(0, 0);
@@ -25,7 +25,7 @@ function HomePage() {
 
   return (
     <main className="home">
-      {/* <Slider/> */}
+      <BannerSlider/>
       <section className="home-content">
         <section className="home-content-main">
           {noticias.map((noticia, id) => {

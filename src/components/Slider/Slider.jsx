@@ -23,8 +23,8 @@ function Slider() {
   };
 
   function selectSlide(selected) {
-    try{
-      document.documentElement.style.setProperty('--current_frame', `-${selected}00%`);
+    
+    document.documentElement.style.setProperty('--current_frame', `-${selected}00%`);
 
     document.getElementById(`radio${selected}`).checked = true;
 
@@ -32,9 +32,6 @@ function Slider() {
 
     clearInterval(change_frame);
     change_frame = setInterval(att, change_time);
-    } catch(error) {
-      console.log(error);
-    }
   };
 
   return (
