@@ -39,12 +39,15 @@ function BannerSlider() {
       <div className='bannerSlider-container'>
         <Link to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`} className='bannerSlider-container-title'>{noticias[currentSlide]?.title}</Link>
         <span className="banner-tags-case">
-            {noticias[currentSlide]?.tags.map((tag, id) => {
-              return (
-                <Link className='banner-tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
-              )
-            })}
-          </span>
+          {noticias[currentSlide]?.tags.map((tag, id) => {
+            return (
+              <Link className='banner-tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
+            )
+          })}
+        </span>
+        <span className="banner-info">
+            Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
+        </span>
         <div className="bannerSlider-container-buttons">
           <BiSolidUpArrow size={28} onClick={lastSlide} className="bannerSlider-container-arrows"></BiSolidUpArrow>
           <div 

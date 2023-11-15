@@ -89,6 +89,26 @@
   background-color: var(--secondary-color);
 }
 
+.banner-info{
+  position: absolute;
+  left: 0; bottom: 0;
+  padding: 10px;
+  color: white;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.banner-info a{
+  border-bottom: 2px solid white;
+  color: white;
+  text-decoration: none;
+  transition: .1s ease-in-out;
+}
+
+.banner-info a:hover{
+  border-bottom: 4px solid var(--main-color);
+}
+
 @media (max-width: 750px) {
   .bannerSlider{
     height: calc(50vw + 40px);
@@ -127,5 +147,10 @@
     color: var(--main-color);
     align-self: center;
     transform: rotate(270deg);
+  }
+
+  .banner-info{
+    top: 0; right: 0;
+    bottom: unset; left: unset;
   }
 }
