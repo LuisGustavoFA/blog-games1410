@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: calc(100vw - 17px);
   height: 75vh;
   position: relative;
   background-size: cover;
@@ -15,7 +15,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 75%;
+  width: 80%;
   height: 60vh;
   background: linear-gradient(to right, #000000c1, #00000089);
   border: 2px solid var(--main-color);
@@ -27,7 +27,7 @@
   color: #FFF;
   font-size: 3.5vw;
   font-weight: bold;
-  padding: 40px;
+  margin: auto;
   text-align: center;
   text-decoration: none;
 }
@@ -58,7 +58,7 @@
   border-radius: 5px;
 }
 
-.bannerSlider-container-middleButton{
+.selected-slide{
   transform: scale(1.25);
 }
 

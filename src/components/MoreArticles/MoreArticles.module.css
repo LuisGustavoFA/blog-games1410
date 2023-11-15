@@ -1,0 +1,26 @@
+.moreArticles_container{
+  width: 80%;
+  margin-bottom: 100px;
+}
+
+.moreArticles_container_title{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.moreArticles_container_cards{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+}
+
+@media (max-width: 800px) {
+  .moreArticles_container{
+    width: 90%;
+  }
+
+  .moreArticles_container_cards{
+    flex-direction: column;
+  }
+}

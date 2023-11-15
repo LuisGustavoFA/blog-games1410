@@ -1,35 +1,33 @@
-.card {
-  display: flex;
-  align-items: center;
-  height: 200px;
+.card{
+  width: 33%;
   text-decoration: none;
 }
 
-.card-banner{
-  height: 100%;
+.cardImage{
+  width: 100%;
   aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
 }
 
-.card-data{
+.cardData{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  height: 90%;
-  width: 50%;
-  margin-left: 20px;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 10px;
+  width: 95%;
+  height: 140px;
+  margin: auto;
+  margin-top: 10px;
 }
 
-.card-tags-case{
+.cardTags{
   display: flex;
-  flex-direction: row;
-  gap: 6px;
+  gap: 5px;
 }
 
-.card-tag {
+.cardTag{
   text-decoration: none;
   color: black;
   font-size: .9rem;
@@ -42,18 +40,19 @@
   transition: background-color .2s ease-in-out;
 }
 
-.card-tag:hover{
+.cardTag:hover{
   background-color: var(--secondary-color);
 }
 
-.card-link{
+.cardTitle{
+  text-align: center;
   color: var(--text-color);
   transition: color .2s ease-in-out;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.card-info{
+.cardInfo{
   color: var(--text-color);
   align-self: flex-end;
   margin-top: auto;
@@ -62,46 +61,24 @@
   transition: color .2s ease-in-out;
 }
 
-.card-info a{
+.cardInfo a{
   border-bottom: 2px solid var(--text-color);
   color: var(--text-color);
   text-decoration: none;
   transition: .2s ease-in-out;
 }
 
-.card-info a:hover{
+.cardInfo a:hover{
   border-bottom: 4px solid var(--main-color);
 }
 
-.card-underline{
-  width: 100%;
-  border-bottom: 1px solid var(--text-color);
-  transition: border-bottom .2s ease-in-out;
+@media (max-width: 800px) {
+  .card{
+    width: 100%;
+  }
 
-}
-.card-underline:last-child {
-  border-bottom: 1px solid transparent;
-}
-
-@media (max-width: 1150px) {
-  .card {
-    flex-direction: column;
-    background-color: var(--background-color);
+  .cardData{
     height: auto;
-  }
-
-  .card-underline {
-    display: none;
-  }
-
-  .card-banner{
-    width: 100%;
-  }
-
-  .card-data{
-    width: 100%;
-    height: 55%;
-    margin-left: 0;
-    padding: 12px 0 0;
+    padding-bottom: 20px
   }
 }

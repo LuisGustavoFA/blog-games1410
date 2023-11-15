@@ -25,8 +25,8 @@ function BannerSlider() {
     currentSlide === 0 ? setCurrentSlide(sliderSize) : setCurrentSlide(currentSlide - 1);
   }
 
-  useEffect(()=> {
-    const inter = setInterval(()=> {
+  useEffect(() => {
+    const inter = setInterval(() => {
       nextSlide();
     }, 7500);
     return () => {
@@ -46,21 +46,24 @@ function BannerSlider() {
           })}
         </span>
         <span className="banner-info">
-            Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
+          Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
         </span>
         <div className="bannerSlider-container-buttons">
           <BiSolidUpArrow size={28} onClick={lastSlide} className="bannerSlider-container-arrows"></BiSolidUpArrow>
-          <div 
-            onClick={lastSlide} 
+          <div
+            id='slide-up'
+            onClick={lastSlide}
             style={{ backgroundImage: `url(${noticias[currentSlide === 0 ? sliderSize : currentSlide - 1]?.banner})` }}>
           </div>
-          <div 
-            className='bannerSlider-container-middleButton' 
+          <div
+            id='slide-middle'
+            className='selected-slide'
             onClick={() => navigate(`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`)}
             style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
           </div>
-          <div 
-            onClick={nextSlide} 
+          <div
+            id='slide-down'
+            onClick={nextSlide}
             style={{ backgroundImage: `url(${noticias[currentSlide === sliderSize ? 0 : currentSlide + 1]?.banner})` }}>
           </div>
           <BiSolidDownArrow size={28} onClick={nextSlide} className="bannerSlider-container-arrows"></BiSolidDownArrow>
