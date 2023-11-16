@@ -50,7 +50,7 @@ function BannerSlider() {
         </span>
         <div className="bannerSlider-container-buttons">
           <span className="bannerSlider-container-arrows" onClick={lastSlide}>
-            <BiSolidUpArrow size={28} className="bannerSlider-container-arrow"></BiSolidUpArrow>
+            <BiSolidUpArrow size={32} className="bannerSlider-container-arrow"></BiSolidUpArrow>
           </span>
           <div
             id='slide-up'
@@ -69,7 +69,7 @@ function BannerSlider() {
             style={{ backgroundImage: `url(${noticias[currentSlide === sliderSize ? 0 : currentSlide + 1]?.banner})` }}>
           </div>
           <span className="bannerSlider-container-arrows" onClick={lastSlide}>
-            <BiSolidDownArrow size={28} className="bannerSlider-container-arrow"></BiSolidDownArrow>
+            <BiSolidDownArrow size={32} className="bannerSlider-container-arrow"></BiSolidDownArrow>
           </span>
         </div>
       </div>

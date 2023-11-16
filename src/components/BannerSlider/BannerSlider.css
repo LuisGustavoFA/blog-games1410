@@ -78,7 +78,7 @@
 .banner-tag {
   text-decoration: none;
   color: black;
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: bold;
   background-color: var(--main-color);
   padding: 2.5px 5px;
@@ -97,7 +97,7 @@
   left: 0; bottom: 0;
   padding: 10px;
   color: white;
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: bold;
 }
 
@@ -136,8 +136,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 10px 0;
-    margin-left: unset;
+    padding: 12px 0;
     width: 100%;
   }
 
@@ -148,10 +147,10 @@
 
   
   .bannerSlider-container-arrows{
-    width: 8vw;
-    height: 16.3vw;
     position: absolute;
-    background-color: #000000b3;
+    width: 8vw;
+    height: 16.5vw;
+    background-color: #0000007f;
     color: var(--main-color);
   }
 
