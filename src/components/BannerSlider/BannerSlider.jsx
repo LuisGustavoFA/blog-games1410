@@ -49,7 +49,9 @@ function BannerSlider() {
           Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
         </span>
         <div className="bannerSlider-container-buttons">
-          <BiSolidUpArrow size={28} onClick={lastSlide} className="bannerSlider-container-arrows"></BiSolidUpArrow>
+          <span className="bannerSlider-container-arrows" onClick={lastSlide}>
+            <BiSolidUpArrow size={28} className="bannerSlider-container-arrow"></BiSolidUpArrow>
+          </span>
           <div
             id='slide-up'
             onClick={lastSlide}
@@ -66,7 +68,9 @@ function BannerSlider() {
             onClick={nextSlide}
             style={{ backgroundImage: `url(${noticias[currentSlide === sliderSize ? 0 : currentSlide + 1]?.banner})` }}>
           </div>
-          <BiSolidDownArrow size={28} onClick={nextSlide} className="bannerSlider-container-arrows"></BiSolidDownArrow>
+          <span className="bannerSlider-container-arrows" onClick={lastSlide}>
+            <BiSolidDownArrow size={28} className="bannerSlider-container-arrow"></BiSolidDownArrow>
+          </span>
         </div>
       </div>
     </div>

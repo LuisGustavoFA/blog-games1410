@@ -36,6 +36,9 @@
   color: var(--main-color);
   width: 100%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bannerSlider-container-buttons{
@@ -124,12 +127,13 @@
   .bannerSlider-container-title{
     padding: 10px 0;
     padding-top: 12vw;
-    font-size: 6vw;
+    font-size: 5vw;
     width: 100%;
     height: 100%;
   }
 
   .bannerSlider-container-buttons{
+    position: relative;
     display: flex;
     flex-direction: row;
     padding: 10px 0;
@@ -142,13 +146,29 @@
     border: .5px solid var(--main-color);
   }
 
+  
   .bannerSlider-container-arrows{
-    width: 18vw;
+    width: 8vw;
+    height: 16.5vw;
+    position: absolute;
+    background-color: #000000b3;
     color: var(--main-color);
-    align-self: center;
-    transform: rotate(270deg);
   }
 
+  .bannerSlider-container-arrows:first-child {
+    left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .bannerSlider-container-arrows:last-child {
+    right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .bannerSlider-container-arrow{
+    transform: rotate(270deg);
+  }
+  
   .banner-info{
     top: 0; right: 0;
     bottom: unset; left: unset;

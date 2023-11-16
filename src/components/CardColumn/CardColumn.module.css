@@ -18,7 +18,6 @@
   gap: 10px;
   width: 95%;
   height: 140px;
-  margin: auto;
   margin-top: 10px;
 }
 
@@ -45,7 +44,6 @@
 }
 
 .cardTitle{
-  text-align: center;
   color: var(--text-color);
   transition: color .2s ease-in-out;
   font-size: 1.5rem;
