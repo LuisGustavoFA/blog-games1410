@@ -16,7 +16,7 @@
 .sandwichButton::before,
 .sandwichButton::after {
   width: 30px;
-  border-top: 4px solid #000000;
+  border-top: 4px solid #FFF;
 }
 
 .sandwichButton.active {
@@ -24,12 +24,12 @@
 }
 
 .sandwichButton.active::before {
-  border-color: #000000;
+  border-color: #FFF;
   transform: rotate(-45deg);
 }
 
 .sandwichButton.active::after {
-  border-color: #000000;
+  border-color: #FFF;
   position: relative;
   transform: rotate(45deg);
 }
