@@ -1,10 +1,10 @@
 import './TemplatePage.css';
-import { GoCloudOffline } from "react-icons/go";
+import { TbWorldX } from "react-icons/tb";
 
 const TemplatePage = () => {
   return(
     <main className='temp-main'>
-      <GoCloudOffline size={64} className='temp-main-cloud'/>
+      <TbWorldX size={100} className='temp-main-cloud'/>
       <h1>Página não encontrada.</h1>
     </main>
   )

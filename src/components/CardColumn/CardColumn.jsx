@@ -5,15 +5,9 @@ function CardColumn({ data }) {
   const { banner, title, info, tags } = data;
   const title_url = title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-  const reloadPage = () => {
-    setTimeout(() => {
-      window.location.reload();
-    }, 1);
-  };
-
   return (
     <>
-      <Link className={styles.card} to={`/article/${title_url}`} onClick={reloadPage}>
+      <Link className={styles.card} to={`/article/${title_url}`}>
         <div className={styles.cardImage} alt="banner da notícia" style={{ backgroundImage: `url(${banner})` }}></div>
         <div className={styles.cardData}>
           <span className={styles.cardTags}>

@@ -37,7 +37,7 @@ function BannerSlider() {
   return (
     <div className='bannerSlider' style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
       <div className='bannerSlider-container'>
-        <Link to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`} className='bannerSlider-container-title'>{noticias[currentSlide]?.title}</Link>
+        <Link className='bannerSlider-container-title' to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.title}</Link>
         <span className="banner-tags-case">
           {noticias[currentSlide]?.tags.map((tag, id) => {
             return (

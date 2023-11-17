@@ -17,7 +17,7 @@ function Article() {
     findArticle(title.replace(/-/g, " ")).then((resp) => {
       setArticle(resp);
     })
-  }, [])
+  }, [title])
 
   return (
     <>
@@ -38,7 +38,7 @@ function Article() {
             <h5>Por {article?.info?.autor}, {article?.info?.data}.</h5>
           </div>
         </section>
-        <MoreArticles actualArticle={article}/>
+        <MoreArticles/>
       </main>
     </>
   )
