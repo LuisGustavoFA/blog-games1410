@@ -23,29 +23,6 @@
   gap: 8px;
 }
 
-.card-tags-case{
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-}
-
-.card-tag {
-  text-decoration: none;
-  color: black;
-  font-size: .9rem;
-  font-weight: bold;
-  background-color: var(--main-color);
-  padding: 2.5px 5px;
-  border-radius: 5px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  transition: background-color .2s ease-in-out;
-}
-
-.card-tag:hover{
-  background-color: var(--secondary-color);
-}
-
 .card-link{
   color: var(--text-color);
   transition: color .2s ease-in-out;

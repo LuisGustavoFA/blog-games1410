@@ -40,7 +40,9 @@ function Header() {
         </ul>
       ) : (
         <nav>
-          <Link className="header-logo" to={"/home"}>GAMES BLOG</Link>
+          <div className="header-logo-case">
+            <Link className="header-logo" to={"/home"}>GAMES BLOG</Link>
+          </div>
 
           <ul className="header-pc">
             <li><Link to={"/search/noticia"}>Notícias</Link></li>
@@ -48,7 +50,7 @@ function Header() {
             <li><Link to={"/lists"}>Listas</Link></li>
           </ul>
 
-          <SearchBar id="pc-search-input" iconSize={25} />
+          <SearchBar id="pc-search-input" iconSize={30} />
 
           <div onClick={handleTheme} className="header-pc-night">
             {(darkMode) ? <BsMoonFill size={30} /> : <BsMoon size={30} />}

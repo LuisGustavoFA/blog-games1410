@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getData } from "../../database/DataApi";
-import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
+import { BiSolidUpArrow, BiSolidDownArrow, BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import './BannerSlider.css';
+import TagsCase from "../TagsCase/TagsCase";
 
 function BannerSlider() {
   const [noticias, setNoticias] = useState([]);
@@ -37,41 +38,60 @@ function BannerSlider() {
   return (
     <div className='bannerSlider' style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
       <div className='bannerSlider-container'>
+
+        {/* titulo */}
         <Link className='bannerSlider-container-title' to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.title}</Link>
-        <span className="banner-tags-case">
-          {noticias[currentSlide]?.tags.map((tag, id) => {
-            return (
-              <Link className='banner-tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
-            )
-          })}
-        </span>
+
+        {/* tags */}
+        <TagsCase tags={noticias[currentSlide]?.tags} banner/>
+
+        {/* autor */}
         <span className="banner-info">
           Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
         </span>
+
+        {/* botões/imagens */}
         <div className="bannerSlider-container-buttons">
+
+          {/* flecha cima */}
           <span className="bannerSlider-container-arrows" onClick={lastSlide}>
             <BiSolidUpArrow size={32} className="bannerSlider-container-arrow"></BiSolidUpArrow>
           </span>
+
+          {/* primeiro botão */}
           <div
-            id='slide-up'
+            className="back-slides"
             onClick={lastSlide}
             style={{ backgroundImage: `url(${noticias[currentSlide === 0 ? sliderSize : currentSlide - 1]?.banner})` }}>
+              <span className="in-arrows-first">
+                <BiSolidLeftArrow size={40} className="in-arrow"/>
+              </span>
           </div>
+
+          {/* botão do meio */}
           <div
-            id='slide-middle'
             className='selected-slide'
             onClick={() => navigate(`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`)}
             style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
           </div>
+
+          {/* último botão */}
           <div
-            id='slide-down'
+            className="back-slides"
             onClick={nextSlide}
             style={{ backgroundImage: `url(${noticias[currentSlide === sliderSize ? 0 : currentSlide + 1]?.banner})` }}>
+              <span className="in-arrows-last">
+                <BiSolidRightArrow size={40} className="in-arrow"/>
+              </span>
           </div>
+
+          {/* flecha baixo */}
           <span className="bannerSlider-container-arrows" onClick={lastSlide}>
             <BiSolidDownArrow size={32} className="bannerSlider-container-arrow"></BiSolidDownArrow>
           </span>
+
         </div>
+
       </div>
     </div>
   )

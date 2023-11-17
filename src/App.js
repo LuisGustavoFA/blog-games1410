@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/HomePage/HomePage';
 import Article from './components/Article/Article';
-import TemplatePage from './components/TemplatePage/TemplatePage'
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import SearchPage from './components/SearchPage/SearchPage';
 import ListPage from './components/ListPage/ListPage';
 
@@ -17,7 +17,7 @@ function App() {
           <Route path='/article/:title' element={<Article/>}/>
           <Route path='/list/:title' element={<ListPage/>}/>
           <Route path='/search/:search' element={<SearchPage/>}/>
-          <Route path='*' element={<TemplatePage/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       <Footer/>
     </Router>

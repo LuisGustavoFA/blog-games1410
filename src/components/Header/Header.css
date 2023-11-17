@@ -12,26 +12,31 @@
  .header nav {
    display: flex;
    justify-content: space-between;
+   gap: 16px;
    align-items: center;
    width: 80%;
    height: 100%;
    margin: auto;
  }
 
+ .header-logo-case {
+   width: 50%;
+ }
+
  .header-logo {
-   width: 30%;
-   font-size: 2rem;
-   font-weight: bold;
-   text-decoration: none;
-   text-shadow: 2px 2px #000;
-   color: #FFF;
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px #000;
+  text-wrap: nowrap;
  }
 
  .header-pc {
    display: flex;
-   justify-content: end;
+   padding: 0;
    gap: 30px;
-   width: 30%;
+   width: auto;
    list-style: none;
  }
 
@@ -64,9 +69,18 @@
  }
 
  @media (max-width: 1000px) {
-   .header-pc {
-     justify-content: space-around;
-   }
+  .header-logo-case {
+    width: auto;
+  }
+  .header-logo {
+    font-size: 1.2rem;
+  }
+  .header-pc {
+    overflow: hidden;
+  }
+  .header-pc a {
+    font-size: 1.1rem;
+  }
  }
 
  @media (max-width: 650px) {

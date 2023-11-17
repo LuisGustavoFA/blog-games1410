@@ -1,0 +1,33 @@
+.tags-case{
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.tags-case-banner{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.tag {
+  text-decoration: none;
+  color: white;
+  font-size: .9rem;
+  text-shadow: 1.5px 1.5px #000;
+  font-weight: bold;
+  background-color: var(--main-color);
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transition: background-color .2s ease-in-out;
+}
+
+.tag:hover{
+  filter: brightness(80%);
+}
