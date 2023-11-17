@@ -63,6 +63,7 @@
 
 .selected-slide{
   transform: scale(1.25);
+  z-index: 1;
 }
 
 .banner-info{
@@ -132,18 +133,19 @@
     display: flex;
     height: 100%;
     align-items: center;
+    justify-content: center;
     color: var(--main-color);
     backdrop-filter: brightness(60%);
   }
 
   .in-arrows-first{
     border-radius: 5px 0 0 5px;
+    justify-content: flex-start;
   }
 
   .in-arrows-last{
     border-radius: 0 5px 5px 0;
     justify-content: flex-end;
-    margin-left: 12.1%;
   }
 
   .in-arrow {
