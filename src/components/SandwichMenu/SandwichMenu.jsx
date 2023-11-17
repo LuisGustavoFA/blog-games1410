@@ -13,7 +13,7 @@ function SandwichMenu() {
     <>
       <div className={`${styles.sandwichButton} ${active ? styles.active : ''}`} onClick={handlerButton}></div>  
       <div className={`${styles.sandwich} ${active ? styles.active : ''}`}>
-        <ul className={styles.sandwichList}>
+        <ul className={`${styles.sandwichList} ${active ? styles.active : ''}`}>
           <Link className={styles.sandwichLinks} to={"/home"} onClick={handlerButton}>Página Inicial</Link>
           <Link className={styles.sandwichLinks} to={"/search/noticia"} onClick={handlerButton}>Notícias</Link>
           <Link className={styles.sandwichLinks} to={"/search/review"} onClick={handlerButton}>Reviews</Link>
