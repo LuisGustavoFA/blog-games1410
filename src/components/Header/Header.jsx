@@ -18,7 +18,10 @@ function Header() {
   }
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 650);
+    var int = setInterval(()=> {
+      setIsMobile(window.innerWidth < 650);
+      clearInterval(int);
+    }, 100);
   };
 
   useEffect(() => {
@@ -26,13 +29,13 @@ function Header() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [window.onresize]);
 
   return (
     <header className="header">
       {isMobile ? (
         <ul className="header-mobile">
-          <li><SandwichMenu /></li>
+          <li><SandwichMenu/></li>
           <li><SearchBar id="mobile-search-input" iconSize={35} /></li>
           <div onClick={handleTheme} className="header-mobile-night">
             {(darkMode) ? <BsMoonFill size={32} /> : <BsMoon size={32} />}
