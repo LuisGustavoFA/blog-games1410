@@ -41,7 +41,7 @@
   height: 0;
   background-color: var(--main-color);
   filter: opacity(90%);
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .sandwich.active {
@@ -52,13 +52,14 @@
 .sandwichList{
   display: none;
   flex-direction: row;
+  justify-content: space-between;
   height: 100%;
-  padding: 0;
+  padding: 0 12px;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
   list-style: none;
   color: white;
-  filter: drop-shadow(1.5px 1.5px #000);
+  filter: drop-shadow(2px 2px #000);
 }
 
 .sandwichList.active{
@@ -66,7 +67,6 @@
 }
 
 .sandwichLinks {
-  width: 25%;
   padding: 12px;
   border-radius: 10px;
   text-align: center;

@@ -7,15 +7,14 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <Link className="footer-link" to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">
-            <AiFillGithub size={30}/>
-            João Gabriel
+          <Link className="footer-case" to={"https://github.com/joaogabrielfa"} target="_blank" rel="noreferrer">
+            <AiFillGithub className="footer-icon" size={28}/>
+            <h2 className="footer-text">João Gabriel</h2>
           </Link>
-          <Link className="footer-link" to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">
-            <AiFillGithub size={30}/>
-            Luis Gustavo
+          <Link className="footer-case" to={"https://github.com/luisgustavofa"} target="_blank" rel="noreferrer">
+            <AiFillGithub className="footer-icon" size={28}/>
+            <h2 className="footer-text" >Luis Gustavo</h2>
           </Link>
-          <li>V1.08 13/11/23</li>
         </ul>
       </nav>
     </footer>

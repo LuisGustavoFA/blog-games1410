@@ -1,21 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 import SearchBar from "../SearchBar/SearchBar";
-import SandwichMenu from "../SandwichMenu/SandwichMenu";
-import changeTheme from "../../index";
-import { BsMoon, BsMoonFill } from 'react-icons/bs'
+import QuickMenu from "../QuickMenu/QuickMenu";
 import { useState, useEffect } from "react";
+import DarkToggle from "../DarkToggle/DarkToggle";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
-  const [darkMode, setDarkMode] = useState(false);
-
-  const handleTheme = () => {
-    if (darkMode) {
-      changeTheme("white", "black");
-    } else changeTheme("black", "white");
-    setDarkMode(!darkMode);
-  }
 
   const handleResize = () => {
     var int = setInterval(()=> {
@@ -35,11 +26,9 @@ function Header() {
     <header className="header">
       {isMobile ? (
         <ul className="header-mobile">
-          <li><SandwichMenu/></li>
-          <li><SearchBar id="mobile-search-input" iconSize={35} /></li>
-          <div onClick={handleTheme} className="header-mobile-night">
-            {(darkMode) ? <BsMoonFill size={32} /> : <BsMoon size={32} />}
-          </div>
+          <li><QuickMenu/></li>
+          <li><Link className="header-logo" to={"/home"}>GAMES BLOG</Link></li>
+          <li><SearchBar id="mobile-search-input" iconSize={35}/></li>
         </ul>
       ) : (
         <nav>
@@ -53,11 +42,8 @@ function Header() {
             <li><Link to={"/lists"}>Listas</Link></li>
           </ul>
 
-          <SearchBar id="pc-search-input" iconSize={30} />
-
-          <div onClick={handleTheme} className="header-pc-night">
-            {(darkMode) ? <BsMoonFill size={30} /> : <BsMoon size={30} />}
-          </div>
+          <SearchBar id="pc-search-input" iconSize={30}/>
+          <DarkToggle/>
         </nav>
       )}
     </header>

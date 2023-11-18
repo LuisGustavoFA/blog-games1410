@@ -112,10 +112,11 @@
   }
 
   .bannerSlider-container-buttons{
-    position: relative;
     flex-direction: row;
+    margin: auto;
     padding: 12px 0;
     width: 100%;
+    max-width: 550px;
     height: auto;
     max-height: 40%;
   }
