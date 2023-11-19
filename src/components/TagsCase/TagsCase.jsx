@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./TagsCase.css";
+import { format } from "../../functions/format";
 
 function TagsCase( { tags, banner = false } ) {
   const className = banner ? "-banner" : "";
@@ -8,7 +9,7 @@ function TagsCase( { tags, banner = false } ) {
     <span className={`tags-case${className}`}>
       {tags?.map((tag, id) => {
         return (
-          <Link className='tag' key={id} to={`/search/${tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{tag}</Link>
+          <Link className='tag' key={id} to={`/search/${format(tag)}`}>{tag}</Link>
         )
       })}
     </span>

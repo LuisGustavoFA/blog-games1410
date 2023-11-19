@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { getData } from '../../database/DataApi';
 import Card from '../Card/Card';
-
 import './SearchPage.css';
+import { format } from '../../functions/format';
 
 function SearchPage() {
   window.scrollTo(0, 0);
@@ -25,17 +25,17 @@ function SearchPage() {
 
   const checkTag = (noticia) => {
     return noticia?.tags.some((tag) => {
-      const normalizedTag = tag.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      const normalizedTag = format(tag);
       return normalizedTag.includes(search);
     });
   }
 
   const SearchNews = (noticia) => {
-    return noticia?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
-      || noticia?.subtitle.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
-      || noticia?.text.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
-      || noticia?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
-      || noticia?.info.data.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(search)
+    return format(noticia?.title).includes(search)
+      || format(noticia?.subtitle).includes(search)
+      || format(noticia?.text).includes(search)
+      || format(noticia?.info.autor).includes(search)
+      || format(noticia?.info.data).includes(search)
       || checkTag(noticia);
   }
 

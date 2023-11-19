@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom"
 import './ListCard.css';
+import { format } from "../../functions/format";
 
-function ListCard({ data }) {
-  const title_url = data.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  const title = data.title.toUpperCase();
-
+function ListCard({ lists }) {
   return (
-    <Link to={`/list/${title_url}`} className="list-card-link" href='#'>{title}</Link>
+    <div className="list-card">
+      <span className="list-card-title">LISTAS</span>
+      {lists.map((list) => {
+        return (
+          <Link
+            to={`/list/${format(list.title)}`}
+            className="list-card-link"
+            href='#'>
+            {(list.title?.length > 35 ? list.title.substring(0, 35) + '...' : list.title).toUpperCase()}
+          </Link>
+        )
+      })}
+    </div>
+
   )
 }
 

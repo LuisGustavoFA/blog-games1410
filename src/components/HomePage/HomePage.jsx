@@ -39,14 +39,7 @@ function HomePage() {
         </section>
 
         <section className="home-content-secondary">
-          <div className="list-card">
-            <span className="list-card-title">LISTAS</span>
-            {lists.map((list, id) => {
-              return (
-                <ListCard data={list} key={id}/>
-              )
-            })}
-          </div>
+          <ListCard lists={lists}/>
         </section>
 
       </section>

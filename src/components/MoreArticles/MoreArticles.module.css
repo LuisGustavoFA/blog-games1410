@@ -1,12 +1,13 @@
 .moreArticles_container{
   width: 80%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 
 .moreArticles_container_title{
   font-size: 1.8rem;
   font-weight: bold;
+  color: var(--text-color);
+  transition: .3s ease-in-out;
 }
 
 .moreArticles_container_cards{
@@ -14,11 +15,13 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 30px;
+  gap: 12px;
 }
 
 @media (max-width: 800px) {
   .moreArticles_container{
     width: 90%;
+    margin-bottom: 40px;
   }
 
   .moreArticles_container_cards{

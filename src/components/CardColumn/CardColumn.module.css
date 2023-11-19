@@ -16,38 +16,17 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  width: 95%;
+  width: 100%;
   height: 140px;
   margin-top: 10px;
 }
 
-.cardTags{
-  display: flex;
-  gap: 5px;
-}
-
-.cardTag{
-  text-decoration: none;
-  color: black;
-  font-size: .9rem;
-  font-weight: bold;
-  background-color: var(--main-color);
-  padding: 2.5px 5px;
-  border-radius: 5px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  transition: background-color .2s ease-in-out;
-}
-
-.cardTag:hover{
-  background-color: var(--secondary-color);
-}
-
 .cardTitle{
   color: var(--text-color);
-  transition: color .2s ease-in-out;
-  font-size: 1.5rem;
+  height: 50%;
+  font-size: 1.4rem;
   font-weight: bold;
+  transition: color .2s ease-in-out;
 }
 
 .cardInfo{

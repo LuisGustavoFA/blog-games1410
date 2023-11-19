@@ -32,6 +32,29 @@
   text-wrap: nowrap;
  }
 
+ .header-search{
+  color: #FFF;
+  filter: drop-shadow(2px 2px #000);
+ }
+
+ .header-search-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  background-color: #02495d;
+ }
+
+ .header-search-input{
+  width: calc(90% - 10px);
+  height: 14px;
+  padding: 10px;
+  border: none;
+  margin: auto;
+  font-size: 1rem;
+ }
+
  .header-pc {
    display: flex;
    padding: 0;

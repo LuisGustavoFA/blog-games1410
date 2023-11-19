@@ -36,7 +36,7 @@
 
 .article-horizontal-ad{
   width: 100%;
-  aspect-ratio: 21/9;
+  aspect-ratio: 4/1;
   background-image: url('https://bannerboo.com/upload/medialibrary/13a/851x315_b7f147f2ad77f-_15_.gif');
   background-size: cover;
   background-position: center;
@@ -109,5 +109,9 @@
 
   .article-vertical-ad {
     display: none;
+  }
+
+  .article-horizontal-ad {
+    aspect-ratio: 21/9;
   }
 }

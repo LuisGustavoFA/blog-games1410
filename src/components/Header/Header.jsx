@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import SearchBar from "../SearchBar/SearchBar";
-import QuickMenu from "../QuickMenu/QuickMenu";
+import SearchBarNew from "../SearchBarNew/SearchBarNew";
 import { useState, useEffect } from "react";
 import DarkToggle from "../DarkToggle/DarkToggle";
+import NavBarMobile from "../NavBarMobile/NavBarMobile";
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
 
   const handleResize = () => {
-    const it = setInterval(()=> {
+    const it = setInterval(() => {
       setIsMobile(window.innerWidth < 650);
       clearInterval(it);
     }, 100);
@@ -25,11 +25,7 @@ function Header() {
   return (
     <header className="header">
       {isMobile ? (
-        <ul className="header-mobile">
-          <li><QuickMenu/></li>
-          <li><Link className="header-logo" to={"/home"}>GAMES BLOG</Link></li>
-          <li><SearchBar id="mobile-search-input" iconSize={35}/></li>
-        </ul>
+        <NavBarMobile/>
       ) : (
         <nav>
           <div className="header-logo-case">
@@ -42,8 +38,8 @@ function Header() {
             <li><Link to={"/lists"}>Listas</Link></li>
           </ul>
 
-          <SearchBar id="pc-search-input" iconSize={30}/>
-          <DarkToggle/>
+          <SearchBarNew id="pc-search-input" iconSize={30} />
+          <DarkToggle />
         </nav>
       )}
     </header>

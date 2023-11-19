@@ -1,9 +1,7 @@
 :root {
   --theme-color: white;
   --text-color: black;
-  --main-color: rgb(5, 115, 145);
-  --gradient-color: linear-gradient( to right, var(--main-color) 40%, var(--secondary-color) 60%);
-  --text-shadow: 1px 1px 2px var(--main-color);
+  --main-color: #057391;
 }
 
 body {
@@ -18,7 +16,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
 }
 
 #root{
