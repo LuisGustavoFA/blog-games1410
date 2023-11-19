@@ -9,9 +9,9 @@ function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
 
   const handleResize = () => {
-    var int = setInterval(()=> {
+    const it = setInterval(()=> {
       setIsMobile(window.innerWidth < 650);
-      clearInterval(int);
+      clearInterval(it);
     }, 100);
   };
 
@@ -20,7 +20,7 @@ function Header() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [window.onresize]);
+  }, []);
 
   return (
     <header className="header">

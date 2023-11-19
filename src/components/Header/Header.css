@@ -64,16 +64,16 @@
 
  @media (max-width: 1000px) {
   .header-logo-case {
-    width: auto;
+    width: 30%;
   }
   .header-logo {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .header-pc {
     overflow: hidden;
   }
   .header-pc a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
  }
 

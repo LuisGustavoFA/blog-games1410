@@ -1,10 +1,12 @@
 import './DarkToggle.css';
 import changeTheme from "../../index";
-import { BsMoon, BsMoonFill } from 'react-icons/bs'
+import { BsMoonFill } from 'react-icons/bs'
+import { MdLightMode } from "react-icons/md";
 import { useState, useEffect } from "react";
 
-function DarkToggle() {
+function DarkToggle({mobile = false}) {
   const [darkMode, setDarkMode] = useState(false);
+  const iconSize = mobile? 28 : 32;
 
   const handleTheme = () => {
     const newDarkMode = !darkMode;
@@ -23,7 +25,7 @@ function DarkToggle() {
 
   return (
     <div onClick={handleTheme} className="dark-icon">
-      {darkMode ? <BsMoonFill size={32} /> : <BsMoon size={32} />}
+      {darkMode ? <BsMoonFill size={iconSize} /> : <MdLightMode size={iconSize} />}
     </div>
   );
 }
