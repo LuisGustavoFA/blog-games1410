@@ -35,12 +35,12 @@
   font-size: 1.6rem;
 }
 
-.header_mobile_search_button {
+.header_mobile_buttons {
   color: #FFF;
   filter: drop-shadow(2px 2px #000);
 }
 
-.header_mobile_search_div {
+.header_mobile_subheader {
   display: flex;
   position: fixed;
   left: 0;
@@ -49,10 +49,9 @@
   height: 0;
   background-color: var(--main-color);
   filter: saturate(60%);
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-.header_mobile_search_div.active {
+.header_mobile_subheader.active {
   height: 64px;
-
 }

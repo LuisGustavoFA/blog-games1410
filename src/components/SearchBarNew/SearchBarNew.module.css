@@ -38,6 +38,7 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #FFF;
-  background-color: #057391;
+  background-color: var(--main-color);
+  filter: saturate(60%);
   cursor: pointer;
 }

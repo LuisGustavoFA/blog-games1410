@@ -1,81 +1,20 @@
-.sandwichButton {
-  filter: drop-shadow(2px 2px #000);
-}
-
-.sandwichButton::before,
-.sandwichButton::after {
-  content: '';
-  display: block;
-  margin-top: 6px;
-  top: -10px;
-  transition: 0.3s;
-}
-
-.sandwichButton,
-.sandwichButton::before,
-.sandwichButton::after {
-  width: 30px;
-  border-top: 4px solid #FFF;
-}
-
-.sandwichButton.active {
-  border-color: #00000000;
-}
-
-.sandwichButton.active::before {
-  border-color: #FFF;
-  transform: rotate(-45deg);
-}
-
-.sandwichButton.active::after {
-  border-color: #FFF;
-  position: relative;
-  transform: rotate(45deg);
-}
-
-.sandwich {
-  position: fixed;
-  left: 0;
-  top: 64px;
-  width: 100%;
-  height: 0;
-  background-color: var(--main-color);
-  filter: saturate(60%);
-  transition: .3s ease-in-out;
-}
-
-.sandwich.active {
-  height: 64px;
-  color: white;
-}
-
-.sandwichList{
-  display: none;
+.quickMenuCase{
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100%;
-  padding: 0 12px;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 12px;
+  margin: 0;
   font-size: 1.4rem;
   list-style: none;
-  color: white;
   filter: drop-shadow(2px 2px #000);
 }
 
-.sandwichList.active{
-  display: flex;
-}
-
-.sandwichLinks {
+.quickMenuLinks {
   padding: 12px;
-  border-radius: 10px;
   text-align: center;
-  color: #FFFFFF;
+  color: #FFF;
   text-decoration: none;
-}
-
-@media (min-width: 650px) {
-  .sandwichButtonContainer, .sandwich {
-    display: none;
-  }
 }
