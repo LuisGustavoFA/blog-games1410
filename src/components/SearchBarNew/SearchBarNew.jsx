@@ -4,7 +4,7 @@ import { BsSearch } from 'react-icons/bs';
 import { format } from '../../functions/format';
 import styles from './SearchBarNew.module.css';
 
-function SearchBarNew({mobile}) {
+function SearchBarNew({mobile = false}) {
   const location = useLocation();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
@@ -32,7 +32,7 @@ function SearchBarNew({mobile}) {
         onChange={handleChange}
       />
       <button type='submit' className={styles.searchBar_button}>
-        <BsSearch size={18} />
+        <BsSearch size={20} />
       </button>
     </form>
   );

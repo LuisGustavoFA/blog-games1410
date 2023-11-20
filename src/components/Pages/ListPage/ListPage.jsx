@@ -1,5 +1,5 @@
 import './ListPage.css';
-import { findList } from "../../database/DataApi";
+import { findList } from "../../../database/DataApi";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 

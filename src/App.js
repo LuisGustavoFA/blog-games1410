@@ -1,20 +1,20 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Header from './components/Header/Header';
+import HeaderHandler from './components/HeaderHandler/HeaderHandler';
 import Footer from './components/Footer/Footer';
-import HomePage from './components/HomePage/HomePage';
-import Article from './components/Article/Article';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import SearchPage from './components/SearchPage/SearchPage';
-import ListPage from './components/ListPage/ListPage';
+import HomePage from './components/Pages/HomePage/HomePage';
+import ArticlePage from './components/Pages/ArticlePage/ArticlePage';
+import ErrorPage from './components/Pages/ErrorPage/ErrorPage';
+import SearchPage from './components/Pages/SearchPage/SearchPage';
+import ListPage from './components/Pages/ListPage/ListPage';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <HeaderHandler/>
         <Routes>
           <Route element={<HomePage/>} path=''/>
           <Route element={<HomePage/>} path='/home'/>
-          <Route element={<Article/>} path='/article/:title'/>
+          <Route element={<ArticlePage/>} path='/article/:title'/>
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
           <Route element={<ErrorPage/>} path='*'/>

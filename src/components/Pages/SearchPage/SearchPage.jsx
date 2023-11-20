@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { getData } from '../../database/DataApi';
-import Card from '../Card/Card';
+import { getData } from '../../../database/DataApi';
+import Card from '../../Card/Card';
 import './SearchPage.css';
-import { format } from '../../functions/format';
+import { format } from '../../../functions/format';
 
 function SearchPage() {
   window.scrollTo(0, 0);
