@@ -6,7 +6,7 @@
 
 .cardReview_container{
   position: relative;
-  width: 200px;
+  width: 220px;
   aspect-ratio: 5/7;
   border-radius: 8px;
   overflow: hidden;
@@ -44,7 +44,7 @@
   font-size: 1.1rem;
   text-align: center;
   font-weight: bold;
-  width: 200px;
+  width: 220px;
   color: var(--text-color);
   transition: .2s ease-in-out;
 }
