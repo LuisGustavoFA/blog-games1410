@@ -7,7 +7,7 @@ function CardReview({image, title, score}) {
         <div className={styles.cardReview_container_image} style={{ backgroundImage: `url('${image}')` }}></div>
         <div className={styles.cardReview_container_score}>{score}</div>
       </div>
-      <span className={styles.cardReview_title}>Review: {title}</span>
+      <span className={styles.cardReview_title}>{title}</span>
     </div>
   )
 }

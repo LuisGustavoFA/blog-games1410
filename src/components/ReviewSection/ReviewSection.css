@@ -1,0 +1,41 @@
+.reviews-case {
+  width: 80%;
+  margin: 25px 0;
+}
+
+.reviews-title {
+  color: var(--text-color);
+  overflow: hidden;
+  margin: 16px 0;
+  transition: .2s ease-in-out;
+}
+
+.reviews-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  overflow: scroll;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+}
+
+.reviews-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reviews-cards::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 650px) {
+  .reviews-case {
+    width: 95%;
+    padding: 0;
+    margin: 8px 0;
+  }
+
+  .reviews-cards::-webkit-scrollbar {
+    display: none;
+  }
+}

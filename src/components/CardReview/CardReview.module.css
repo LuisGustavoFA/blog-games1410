@@ -6,7 +6,7 @@
 
 .cardReview_container{
   position: relative;
-  width: 230px;
+  width: 200px;
   aspect-ratio: 5/7;
   border-radius: 8px;
   overflow: hidden;
@@ -41,9 +41,16 @@
 }
 
 .cardReview_title{
+  font-size: 1.1rem;
   text-align: center;
   font-weight: bold;
-  width: 230px;
+  width: 200px;
   color: var(--text-color);
   transition: .2s ease-in-out;
+}
+
+@media (max-height: 650px) {
+  .cardReview_container_image:hover{
+    transform: none;
+  }
 }

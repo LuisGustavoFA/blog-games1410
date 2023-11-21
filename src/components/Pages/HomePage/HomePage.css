@@ -8,14 +8,6 @@
   transition: background-color .2s ease-in-out;
 }
 
-.home-reviews {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  width: 80%;
-  margin: 25px 0;
-}
-
 .home-content{
   display: flex;
   justify-content: space-between;
@@ -50,8 +42,6 @@
   transition: .2s ease-in-out;
 }
 
-
-
 @media (max-width: 650px) {
   .home {
     margin-top: 64px;
@@ -63,13 +53,10 @@
 
   .home-content-main{
     width: 100%;
+    padding: 0;
   }
 
   .home-content-secondary{
-    display: none;
-  }
-
-  .home-reviews{
     display: none;
   }
   

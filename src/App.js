@@ -7,6 +7,7 @@ import ErrorPage from './components/Pages/ErrorPage/ErrorPage';
 import SearchPage from './components/Pages/SearchPage/SearchPage';
 import ListPage from './components/Pages/ListPage/ListPage';
 import ScrollButton from './components/ScrollButton/ScrollButton';
+import ThemeHandler from './components/ThemeHandler/ThemeHandler';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Routes>
       <Footer/>
       <ScrollButton/>
+      <ThemeHandler/>
     </Router>
   );
 }
