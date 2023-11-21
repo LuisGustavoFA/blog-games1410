@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import style from './Header.module.css';
 import SearchBarNew from "../SearchBarNew/SearchBarNew";
 import DarkToggle from "../DarkToggle/DarkToggle";
+import { scrollTop } from '../../functions/scrolltop';
 
 function Header() {
   return (
     <header className={style.header}>
       <nav>
         <div className={style.header_logo_case}>
-          <Link className={style.header_logo} to={"/home"}>GAMES BLOG</Link>
+          <Link className={style.header_logo} to={"/home"} onClick={scrollTop} >GAMES BLOG</Link>
         </div>
 
         <ul className={style.header_pc}>

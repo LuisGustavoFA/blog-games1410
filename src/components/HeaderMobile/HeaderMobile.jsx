@@ -6,6 +6,7 @@ import { MdMenu } from "react-icons/md";
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import SearchBarNew from '../SearchBarNew/SearchBarNew';
+import { scrollTop } from '../../functions/scrolltop';
 
 function HeaderMobile() {
   const [currentSubheader, setCurrentSubheader] = useState(null);
@@ -37,7 +38,7 @@ function HeaderMobile() {
             <MdMenu className={styles.header_mobile_buttons} size={32} onClick={() => handleSubheader('quickMenu')}/>
           }
         </li>
-        <li><Link className={styles.header_mobile_logo} to={"/home"}>GAMES BLOG</Link></li>
+        <li><Link className={styles.header_mobile_logo} to={"/home"} onClick={scrollTop}>GAMES BLOG</Link></li>
         <li>
           {currentSubheader === 'search' ?
             <RxCross1 className={styles.header_mobile_buttons} size={32} onClick={() => handleSubheader('search')}/> :

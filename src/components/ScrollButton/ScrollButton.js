@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "./ScrollButton.css";
 import { RxPinTop } from "react-icons/rx";
+import { scrollTop } from '../../functions/scrolltop';
 
 function ScrollButton() {
   const [active, setActive] = useState(false);
-
-  const scrollTop = () => {
-    window.scrollTo(0, 0);
-  }
-
+  
   const handleActivation = () => {
     if (window.scrollY > 300) setActive(true);
     else setActive(false);

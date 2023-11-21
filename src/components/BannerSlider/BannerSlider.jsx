@@ -9,6 +9,7 @@ import TagsCase from "../TagsCase/TagsCase";
 function BannerSlider() {
   const [noticias, setNoticias] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [pageVisible, setPageVisible] = useState(true);
   const sliderSize = 6;
   const navigate = useNavigate();
 
@@ -26,14 +27,22 @@ function BannerSlider() {
     currentSlide === 0 ? setCurrentSlide(sliderSize) : setCurrentSlide(currentSlide - 1);
   }
 
+  const visibilityHandler = () => {
+    setPageVisible(!document.hidden);
+  }
+
   useEffect(() => {
     const inter = setInterval(() => {
-      nextSlide();
-    }, 7500);
+      if (pageVisible) nextSlide();
+    }, 7000);
+
+    document.addEventListener("visibilitychange", visibilityHandler);
+
     return () => {
       clearInterval(inter);
+      document.removeEventListener("visibilitychange", visibilityHandler);
     };
-  }, [currentSlide]);
+  }, [currentSlide, pageVisible]);
 
   return (
     <div className='bannerSlider' style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
