@@ -1,0 +1,49 @@
+.cardReview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardReview_container{
+  position: relative;
+  width: 230px;
+  aspect-ratio: 5/7;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardReview_container_image{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: .5s;
+}
+
+.cardReview_container_image:hover{
+  transform: scale(1.1);
+}
+
+.cardReview_container_score{
+  position: absolute;
+  bottom: 0; left: 0;
+  padding: 8px 10px;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: var(--main-color);
+  color: #FFF;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  box-shadow: 2px 2px black;
+  text-shadow: 1.5px 1.5px #000;
+}
+
+.cardReview_title{
+  text-align: center;
+  font-weight: bold;
+  width: 230px;
+  color: var(--text-color);
+  transition: .2s ease-in-out;
+}

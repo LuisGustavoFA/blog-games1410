@@ -86,7 +86,7 @@ function BannerSlider() {
           </div>
 
           {/* flecha baixo */}
-          <span className="bannerSlider-container-arrows" onClick={lastSlide}>
+          <span className="bannerSlider-container-arrows" onClick={nextSlide}>
             <BiSolidDownArrow size={32} className="bannerSlider-container-arrow"></BiSolidDownArrow>
           </span>
 

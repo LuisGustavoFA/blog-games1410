@@ -67,7 +67,7 @@
     height: auto;
   }
 
-  .card-underline {
+  .card-underline{
     display: none;
   }
 
@@ -80,5 +80,9 @@
     height: 55%;
     margin-left: 0;
     padding: 12px 0 0;
+  }
+
+  .card-link{
+    font-size: 1.4rem;
   }
 }

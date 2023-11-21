@@ -8,6 +8,14 @@
   transition: background-color .2s ease-in-out;
 }
 
+.home-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 80%;
+  margin: 25px 0;
+}
+
 .home-content{
   display: flex;
   justify-content: space-between;
@@ -61,7 +69,9 @@
     display: none;
   }
 
-  
+  .home-reviews{
+    display: none;
+  }
   
   .home-vertical-ad {
     display: none;

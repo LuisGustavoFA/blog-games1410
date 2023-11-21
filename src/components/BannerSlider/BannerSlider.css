@@ -17,7 +17,7 @@
   align-items: center;
   width: 80%;
   height: 90%;
-  background: linear-gradient(to right, #000000c1, #00000089);
+  background: linear-gradient(to right, #000000af, #00000077);
   border: 2px solid var(--main-color);
   border-radius: 12px;
 }
@@ -104,10 +104,12 @@
   }
 
   .bannerSlider-container-title{
-    padding: 10px 0;
-    padding-top: 40px;
-    font-size: 1.4rem;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    font-size: 1.5rem;
+    width: 95%;
     height: 60%;
   }
 

@@ -6,6 +6,7 @@ import ArticlePage from './components/Pages/ArticlePage/ArticlePage';
 import ErrorPage from './components/Pages/ErrorPage/ErrorPage';
 import SearchPage from './components/Pages/SearchPage/SearchPage';
 import ListPage from './components/Pages/ListPage/ListPage';
+import ScrollButton from './components/ScrollButton/ScrollButton';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>
+      <ScrollButton/>
     </Router>
   );
 }
