@@ -4,9 +4,17 @@
   justify-content: center;
 }
 
+.cardReview:first-of-type{
+  margin-left: 10%;
+}
+
+.cardReview:last-of-type{
+  margin-right: 10%;
+}
+
 .cardReview_container{
   position: relative;
-  width: 220px;
+  width: 235px;
   aspect-ratio: 5/7;
   border-radius: 8px;
   overflow: hidden;
@@ -49,8 +57,20 @@
   transition: .2s ease-in-out;
 }
 
-@media (max-height: 650px) {
+@media (max-width: 650px) {
   .cardReview_container_image:hover{
     transform: none;
+  }
+
+  .cardReview:first-of-type{
+    margin-left: 2.5%;
+  }
+  
+  .cardReview:last-of-type{
+    margin-right: 2.5%;
+  }
+
+  .cardReview_container, .cardReview_title{
+    width: 150px;
   }
 }

@@ -1,24 +1,30 @@
 .reviews-case {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 25px 0;
 }
 
 .reviews-title {
+  width: 80%;
   color: var(--text-color);
   overflow: hidden;
-  margin: 16px 0;
+  margin: 16px auto;
   transition: .2s ease-in-out;
 }
 
 .reviews-cards {
+  width: 100%;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
   overflow: scroll;
   overflow-y: hidden;
   padding-bottom: 12px;
   scroll-behavior: smooth;
+}
+
+.reviews-cards:first-child{
+  transform: scale(1.5);
 }
 
 .reviews-cards::-webkit-scrollbar {
@@ -64,9 +70,13 @@
 
 @media (max-width: 650px) {
   .reviews-case {
-    width: 95%;
+    width: 100%;
     padding: 0;
     margin: 8px 0;
+  }
+
+  .reviews-title{
+    width: 95%;
   }
 
   .reviews-arrows-case-left, .reviews-arrows-case-right {
