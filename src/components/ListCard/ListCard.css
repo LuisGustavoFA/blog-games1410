@@ -2,31 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: auto;
-  padding: 10px;
-  gap: 4px;
-  border: 2px solid var(--text-color);
-  border-radius: 5px;
-  transition: .3s ease-in-out;
-}
-
-.list-card-title{
-  color: var(--text-color);
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.8rem;
-  cursor: default;
-  transition: color .2s ease-in-out;
-}
-
-.list-card-title::after{
-  content: '';
-  display: block;
-  margin: auto;
-  margin-top: -2px;
-  width: 25%;
-  border-top: 3px solid var(--text-color);
-  transition: .3s;
+  gap: 8px;
 }
 
 .list-card-link{
@@ -34,7 +10,6 @@
   font-weight: 600;
   padding: 8px;
   text-decoration: none;
-  text-align: center;
   color: var(--text-color);
   border-radius: 8px;
   transition: .2s ease-in-out;
@@ -48,15 +23,13 @@
 .list-card-link::after{
   content: '';
   display: block;
-  margin: auto;
-  margin-top: 2px;
-  width: 8px;
+  width: 100%;
   border-top: 3px solid var(--text-color);
-  transition: .3s;
+  transition: .2s ease-in-out;
 }
 
 .list-card-link:hover::after {
-  width: 100%;
+  border-color: var(--main-color);
 }
 
 @media (max-width: 650px) {

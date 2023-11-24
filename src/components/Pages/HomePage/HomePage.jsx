@@ -30,6 +30,7 @@ function HomePage() {
       <ReviewSection/>
       <section className="home-content">
         <section className="home-content-main">
+          <h2 className="home-content-title">ÚLTIMAS NOTÍCIAS</h2>
           {noticias.map((noticia, id) => {
             const isReview = noticia.tags.includes("REVIEW");
             if (!isReview) {
@@ -44,6 +45,7 @@ function HomePage() {
         </section>
 
         <section className="home-content-secondary">
+          <h2 className="home-content-title">ÚLTIMAS LISTAS</h2>
           <ListCard lists={lists}/>
         </section>
 

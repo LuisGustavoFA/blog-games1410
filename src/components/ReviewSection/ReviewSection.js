@@ -36,14 +36,16 @@ function ReviewSection() {
     const reviewsCards = reviewsCardsRef.current;
     handleActivation();
     reviewsCards.addEventListener("scroll", handleActivation);
+    window.addEventListener('resize', handleActivation);
     return () => {
       reviewsCards.removeEventListener("scroll", handleActivation);
+      window.removeEventListener('resize', handleActivation);
     };
   }, [])
 
   return (
     <div className="reviews-case">
-      <h2 className="reviews-title">Reviews mais recentes:</h2>
+      <h2 className="reviews-title">ÚLTIMAS REVIEWS</h2>
       <section className="reviews-cards" ref={reviewsCardsRef}>
         <span className={`reviews-arrows-case-left ${leftArrowActive ? " active" : ""}`} onClick={() => scroll("left")}>
           <FaArrowLeft className='reviews-arrows' size={38}/>
@@ -53,6 +55,8 @@ function ReviewSection() {
           const isReview = noticia.tags.includes("REVIEW");
           return (isReview && <CardReview data={noticia}/>);
         })}
+
+        <CardReview viewMore/>
 
         {/* <CardReview title={'Resident Evil 4'} score={'95'} image={'https://cdn.promo.capcomusa.com/boxart/157136.png'}/>
         <CardReview title={'Resident Evil 7'} score={'90'} image={'https://cdn.promo.capcomusa.com/boxart/16073.png'}/>

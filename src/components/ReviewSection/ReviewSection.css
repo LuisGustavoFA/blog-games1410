@@ -9,6 +9,9 @@
   margin: 0;
   color: var(--text-color);
   transition: .2s ease-in-out;
+  text-align: center;
+  text-decoration: underline 6px var(--main-color);
+  margin-bottom: 8px;
 }
 
 .reviews-cards {
