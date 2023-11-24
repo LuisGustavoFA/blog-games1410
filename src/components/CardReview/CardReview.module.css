@@ -4,17 +4,17 @@
   justify-content: center;
 }
 
-.cardReview:first-of-type{
+/* .cardReview:first-of-type{
   margin-left: 10%;
 }
 
 .cardReview:last-of-type{
   margin-right: 10%;
-}
+} */
 
 .cardReview_container{
   position: relative;
-  width: 235px;
+  width: 220px;
   aspect-ratio: 5/7;
   border-radius: 8px;
   overflow: hidden;
@@ -72,5 +72,6 @@
 
   .cardReview_container, .cardReview_title{
     width: 150px;
+    font-size: 1rem;
   }
 }

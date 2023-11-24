@@ -1,19 +1,20 @@
 .reviews-case {
   position: relative;
-  width: 100%;
+  width: 80%;
   margin: 25px 0;
 }
 
 .reviews-title {
   width: 80%;
+  padding: 8px 0;
+  margin: 0;
   color: var(--text-color);
-  overflow: hidden;
-  margin: 16px auto;
   transition: .2s ease-in-out;
 }
 
 .reviews-cards {
   width: 100%;
+  margin: auto;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -21,10 +22,6 @@
   overflow-y: hidden;
   padding-bottom: 12px;
   scroll-behavior: smooth;
-}
-
-.reviews-cards:first-child{
-  transform: scale(1.5);
 }
 
 .reviews-cards::-webkit-scrollbar {
