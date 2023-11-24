@@ -5,6 +5,7 @@ import { BiSolidUpArrow, BiSolidDownArrow, BiSolidLeftArrow, BiSolidRightArrow }
 import { Link } from "react-router-dom";
 import './BannerSlider.css';
 import TagsCase from "../TagsCase/TagsCase";
+import { format } from "../../functions/format";
 
 function BannerSlider() {
   const [noticias, setNoticias] = useState([]);
@@ -80,7 +81,7 @@ function BannerSlider() {
           {/* botão do meio */}
           <div
             className='selected-slide'
-            onClick={() => navigate(`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`)}
+            onClick={() => navigate(format(`/article/${format(noticias[currentSlide]?.title)}`))}  
             style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
           </div>
 

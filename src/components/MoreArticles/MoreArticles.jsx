@@ -27,7 +27,7 @@ function MoreArticles() {
 
   return (
     <section className={styles.moreArticles_container}>
-      <span className={styles.moreArticles_container_title}>Mais Notícias</span>
+      <span className={styles.moreArticles_container_title}>Mais Artigos</span>
       <div className={styles.moreArticles_container_cards}>
         {noticias.map((noticia, id) => {
           return (

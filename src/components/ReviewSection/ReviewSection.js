@@ -27,7 +27,7 @@ function ReviewSection() {
     const reviewsCards = reviewsCardsRef.current;
     const currentScroll = reviewsCards.scrollLeft;
     const maxScroll = reviewsCards.scrollWidth - reviewsCards.clientWidth;
-    
+
     setLeftArrowActive(currentScroll >= 1);
     setRightArrowActive(currentScroll < maxScroll -1);
   }
@@ -51,7 +51,7 @@ function ReviewSection() {
 
         {noticias.map((noticia) => {
           const isReview = noticia.tags.includes("REVIEW");
-          return (isReview && <CardReview title={noticia.title} score={'86'} image={noticia.banner}/>);
+          return (isReview && <CardReview data={noticia}/>);
         })}
 
         {/* <CardReview title={'Resident Evil 4'} score={'95'} image={'https://cdn.promo.capcomusa.com/boxart/157136.png'}/>

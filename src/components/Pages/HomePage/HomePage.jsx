@@ -4,7 +4,6 @@ import { getData, getListData } from "../../../database/DataApi";
 import Card from "../../Card/Card";
 import ListCard from "../../ListCard/ListCard";
 import BannerSlider from "../../BannerSlider/BannerSlider";
-import CardReview from "../../CardReview/CardReview";
 import ReviewSection from "../../ReviewSection/ReviewSection";
 
 function HomePage() {
@@ -32,12 +31,15 @@ function HomePage() {
       <section className="home-content">
         <section className="home-content-main">
           {noticias.map((noticia, id) => {
-            return (
-              <React.Fragment key={id}>
-                <Card data={noticia} key={id}/>
-                {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
-              </React.Fragment>
-            )
+            const isReview = noticia.tags.includes("REVIEW");
+            if (!isReview) {
+              return (
+                <React.Fragment key={id}>
+                  <Card data={noticia} key={id}/>
+                  {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
+                </React.Fragment>
+              )
+            }
           })}
         </section>
 
