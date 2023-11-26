@@ -5,7 +5,11 @@ export const getData = async () => {
   try {
     const dataJSON = await fetch(API_URL).then(resp => resp.json());
     const data = [...dataJSON];
-    return data;
+    return data.sort((a, b) => {
+      const dateA = new Date(a.info.time).getTime();
+      const dateB = new Date(b.info.time).getTime();
+      return dateB - dateA;
+    });
   } catch (error) {
     console.log('FETCH ERROR: ', error);
     return [];

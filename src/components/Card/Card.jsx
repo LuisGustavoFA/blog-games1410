@@ -1,3 +1,4 @@
+import { calctime } from '../../functions/calctime';
 import { format } from '../../functions/format';
 import TagsCase from '../TagsCase/TagsCase';
 import './Card.css';
@@ -6,6 +7,7 @@ import { Link } from "react-router-dom";
 function Card({ data }) {
   const { banner, title, info, tags } = data;
   const title_url = format(title);
+
   return (
     <>
       <Link className="card" to={`/article/${title_url}`}>
@@ -14,7 +16,7 @@ function Card({ data }) {
           <TagsCase tags={tags}/>
           <span className="card-link">{title}</span>
           <span className="card-info">
-            Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>
+            Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(data.info?.time)}
           </span>
         </div>
       </Link>

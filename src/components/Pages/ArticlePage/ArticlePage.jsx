@@ -4,6 +4,7 @@ import "./ArticlePage.css"
 import { findArticle } from "../../../database/DataApi";
 import React from "react";
 import MoreArticles from "../../MoreArticles/MoreArticles";
+import { calctime } from "../../../functions/calctime";
 
 function ArticlePage() {
   window.scrollTo(0, 0);
@@ -12,7 +13,7 @@ function ArticlePage() {
   const [article, setArticle] = useState([]);
 
   document.title = article.title;
-
+  
   useEffect(() => {
     findArticle(title.replace(/-/g, " ")).then((resp) => {
       setArticle(resp);
@@ -35,7 +36,7 @@ function ArticlePage() {
           <div className="article-horizontal-ad"></div>
           <div className="article-content-main">
             <p>{article.text}</p>
-            <h5>Por {article?.info?.autor}, {article?.info?.data}.</h5>
+            <h5>Por {article?.info?.autor}, {calctime(article.info?.time)}.</h5>
           </div>
         </section>
         <MoreArticles/>

@@ -2,6 +2,7 @@ import styles from './CardColumn.module.css';
 import TagsCase from '../TagsCase/TagsCase';
 import { Link } from "react-router-dom"
 import { format } from '../../functions/format';
+import { calctime } from '../../functions/calctime';
 
 function CardColumn({ data }) {
   const { banner, title, info, tags } = data;
@@ -15,7 +16,7 @@ function CardColumn({ data }) {
           <TagsCase tags={tags}/>
           <span className={styles.cardTitle}>{title}</span>
           <span className={styles.cardInfo}>
-            Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>
+            Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(info.time)}
           </span>
         </div>
       </Link>

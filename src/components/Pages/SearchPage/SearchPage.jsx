@@ -35,7 +35,7 @@ function SearchPage() {
       || format(noticia?.subtitle).includes(search)
       || format(noticia?.text).includes(search)
       || format(noticia?.info.autor).includes(search)
-      || format(noticia?.info.data).includes(search)
+      || format(noticia?.info.time).includes(search)
       || checkTag(noticia);
   }
 
