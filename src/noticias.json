@@ -1,58 +1,242 @@
-[
-  {
-    "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/10/6fd08b309a6ed2a3b70baa64b088f5104c538e2e.png?resize=1088%2C612&crop_strategy=smart",
-    "title": "Novo PS6 é anunciado pela Sony",
-    "subtitle": "Nova versão do console da 'nova geração' é anunciado pela gigante essa semana.",
-    "text": "Novo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela Sony.",
-    "info": "Escrito por Luis Gustavo em 14/10/2023."
-  },
-  {
-    "banner": "https://t2.tudocdn.net/687809?w=1200&h=1200",
-    "title": "GTA 6 tem data de lançamento anunciada",
-    "subtitle": "Jogo mais esperado dos ultimos anos tem data finalmente revelada por Rockstar.",
-    "text": "GTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciada.",
-    "info": "Escrito por Luis Gustavo em 15/10/2023."
-  },
-  {
-    "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/10/6fd08b309a6ed2a3b70baa64b088f5104c538e2e.png?resize=1088%2C612&crop_strategy=smart",
-    "title": "Novo PS5 é anunciado pela Sony",
-    "subtitle": "Nova versão do console da 'nova geração' é anunciado pela gigante essa semana.",
-    "text": "Novo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela Sony.",
-    "info": "Escrito por Luis Gustavo em 14/10/2023."
-  },
-  {
-    "banner": "https://t2.tudocdn.net/687809?w=1200&h=1200",
-    "title": "GTA 6 tem data de lançamento anunciada",
-    "subtitle": "Jogo mais esperado dos ultimos anos tem data finalmente revelada por Rockstar.",
-    "text": "GTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciada.",
-    "info": "Escrito por Luis Gustavo em 15/10/2023."
-  },
-  {
-    "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/10/6fd08b309a6ed2a3b70baa64b088f5104c538e2e.png?resize=1088%2C612&crop_strategy=smart",
-    "title": "Novo PS5 é anunciado pela Sony",
-    "subtitle": "Nova versão do console da 'nova geração' é anunciado pela gigante essa semana.",
-    "text": "Novo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela Sony.",
-    "info": "Escrito por Luis Gustavo em 14/10/2023."
-  },
-  {
-    "banner": "https://t2.tudocdn.net/687809?w=1200&h=1200",
-    "title": "GTA 6 tem data de lançamento anunciada",
-    "subtitle": "Jogo mais esperado dos ultimos anos tem data finalmente revelada por Rockstar.",
-    "text": "GTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciada.",
-    "info": "Escrito por Luis Gustavo em 15/10/2023."
-  },
-  {
-    "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/10/6fd08b309a6ed2a3b70baa64b088f5104c538e2e.png?resize=1088%2C612&crop_strategy=smart",
-    "title": "Novo PS5 é anunciado pela Sony",
-    "subtitle": "Nova versão do console da 'nova geração' é anunciado pela gigante essa semana.",
-    "text": "Novo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela SonyNovo PS5 é anunciado pela Sony.",
-    "info": "Escrito por Luis Gustavo em 14/10/2023."
-  },
-  {
-    "banner": "https://t2.tudocdn.net/687809?w=1200&h=1200",
-    "title": "GTA 6 tem data de lançamento anunciada",
-    "subtitle": "Jogo mais esperado dos ultimos anos tem data finalmente revelada por Rockstar.",
-    "text": "GTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciadaGTA 6 tem data de lançamento anunciada.",
-    "info": "Escrito por Luis Gustavo em 15/10/2023."
-  }
-]
+{
+  "news": [
+    {
+      "banner": "https://cdn.ome.lt/0sxfD9ZJGsUQKk7QOXJzvEDz5AU=/1200x630/smart/extras/conteudos/tga_2022_GGNZSUw.webp",
+      "tags": [
+        "NOTÍCIA"
+      ],
+      "title": "Confira os jogos indicados para concorrer ao prêmio TGA 2023",
+      "subtitle": "Finalmente foram anunciados os jogos selecionados para o grande prêmio de jogo do ano",
+      "text": "Os indicados para 'Jogo do Ano' são: Alan Wake 2 (Remedy Entertainment), Super Mario Bros. Wonder (Nintendo), The Legend of Zelda: Tears of the Kingdom (Nintendo), Baldur's Gate III (Larian Studios), Resident Evil 4 (Capcom) e Marvel's Spider-Man 2 (Insomniac Games).",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-11-25T11:00:00-03:00"
+      }
+    },
+    {
+      "banner": "https://blog.playstation.com/tachyon/2023/11/16eaf67a7743990f759c08b345d0bb81d33e56b2.png?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
+      "tags": [
+        "NOTÍCIA",
+        "SONY"
+      ],
+      "title": "The Last of Us Part II Remastered oficialmente anunciado",
+      "subtitle": "Naughty Dog anuncia remasterização de seu mais novo jogo.",
+      "text": "A versão trará melhorias em diversos aspectos comparado ao jogo original, e contará com novas fases removidas. Para quem já possuía o jogo em sua versão de PS4, ele custará somente USD$10 (aproximadamente R$50). ",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-11-19T09:50:00-03:00"
+      }
+    },
+    {
+      "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/11/8bfb3a1a3ffd546cef661b3113f973b4da038d1e.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
+      "tags": [
+        "NOTÍCIA",
+        "SONY"
+      ],
+      "title": "Playstation Plus Extra e Deluxe de novembro reveladas",
+      "subtitle": "Sony revelou nessa quarta-feira (15/11) os novos jogos que estarão disponíveis para os assinantes",
+      "text": "Os títulos do plano extra incluem Teardown, Dragon's Dogma: Dark Arisen, Mobile Suit Gundam: Extreme vs. Maxi Boost On, Dead Island: Riptide Definitive Edition, Superliminal, Eiyuden Chronicle: Rising e Nobunaga’s Ambition: Taishi. Enquanto os do plano deluxe são: Grandia, Get Moto, Up, Klonoa Phantasy Reverie Series, PaRappa the Rapper 2. O Destaque do Mês é Teardown, que ficará disponível no dia do lançamento.",
+      "info": {
+        "autor": "João Gabriel",
+        "time": "2023-11-21T10:30:00-03:00"
+      }
+    },
+    {
+      "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/11/a6a021b23839a5a2d23aa86efe1767147070cd34.jpg?resize=1088%2C612&crop_strategy=smart&zoom=0.5",
+      "tags": [
+        "NOTÍCIA",
+        "SONY"
+      ],
+      "title": "Playstation Plus jogos mensais de novembro revelados",
+      "subtitle": "Sony revelou nessa quarta-feira (01/11) os novos jogos que estarão disponíveis para os assinantes",
+      "text": "Os jogos são Mafia II: Definitive Edition, Dragon Ball: The Breakers e Aliens: Fireteam Elite. Todos ficarão disponíveis na próxima terça-feira (07/11) para os assinantes",
+      "info": {
+        "autor": "João Gabriel",
+        "time": "2023-11-19T09:50:00-03:00"
+      }
+    },
+    {
+      "banner": "https://gh.cdn.sewest.net/assets/ident/pulse/8f595c57/FUNGOR_PULSE_Ver_A-ygbowjoxi.jpg?quality=65",
+      "tags": [
+        "NOTÍCIA",
+        "MOBILE"
+      ],
+      "title": "Square Enix anuncia jogo mobile de KINGDOM HEARTS",
+      "subtitle": "Anunciado nessa segunda-feira (30/10), KINGDOM HEARTS Missing-Link chega em 2024",
+      "text": "Em breve um texto será escrito aqui :)",
+      "info": {
+        "autor": "João Gabriel",
+        "time": "2023-10-31T10:20:00-03:00"
+      }
+    },
+    {
+      "banner": "https://cdn1.epicgames.com/offer/d602fd70876141ba9bf4d54809c423d1/EGS_TheEvilWithin_TangoGameworks_S1_2560x1440-16b7f817d8803517fbecbf3f175ac997",
+      "tags": [
+        "NOTÍCIA",
+        "PC"
+      ],
+      "title": "Dois novos jogos ficam de graça na Epic Games Store",
+      "subtitle": "Mais jogos são liberados sem custo na loja",
+      "text": "Já é possível baixar sem pagar dois novos jogos pela Epic Games Store. Liberados nessa quinta-feira (19/10), os jogos são 'The Evil Within' e 'Eternal Threads'. Supostamente, na próxima semana também será liberado a sequência de The Evil Within, 'The Evil Within 2', além de outro jogo: 'Tandem: a Tale of Shadows'.",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-10-19T10:40:00-03:00"
+      }
+    },
+    {
+      "banner": "https://blog.playstation.com/tachyon/2023/10/776ce4ee990ac7ce9bbba981ee37d966493e0997.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
+      "tags": [
+        "NOTÍCIA",
+        "SONY"
+      ],
+      "title": "Playstation Plus Extra e Premium de outubro revelada",
+      "subtitle": "Sony revelou nessa quarta-feira (11/10) os novos jogos que estarão disponíveis para os assinantes",
+      "text": "Todos os jogos ficarão disponíveis na próxima terça-feira, a lista inclui Gotham Knights, Disco Elysium – The Final Cut, The Dark Pictures Anthology: House of Ashes, Alien: Isolation, Dead Island Definitive Edition, Outlast 2, Elite Dangerous, FAR: Changing Tides, Gungrave G.O.R.E., Eldest Souls, Röki, e para assinantes os premium também ficará disponível Tekken 6, Soulcalibur: Broken Destiny, Ape Escape Academy, IQ Final.",
+      "info": {
+        "autor": "João Gabriel",
+        "time": "2023-10-19T17:10:00-03:00"
+      }
+    },
+    {
+      "banner": "https://blog.br.playstation.com/tachyon/sites/4/2023/10/6fd08b309a6ed2a3b70baa64b088f5104c538e2e.png?resize=1088%2C612&crop_strategy=smart",
+      "tags": [
+        "NOTÍCIA",
+        "SONY"
+      ],
+      "title": "Novo modelo do PS5 é anunciado pela Sony",
+      "subtitle": "Nova versão do console da 'nova geração' é anunciado pela gigante essa semana.",
+      "text": "Foi anunciado nessa quarta-feira (11/10) uma nova versão do console PlayStation 5. Essa versão promete ser cerca de 30% menor que a versão anterior, e vem com um SSD de 1tb de armazenamento, ou seja, 175 gigabytes a mais que a anterior.",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-10-19T17:00:00-03:00"
+      }
+    },
+    {
+      "banner": "https://t2.tudocdn.net/687809?w=1200&h=1200",
+      "tags": [
+        "NOTÍCIA",
+        "VAZAMENTO"
+      ],
+      "title": "GTA 6 tem data de lançamento supostamente anunciada",
+      "subtitle": "Jogo mais esperado dos ultimos anos teria data finalmente revelada por Rockstar, segundo rumor",
+      "text": "Nessa quinta-feira (12/10) um leaker chamado 'RSLEAKER2132', com um bom histórico em vazamentos do tipo, disse que segundo suas fontes o jogo estará marcado para lançar no primeiro semestre de 2025. Não temos nenhuma informação oficial sobre o lançamento do jogo até então.",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-10-19T15:30:00-03:00"
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "banner": "https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg",
+      "tags": [
+        "REVIEW",
+        "LANÇAMENTO"
+      ],
+      "title": "Review: Baldurs Gate III",
+      "subtitle": "Review do forte concorrente a jogo do ano de 2023",
+      "text": "Em breve um texto será escrito aqui :)",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-11-24T10:30:00-03:00"
+      }
+    },
+    {
+      "banner": "https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/BiS5QP6h4506JHyJlZlVzK9D.jpg",
+      "tags": [
+        "REVIEW"
+      ],
+      "title": "Review: Resident Evil 4 (REMAKE)",
+      "subtitle": "Remake do clássico jogo de ação da CAPCOM",
+      "text": "Em breve um texto será escrito aqui :)",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-11-24T10:15:00-03:00"
+      }
+    },
+    {
+      "banner": "https://files.tecnoblog.net/wp-content/uploads/2019/03/brawlstars-700x394.jpg",
+      "tags": [
+        "REVIEW",
+        "MOBILE"
+      ],
+      "title": "Review: Brawl Stars",
+      "subtitle": "Jogo mobile multijogador online desenvolvido pela Supercell",
+      "text": "Em breve um texto será escrito aqui :)",
+      "info": {
+        "autor": "Luis Gustavo",
+        "time": "2023-11-02T13:50:00-03:00"
+      }
+    }
+  ],
+  "lists": [
+    {
+      "title": "Melhores jogos mobile do mês de outubro",
+      "itens": [
+        {
+          "title": "Candy Crush",
+          "img": "https://files.tecnoblog.net/wp-content/uploads/2020/09/candycrush.png",
+          "text": "Recebeu 200 mil downloads este mês."
+        },
+        {
+          "title": "Roblox",
+          "img": "https://t.ctcdn.com.br/JMBb4josoticTIMAnrhunB8Bxuw=/1920x1080/smart/i12825.jpeg",
+          "text": "Recebeu 260 mil downloads este mês."
+        },
+        {
+          "title": "Brawl Stars",
+          "img": "https://static1-br.millenium.gg/articles/5/13/76/5/@/150879-buzz-amp_main_media_schema-1.jpg",
+          "text": "Recebeu 270 mil downloads este mês."
+        },
+        {
+          "title": "PUBG Mobile",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtm26WSirHaua_0uLKcRYNoRZWh1LBVAEbWQ&usqp=CAU",
+          "text": "Recebeu 330 mil downloads este mês."
+        },
+        {
+          "title": "COD Mobile",
+          "img": "https://dotesports.com/br/wp-content/uploads/sites/3/2021/02/11123637/GarenaWorld.png",
+          "text": "Recebeu 480 mil downloads este mês."
+        }
+      ],
+      "info": {
+        "autor": "Luis Gustavo",
+        "data": "06/11/2023"
+      }
+    },
+    {
+      "title": "List Title Placeholder 2",
+      "itens": [
+        {
+          "title": "Item 5 title placeholder",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png",
+          "text": "Item 5 text placeholder"
+        },
+        {
+          "title": "Item 4 title placeholder",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png",
+          "text": "Item 4 text placeholder"
+        },
+        {
+          "title": "Item 3 title placeholder",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png",
+          "text": "Item 3 text placeholder"
+        },
+        {
+          "title": "Item 2 title placeholder",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png",
+          "text": "Item 2 text placeholder"
+        },
+        {
+          "title": "Item 1 title placeholder",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png",
+          "text": "Item 1 text placeholder"
+        }
+      ],
+      "info": {
+        "autor": "Placeholder Autor",
+        "data": "00/00/0000"
+      }
+    }
+  ]
+}

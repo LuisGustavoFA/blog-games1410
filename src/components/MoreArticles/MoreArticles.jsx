@@ -18,7 +18,7 @@ function MoreArticles() {
 
   useEffect(() => {
     if (article) {
-      getData().then((resp) => {
+      getData('news').then((resp) => {
         const related = resp.filter(item => item.title !== article.title);
         setNoticias(related.slice(0, 3));
       });

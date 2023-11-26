@@ -13,13 +13,13 @@ function HomePage() {
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
-    getData().then((resp) => {
+    getData('news').then((resp) => {
       setNoticias(resp);
     })
   }, []);
 
   useEffect(() => {
-    getListData().then((resp) => {
+    getData('lists').then((resp) => {
       setLists(resp);
     })
   }, []);

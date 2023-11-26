@@ -9,11 +9,11 @@ function ReviewSection() {
   const [rightArrowActive, setRightArrowActive] = useState(true);
   const reviewsCardsRef = useRef(null);
 
-  const [noticias, setNoticias] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    getData().then((resp) => {
-      setNoticias(resp);
+    getData('reviews').then((resp) => {
+      setReviews(resp);
     })
   }, []);
 
@@ -51,9 +51,8 @@ function ReviewSection() {
           <FaArrowLeft className='reviews-arrows' size={38}/>
         </span>
 
-        {noticias.map((noticia) => {
-          const isReview = noticia.tags.includes("REVIEW");
-          return (isReview && <CardReview data={noticia}/>);
+        {reviews.map((review) => {
+          return <CardReview data={review}/>;
         })}
 
         <CardReview viewMore/>
