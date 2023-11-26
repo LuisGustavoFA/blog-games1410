@@ -4,7 +4,7 @@
   height: 200px;
   text-decoration: none;
   border-radius: 8px;
-  background-color: rgb(128, 128, 128, 0.2)
+  background-color: rgb(128, 128, 128, 0.3)
 }
 
 .card-banner{
@@ -65,8 +65,8 @@
 @media (max-width: 1150px) {
   .card {
     flex-direction: column;
-    background-color: var(--background-color);
     height: auto;
+    padding: 6px;
   }
 
   .card-underline{

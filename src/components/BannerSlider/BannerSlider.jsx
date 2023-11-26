@@ -50,7 +50,7 @@ function BannerSlider() {
       <div className='bannerSlider-container'>
 
         {/* titulo */}
-        <Link className='bannerSlider-container-title' to={`/article/${noticias[currentSlide]?.title.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.title}</Link>
+        <Link className='bannerSlider-container-title' to={`/article/${format(noticias[currentSlide]?.title)}`}>{noticias[currentSlide]?.title}</Link>
 
         {/* tags */}
         <TagsCase tags={noticias[currentSlide]?.tags} banner/>

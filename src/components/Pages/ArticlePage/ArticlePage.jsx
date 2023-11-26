@@ -6,7 +6,6 @@ import React from "react";
 import MoreArticles from "../../MoreArticles/MoreArticles";
 import { calctime } from "../../../functions/calctime";
 import TagsCase from "../../TagsCase/TagsCase";
-import { getData } from "../../../database/DataApi";
 
 function ArticlePage() {
   window.scrollTo(0, 0);
