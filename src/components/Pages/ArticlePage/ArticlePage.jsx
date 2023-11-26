@@ -6,6 +6,7 @@ import React from "react";
 import MoreArticles from "../../MoreArticles/MoreArticles";
 import { calctime } from "../../../functions/calctime";
 import TagsCase from "../../TagsCase/TagsCase";
+import { getData } from "../../../database/DataApi";
 
 function ArticlePage() {
   window.scrollTo(0, 0);
@@ -14,9 +15,9 @@ function ArticlePage() {
   const [article, setArticle] = useState([]);
 
   document.title = article.title;
-  
+
   useEffect(() => {
-    findArticle(title.replace(/-/g, " ")).then((resp) => {
+    findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
       setArticle(resp);
     })
   }, [title])

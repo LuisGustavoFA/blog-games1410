@@ -12,7 +12,7 @@ function SearchPage() {
   const [noticias, setNoticias] = useState([]);
   
   useEffect(() => {
-    getData().then((resp) => {
+    getData('').then((resp) => {
       setNoticias(resp);
     })
   }, []);
@@ -24,7 +24,7 @@ function SearchPage() {
   }, [noticias, search]);
 
   const checkTag = (noticia) => {
-    return noticia?.tags.some((tag) => {
+    return noticia?.tags?.some((tag) => {
       const normalizedTag = format(tag);
       return normalizedTag.includes(search);
     });
