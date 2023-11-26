@@ -5,6 +5,7 @@ import { findArticle } from "../../../database/DataApi";
 import React from "react";
 import MoreArticles from "../../MoreArticles/MoreArticles";
 import { calctime } from "../../../functions/calctime";
+import TagsCase from "../../TagsCase/TagsCase";
 
 function ArticlePage() {
   window.scrollTo(0, 0);
@@ -29,6 +30,7 @@ function ArticlePage() {
 
       <main className="article-main">
         <section className="article-content">
+          <TagsCase tags={article.tags}/>
           <div className="article-content-header">
             <h1>{article.title}</h1>
             <h5>{article.subtitle}</h5>

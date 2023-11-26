@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   transition: .1s linear;
+  overflow: hidden;
 }
 
 .bannerSlider-container{
@@ -142,7 +143,6 @@
     align-items: center;
     justify-content: center;
     color: var(--main-color);
-    backdrop-filter: brightness(40%);
   }
 
   .in-arrows-first{
