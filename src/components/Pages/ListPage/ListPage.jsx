@@ -2,6 +2,7 @@ import './ListPage.css';
 import { findList } from "../../../database/DataApi";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { calctime } from '../../../functions/calctime';
 
 function ListPage() {
   window.scrollTo(0, 0);
@@ -36,14 +37,16 @@ function ListPage() {
             {list?.itens?.map((item, key) => {
               return (
                 <div className='list-item'>
-                  <h2>{list?.itens?.length - key}. {item.title}</h2>
-                  <div style={{ backgroundImage: `url(${item.img})` }} alt="item img"></div>
-                  <p>{item.text}</p>
+                  <div className='list-item-content'>
+                    <h2>{list?.itens?.length - key}. {item.title}</h2>
+                    <p>{item.text}</p>
+                  </div>
+                  <div className="list-item-image" style={{ backgroundImage: `url(${item.img})` }} alt="item img"></div>
                 </div>
               )
             })}
           </div>
-          <h5>Por {list?.info?.autor}, {list?.info?.data}.</h5>
+          <h5>Por {list?.info?.autor}, {calctime(list.info?.time)}.</h5>
         </section>
       </main>
     </>

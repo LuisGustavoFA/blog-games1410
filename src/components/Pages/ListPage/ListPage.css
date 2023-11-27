@@ -53,6 +53,13 @@
   transition: color .2s ease-in-out;
 }
 
+.list-content h5 {
+  margin: 0;
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .list-content-header {
   display: flex;
   flex-direction: column;
@@ -70,28 +77,31 @@
   gap: 72px;
 }
 
-.list-content-main h5 {
-  margin: 0;
-  margin-top: 32px;
-  font-weight: 400;
-  font-size: 14px;
-}
-
 .list-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
 
-.list-item div {
-  margin: 0 72px;
-  aspect-ratio: 16/9;
-  background-size: 100% 100%;
+.list-item-content{
+  width: 60%;
 }
 
-.list-item p {
-  padding-top: 20px;
-  font-size: 20px;
+.list-item-content h2 {
+  margin: 0;
+}
+
+.list-item-content p {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 1.2rem;
+}
+
+.list-item-image {
+  aspect-ratio: 16/9;
+  background-size: 100% 100%;
+  width: 40%;
 }
 
 @media (max-width: 650px) {

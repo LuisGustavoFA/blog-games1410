@@ -1,6 +1,9 @@
 .card{
   width: 33%;
   text-decoration: none;
+  background-color: rgb(128, 128, 128, 0.2);
+  padding: 6px;
+  border-radius: 8px;
 }
 
 .cardImage{

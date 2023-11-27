@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { getData } from '../../../database/DataApi';
-import Card from '../../Card/Card';
+import CardHorizontal from '../../CardHorizontal/CardHorizontal';
 import './SearchPage.css';
 import { format } from '../../../functions/format';
 
@@ -45,7 +45,7 @@ function SearchPage() {
       {noticias.map((noticia, id) => {
         return (
           <React.Fragment key={id}>
-            {SearchNews(noticia) && <Card data={noticia} key={id}/>}
+            {SearchNews(noticia) && <CardHorizontal data={noticia} key={id}/>}
           </React.Fragment>
         )
       })}

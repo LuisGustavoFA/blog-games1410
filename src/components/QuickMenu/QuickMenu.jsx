@@ -7,7 +7,7 @@ function QuickMenu() {
     <ul className={styles.quickMenuCase}>
       <Link className={styles.quickMenuLinks} to={"/search/noticia"}>Notícias</Link>
       <Link className={styles.quickMenuLinks} to={"/search/review"}>Reviews</Link>
-      <Link className={styles.quickMenuLinks} to={"/lists"}>Listas</Link>
+      <Link className={styles.quickMenuLinks} to={"/search/lista"}>Listas</Link>
       <DarkToggle mobile/>
     </ul>
   )

@@ -7,7 +7,7 @@ function HeaderHandler() {
 
   const handleResize = () => {
     const it = setInterval(() => {
-      setIsMobile(window.innerWidth < 650);
+      setIsMobile(window.innerWidth < 900);
       clearInterval(it);
     }, 100);
   };

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from "react-router-dom";
 import styles from './MoreArticles.module.css';
 import { getData, findArticle } from "../../database/DataApi";
-import CardColumn from "../CardColumn/CardColumn";
+import CardVertical from '../CardVertical/CardVertical';
 
 function MoreArticles() {
 
@@ -32,7 +32,7 @@ function MoreArticles() {
         {noticias.map((noticia, id) => {
           return (
             <React.Fragment key={id}>
-              <CardColumn data={noticia} key={id} />
+              <CardVertical data={noticia} key={id} hasBanner/>
             </React.Fragment>
           )
         })}

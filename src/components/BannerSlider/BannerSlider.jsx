@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import './BannerSlider.css';
 import TagsCase from "../TagsCase/TagsCase";
 import { format } from "../../functions/format";
+import { calctime } from "../../functions/calctime";
 
 function BannerSlider() {
   const [noticias, setNoticias] = useState([]);
@@ -57,7 +58,7 @@ function BannerSlider() {
 
         {/* autor */}
         <span className="banner-info">
-          Por <Link to={`/search/${noticias[currentSlide]?.info.autor.replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()}`}>{noticias[currentSlide]?.info.autor}</Link>
+          Por <Link to={`/search/${format(noticias[currentSlide]?.info.autor)}`}>{noticias[currentSlide]?.info.autor}</Link>, {calctime(noticias[currentSlide]?.info.time)}
         </span>
 
         {/* botões/imagens */}

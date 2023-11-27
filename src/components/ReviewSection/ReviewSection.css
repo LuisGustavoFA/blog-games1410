@@ -67,6 +67,12 @@
   color: #FFF;
 }
 
+@media (max-width: 1300px) {
+  .reviews-case {
+    width: 90%;
+  }
+}
+
 @media (max-width: 650px) {
   .reviews-case {
     width: 100%;

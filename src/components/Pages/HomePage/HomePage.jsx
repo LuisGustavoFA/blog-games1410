@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
-import { getData, getListData } from "../../../database/DataApi";
-import Card from "../../Card/Card";
-import ListCard from "../../ListCard/ListCard";
+import { getData } from "../../../database/DataApi";
+import CardHorizontal from "../../CardHorizontal/CardHorizontal";
 import BannerSlider from "../../BannerSlider/BannerSlider";
 import ReviewSection from "../../ReviewSection/ReviewSection";
+import CardVertical from "../../CardVertical/CardVertical";
 
 function HomePage() {
   window.scrollTo(0, 0);
@@ -36,7 +36,7 @@ function HomePage() {
             if (!isReview) {
               return (
                 <React.Fragment key={id}>
-                  <Card data={noticia} key={id}/>
+                  <CardHorizontal data={noticia} key={id}/>
                   {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
                 </React.Fragment>
               )
@@ -46,7 +46,14 @@ function HomePage() {
 
         <section className="home-content-secondary">
           <h2 className="home-content-title">ÚLTIMAS LISTAS</h2>
-          <ListCard lists={lists}/>
+          {lists.map((lists, id) => {
+            const isLista = lists.tags.includes("LISTA");
+            if (isLista) {
+              return (
+                <CardVertical data={lists} key={id}/>
+              )
+            }
+          })}
         </section>
 
       </section>

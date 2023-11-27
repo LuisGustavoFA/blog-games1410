@@ -16,7 +16,6 @@ function ListCard({ lists }) {
         )
       })}
     </div>
-
   )
 }
 

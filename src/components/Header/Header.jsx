@@ -16,7 +16,7 @@ function Header() {
         <ul className={style.header_pc}>
           <li><Link to={"/search/noticia"}>Notícias</Link></li>
           <li><Link to={"/search/review"}>Reviews</Link></li>
-          <li><Link to={"/lists"}>Listas</Link></li>
+          <li><Link to={"/search/lista"}>Listas</Link></li>
         </ul>
 
         <SearchBarNew id="pc_search_input" iconSize={30} />
