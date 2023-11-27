@@ -69,7 +69,6 @@
   margin: 0 12px;
   border-bottom: 2px solid var(--text-color);
   transition: border-bottom .2s ease-in-out;
-
 }
 .card-underline:last-child {
   border-bottom: 2px solid transparent;

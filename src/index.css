@@ -20,7 +20,7 @@ body {
 
 *::selection {
   background: var(--main-color);
-  color: #fff;
+  color: #000;
   text-shadow: none;
 }
 

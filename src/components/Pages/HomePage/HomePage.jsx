@@ -46,14 +46,7 @@ function HomePage() {
 
         <section className="home-content-secondary">
           <h2 className="home-content-title">ÚLTIMAS LISTAS</h2>
-          {lists.map((lists, id) => {
-            const isLista = lists.tags.includes("LISTA");
-            if (isLista) {
-              return (
-                <CardVertical data={lists} key={id}/>
-              )
-            }
-          })}
+          {lists.map((lists, id) => <CardVertical data={lists} key={id}/>)}
         </section>
 
       </section>

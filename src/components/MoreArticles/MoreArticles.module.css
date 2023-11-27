@@ -1,26 +1,35 @@
 .moreArticles_container{
   width: 80%;
-  margin: 100px 0;
+  margin: 100px auto;
 }
 
 .moreArticles_container_title{
-  font-size: 1.8rem;
+  margin: 0;
   font-weight: bold;
   color: var(--text-color);
+  padding: 16px 0;
+  text-decoration: underline 6px var(--main-color);
+  text-wrap: nowrap;
+  text-align: center;
   transition: .3s ease-in-out;
 }
 
 .moreArticles_container_cards{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding-top: 30px;
   gap: 12px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
   .moreArticles_container{
     width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .moreArticles_container{
     margin-bottom: 40px;
   }
 

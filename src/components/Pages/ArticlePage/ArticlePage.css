@@ -90,6 +90,12 @@
   font-size: 1rem;
 }
 
+@media (max-width: 1300px) {
+  .article-content {
+    width: 90%;
+  }
+}
+
 @media (max-width: 650px) {
   .article-banner-case {
     height: 230px;
@@ -104,7 +110,6 @@
   }
 
   .article-content {
-    width: 90%;
     gap: 52px;
     padding: 16px 0;
   }
