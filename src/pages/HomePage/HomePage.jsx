@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
-import { getData } from "../../../database/DataApi";
-import CardHorizontal from "../../CardHorizontal/CardHorizontal";
-import BannerSlider from "../../BannerSlider/BannerSlider";
-import ReviewSection from "../../ReviewSection/ReviewSection";
-import CardVertical from "../../CardVertical/CardVertical";
+import { getData } from "../../database/DataApi";
+import CardHorizontal from "../../components/CardHorizontal/CardHorizontal";
+import BannerSlider from "../../components/BannerSlider/BannerSlider";
+import ReviewSection from "../../components/ReviewSection/ReviewSection";
+import CardVertical from "../../components/CardVertical/CardVertical";
 
 function HomePage() {
   window.scrollTo(0, 0);
   document.title = "Blog";
+  
   const [noticias, setNoticias] = useState([]);
   const [lists, setLists] = useState([]);
 

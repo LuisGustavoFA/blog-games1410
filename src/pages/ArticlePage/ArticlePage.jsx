@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./ArticlePage.css"
-import { findArticle } from "../../../database/DataApi";
+import { findArticle } from "../../database/DataApi";
 import React from "react";
-import MoreArticles from "../../MoreArticles/MoreArticles";
-import { calctime } from "../../../functions/calctime";
-import TagsCase from "../../TagsCase/TagsCase";
+import MoreArticles from "../../components/MoreArticles/MoreArticles";
+import { calctime } from "../../functions/calctime";
+import TagsCase from "../../components/TagsCase/TagsCase";
 
 function ArticlePage() {
   window.scrollTo(0, 0);
@@ -23,12 +23,15 @@ function ArticlePage() {
 
   return (
     <>
-      <div className="article-banner-case">
+      {/* <div className="article-banner-case">
         <div className="article-banner-background" style={{ backgroundImage: `url(${article.banner})` }} alt="banner"></div>
         <div className="article-banner" style={{ backgroundImage: `url(${article.banner})` }} alt="banner"></div>
-      </div>
+      </div> */}
 
       <main className="article-main">
+        <div className="test" style={{ backgroundImage: `url(${article.banner})` }}>
+          <div className="test-filter"></div>
+        </div>
         <section className="article-content">
           <TagsCase tags={article.tags}/>
           <div className="article-content-header">

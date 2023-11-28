@@ -1,0 +1,55 @@
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  height: 80px;
+  width: 100%;
+  background-color: #025268;
+}
+
+.banner_title{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+}
+
+.banner_title_icon,
+.banner_title_span{
+  color: #FFF;
+  font-size: 1.6rem;
+  filter: drop-shadow(2px 2px #000);
+}
+
+.banner_title_span{
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1150px){
+  .news{
+    width: 95%;
+    margin-top: 0;
+  } 
+}
+
+@media screen and (max-width: 900px){
+  .banner{
+    height: 64px;
+    margin-top: 64px;
+  }
+
+  .banner_title{
+    width: 90%;
+  }
+}

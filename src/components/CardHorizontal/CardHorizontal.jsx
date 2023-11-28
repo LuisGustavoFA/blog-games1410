@@ -26,7 +26,7 @@ function CardHorizontal({ data }) {
           </div>
         </div>
       </Link>
-      <div className='card-underline'></div>
+      {/* <div className='card-underline'></div> */}
     </>
   )
 }

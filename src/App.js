@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HeaderHandler from './components/HeaderHandler/HeaderHandler';
 import Footer from './components/Footer/Footer';
-import HomePage from './components/Pages/HomePage/HomePage';
-import ArticlePage from './components/Pages/ArticlePage/ArticlePage';
-import ErrorPage from './components/Pages/ErrorPage/ErrorPage';
-import SearchPage from './components/Pages/SearchPage/SearchPage';
-import ListPage from './components/Pages/ListPage/ListPage';
 import ScrollButton from './components/ScrollButton/ScrollButton';
 import ThemeHandler from './components/ThemeHandler/ThemeHandler';
+
+import HomePage from './pages/HomePage/HomePage';
+import ArticlePage from './pages/ArticlePage/ArticlePage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+import SearchPage from './pages/SearchPage/SearchPage';
+import ListPage from './pages/ListPage/ListPage';
+import Tag from './pages/Tag/Tag';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route element={<ArticlePage/>} path='/article/:title'/>
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
+          <Route element={<Tag/>} path='/tag/:tag'/>
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>

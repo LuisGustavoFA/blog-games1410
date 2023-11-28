@@ -18,6 +18,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main{
+  min-height: calc(100vh - 80px);
+}
+
 *::selection {
   background: var(--main-color);
   color: #000;

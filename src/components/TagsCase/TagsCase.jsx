@@ -9,7 +9,7 @@ function TagsCase( { tags, banner = false } ) {
     <span className={`tags-case${className}`}>
       {tags?.map((tag, id) => {
         return (
-          <Link className='tag' key={id} to={`/search/${format(tag)}`}>{tag}</Link>
+          <Link className='tag' key={id} to={`/tag/${format(tag)}`}>{tag}</Link>
         )
       })}
     </span>

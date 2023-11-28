@@ -1,11 +1,11 @@
 import './ListPage.css';
-import { findList } from "../../../database/DataApi";
+import { findList } from "../../database/DataApi";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { calctime } from '../../../functions/calctime';
-import TagsCase from '../../TagsCase/TagsCase';
-import MoreArticles from '../../MoreArticles/MoreArticles';
-import AdCase from '../../AdCase/AdCase';
+import { calctime } from '../../functions/calctime';
+import TagsCase from '../../components/TagsCase/TagsCase';
+import MoreArticles from '../../components/MoreArticles/MoreArticles';
+import AdCase from '../../components/AdCase/AdCase';
 
 function ListPage() {
   window.scrollTo(0, 0);
@@ -45,9 +45,9 @@ function ListPage() {
           <h5>Por {list?.info?.autor}, {calctime(list.info?.time)}.</h5>
         </section>
         <section className='list-subcontent'>
-          {/* <AdCase/>
           <AdCase/>
-          <AdCase/> */}
+          <AdCase/>
+          <AdCase/>
         </section>
       </main>
       <MoreArticles/>

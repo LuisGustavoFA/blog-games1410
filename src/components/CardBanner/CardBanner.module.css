@@ -1,0 +1,48 @@
+.cardBanner{
+  width: 65%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cardBanner_image{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: .5s;
+}
+
+/* .cardBanner_image:hover{
+  transform: scale(1.05);
+} */
+
+.cardBanner_shadow{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #00000069 5%, transparent 95%);
+}
+
+.cardBanner_title{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1150px){
+  .cardBanner{
+    width: 100vw;
+    border-radius: 0;
+    margin-left: -2.6%;
+  } 
+
+  .cardBanner_title{
+    text-align: center;
+  }
+}

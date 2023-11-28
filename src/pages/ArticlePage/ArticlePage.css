@@ -24,8 +24,23 @@
   z-index: 0;
 }
 
+.test {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.test-filter {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #FFF 20%, transparent 80%);
+}
+
 .article-main {
-  margin-top: 472px;
+  /* margin-top: 472px; */
+  margin-top: 80px;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -34,7 +49,7 @@
   transition: background-color .2s ease-in-out;
 }
 
-.article-horizontal-ad{
+.article-horizontal-ad {
   width: 100%;
   aspect-ratio: 4/1;
   background-image: url('https://bannerboo.com/upload/medialibrary/13a/851x315_b7f147f2ad77f-_15_.gif');
@@ -44,6 +59,7 @@
 }
 
 .article-content {
+  margin-top: -400px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -97,19 +113,25 @@
 }
 
 @media (max-width: 650px) {
+  .test-filter {
+    background: linear-gradient(to top, transparent 20%, transparent 80%);
+  }
+
   .article-banner-case {
     height: 230px;
     top: 64px;
   }
 
   .article-main {
-    margin-top: 294px;
+    margin-top: 64px;
+    /* margin-top: 294px; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
 
   .article-content {
+    margin-top: 0;
     gap: 52px;
     padding: 16px 0;
   }
