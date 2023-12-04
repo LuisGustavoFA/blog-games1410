@@ -102,7 +102,7 @@
 
 @media (max-width: 1000px) {
   .bannerSlider{
-    height: calc(85vh - 65px);
+    height: calc(80vh - 65px);
     width: 100vw;
   }
 
