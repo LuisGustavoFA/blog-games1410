@@ -5,6 +5,7 @@ import CardHorizontal from "../../components/CardHorizontal/CardHorizontal";
 import BannerSlider from "../../components/BannerSlider/BannerSlider";
 import ReviewSection from "../../components/ReviewSection/ReviewSection";
 import CardVertical from "../../components/CardVertical/CardVertical";
+import BannerSliderNew from "../../components/BannerSliderNew/BannerSliderNew";
 
 function HomePage() {
   window.scrollTo(0, 0);
@@ -27,7 +28,8 @@ function HomePage() {
 
   return (
     <main className="home">
-      <BannerSlider/>
+      {/* <BannerSlider/> */}
+      <BannerSliderNew/>
       <ReviewSection/>
       <section className="home-content">
         <section className="home-content-main">

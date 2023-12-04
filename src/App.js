@@ -10,6 +10,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import ListPage from './pages/ListPage/ListPage';
 import Tag from './pages/Tag/Tag';
+import GamesList from './pages/GamesList/GamesList';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
           <Route element={<Tag/>} path='/tag/:tag'/>
+          <Route element={<GamesList/>} path='/psplus/'/>
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>

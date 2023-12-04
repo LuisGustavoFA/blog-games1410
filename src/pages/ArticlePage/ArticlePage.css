@@ -25,6 +25,8 @@
 }
 
 .test {
+  display: flex;
+  align-items: end;
   width: 100%;
   aspect-ratio: 16/9;
   background-size: contain;
@@ -34,7 +36,7 @@
 
 .test-filter {
   width: 100%;
-  height: 100%;
+  height: 70%;
   background: linear-gradient(to top, var(--theme-color) 20%, transparent 80%);
 }
 
@@ -58,13 +60,13 @@
 }
 
 .article-content {
-  margin-top: -400px;
-  width: 80%;
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
   justify-content: space-between;
   gap: 64px;
+  width: 80%;
+  margin-top: -400px;
+  padding: 24px 0;
   color: var(--text-color);
   transition: color .2s ease-in-out;
 }
@@ -91,6 +93,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 60%;
 }
 
 .article-content-main p {
@@ -150,5 +153,9 @@
 
   .article-horizontal-ad {
     aspect-ratio: 21/9;
+  }
+
+  .article-content-main{
+    width: 100%;
   }
 }
