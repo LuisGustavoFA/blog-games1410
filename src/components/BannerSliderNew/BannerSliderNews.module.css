@@ -7,7 +7,7 @@
   height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
-  transition: .1s linear;
+  /* transition: .1s linear; */
   /* overflow: hidden; */
 }
 

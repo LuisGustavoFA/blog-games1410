@@ -1,20 +1,43 @@
 import styles from './GamesList.module.css';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { findArticle } from '../../database/DataApi';
+import TagsCase from '../../components/TagsCase/TagsCase';
+import CardList from '../../components/CardList/CardList';
 
 function GamesList() {
+  window.scrollTo(0, 0);
+
+  const { title } = useParams();
+  const [article, setArticle] = useState([]);
+  const [games, setGames] = useState([]);
+
+  document.title = article.title;
+
+  useEffect(() => {
+    findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
+      setArticle(resp);
+      resp.games ? setGames(resp.games) : setGames([]);
+    })
+  }, [title])
+
   return (
-    <>
-      <main className={styles.main}>
-        <div className={styles.test} style={{ backgroundImage: `url("https://cdn1.epicgames.com/f4a904fcef2447439c35c4e6457f3027/offer/DS_wide-2560x1440-c3d7bbf8ee36dd025610088381a5235a.jpg")` }}>
-          <div className={styles.test_filter}></div>
-        </div>
-        <div className={styles.content}>
-          <span className={styles.content_title}>Jogos Mensais Sony</span>
-          <div className={styles.content_main}>
-            <span className={styles.content_main_text}>abooboraabooboraabooboraaboobora abooboraabooboraabooboraaboobora abooboraabooboraabooboraaboobora</span>
-          </div>
-        </div>
-      </main>
-    </>
+    <main className={styles.main}>
+      <div className={styles.banner_image} style={{ backgroundImage: `url('${article.banner}')` }}>
+        <div className={styles.filter}></div>
+      </div>
+      <div className={styles.banner_case}>
+        <TagsCase tags={article.tags} />
+        <span className={styles.banner_case_title}>{article.title}</span>
+        <span className={styles.banner_case_subtitle}>{article.subtitle}</span>
+      </div>
+      <div className={styles.content}>
+        <span className={styles.content_text}>{article.text}</span>
+        {games.map((game, index) => (
+          <CardList key={index} game={game} />
+        ))}
+      </div>
+    </main>
   )
 }
 

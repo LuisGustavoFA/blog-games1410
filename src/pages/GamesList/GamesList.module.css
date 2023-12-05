@@ -1,33 +1,83 @@
-.main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.test {
-  display: flex;
-  align-items: end;
+.banner_image{
+  position: absolute;
+  top: 0;
   width: 100%;
   aspect-ratio: 16/9;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
-.test_filter {
+.filter{
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 70%;
-  background: linear-gradient(to top, var(--theme-color) 20%, transparent 80%);
+  height: 50%;
+  background: linear-gradient(to top, var(--theme-color) 5%, transparent 95%);
+}
+
+.banner_case{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 80vh;
+  margin-bottom: 80px;
+  gap: 10px;
+  z-index: 1;
+}
+
+.banner_case_title,
+.banner_case_subtitle,
+.content_text{
+  font-weight: bold;
+  text-shadow: 2px 2px var(--theme-color);
+}
+
+.banner_case_title{
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.banner_case_subtitle{
+  font-size: 1rem;
+  color: #9e9e9e;
 }
 
 .content{
-  width: 80%;
-  margin-top: -200px;
-  background-color: red;
+  width: 50%;
+  margin-left: 10%;
+  padding-bottom: 100px;
 }
 
-.content_title{
-  font-size: 2rem;
-  font-weight: bold;
+.content_text{
+  color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+  .banner_image{
+    margin-top: 64px;
+    position: inherit;
+  }
+
+  .filter{
+    display: none;
+  }
+
+  .banner_case {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .banner_case_title{
+    font-size: 1.5rem;
+  }
+
+  .content{
+    width: 90%;
+    margin-left: 5%;
+  }
 }

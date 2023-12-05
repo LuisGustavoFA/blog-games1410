@@ -1,0 +1,32 @@
+.card{
+  margin-top: 50px;
+}
+
+.card_title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.card_image{
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 20px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.card_text{
+  color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+  .card_title{
+    font-size: 1.5rem;
+  }
+
+  /* .card_image{
+    width: 100vw;
+    margin-left: -5vw;
+  } */
+}

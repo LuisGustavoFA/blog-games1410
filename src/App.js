@@ -19,11 +19,11 @@ function App() {
         <Routes>
           <Route element={<HomePage/>} path=''/>
           <Route element={<HomePage/>} path='/home'/>
-          <Route element={<ArticlePage/>} path='/article/:title'/>
+          <Route element={<GamesList/>} path='/article/:title'/>
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
           <Route element={<Tag/>} path='/tag/:tag'/>
-          <Route element={<GamesList/>} path='/psplus/'/>
+          {/* <Route element={<GamesList/>} path='/psplus/'/> */}
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>

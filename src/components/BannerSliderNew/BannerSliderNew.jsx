@@ -26,7 +26,7 @@ function BannerSliderNew() {
   }
 
   useEffect(() => {
-    getData('news').then((resp) => {
+    getData('').then((resp) => {
       setNoticias(resp);
     })
   }, []);
