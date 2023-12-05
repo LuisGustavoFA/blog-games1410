@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { findArticle } from '../../database/DataApi';
 import TagsCase from '../../components/TagsCase/TagsCase';
 import CardList from '../../components/CardList/CardList';
-import MoreArticles from "../../components/MoreArticles/MoreArticles";
+import MoreArticles from '../../components/MoreArticles/MoreArticles';
 
 function GamesList() {
   window.scrollTo(0, 0);

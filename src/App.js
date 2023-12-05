@@ -23,7 +23,6 @@ function App() {
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
           <Route element={<Tag/>} path='/tag/:tag'/>
-          {/* <Route element={<GamesList/>} path='/psplus/'/> */}
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>

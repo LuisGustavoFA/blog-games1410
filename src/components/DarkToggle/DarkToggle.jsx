@@ -10,16 +10,16 @@ function DarkToggle({mobile = false}) {
 
   const handleTheme = () => {
     const newDarkMode = !darkMode;
-    if (newDarkMode) changeTheme("black", "white");
-    else changeTheme("white", "black");
+    if (newDarkMode) changeTheme("black", "white", "#9e9e9e");
+    else changeTheme("white", "black", "#3f3f3f");
     setDarkMode(newDarkMode);
     localStorage.setItem("darkMode", JSON.parse(newDarkMode));
   };
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
-    if (isDarkMode) changeTheme("black", "white");
-    else changeTheme("white", "black");
+    if (isDarkMode) changeTheme("black", "white", "#9e9e9e");
+    else changeTheme("white", "black", "#3f3f3f");
     setDarkMode(isDarkMode);
   }, []);
 

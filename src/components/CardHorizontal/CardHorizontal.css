@@ -36,7 +36,6 @@
 
 .card-data-link{
   color: var(--text-color);
-  transition: color .2s ease-in-out;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -48,17 +47,16 @@
   gap: 8px;
   margin-top: auto;
   width: 100%;
-  color: var(--text-color);
+  color: var(--subtext-color);
   font-size: .9rem;
   font-weight: bold;
-  transition: color .2s ease-in-out;
 }
 
 .card-data-footer-info a{
   border-bottom: 2px solid var(--text-color);
   color: var(--text-color);
   text-decoration: none;
-  transition: .2s ease-in-out;
+  transition: border-width .2s ease-in-out;
 }
 
 .card-data-footer-info a:hover{
@@ -68,7 +66,6 @@
 .card-underline{
   margin: 0 12px;
   border-bottom: 2px solid var(--text-color);
-  transition: border-bottom .2s ease-in-out;
 }
 .card-underline:last-child {
   border-bottom: 2px solid transparent;

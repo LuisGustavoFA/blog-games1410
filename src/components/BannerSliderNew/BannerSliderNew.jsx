@@ -10,6 +10,8 @@ function BannerSliderNew() {
   const [noticias, setNoticias] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderSize = 5;
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
   // const [loadingWidth, setLoadingWidth] = useState(0);
 
   document.querySelectorAll('input[type=radio][name=slideRadio]').forEach(radio => {
@@ -25,6 +27,10 @@ function BannerSliderNew() {
     // setLoadingWidth(0);
   }
 
+  const lastSlide = () => {
+    currentSlide === 0 ? setCurrentSlide(Number(sliderSize)) : setCurrentSlide(Number(currentSlide) - 1);
+  }
+
   useEffect(() => {
     getData('').then((resp) => {
       setNoticias(resp);
@@ -38,6 +44,14 @@ function BannerSliderNew() {
 
     return () => clearInterval(interval);
   }, [currentSlide]);
+  
+  const handleTouch = () => {
+    const difference = touchStartX - touchEndX;
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) nextSlide();
+      else lastSlide();
+    }
+  };
 
   // useEffect(() => {
   //   setLoadingWidth(0); // Zerar a largura da barra de carregamento ao mudar de slide
@@ -52,11 +66,12 @@ function BannerSliderNew() {
   // }, [currentSlide]);
 
   return (
-    <section className={styles.bannerSlider} style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})` }}>
+    <section className={styles.bannerSlider} onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)} onTouchMove={(e) => setTouchEndX(e.touches[0].clientX)} onTouchEnd={handleTouch}>
+      <div className={styles.bannerSlider_background} style={{ backgroundImage: `url(${noticias[currentSlide]?.banner})`}}></div>
       <div className={styles.bannerSlider_filter}></div>
       <div className={styles.bannerSlider_container}>
         <TagsCase tags={noticias[currentSlide]?.tags} />
-        <span className={styles.bannerSlider_container_title}>{noticias[currentSlide]?.title}</span>
+        <Link className={styles.bannerSlider_container_title} to={`/article/${format(noticias[currentSlide]?.title)}`}>{noticias[currentSlide]?.title}</Link>
         <span className={styles.bannerSlider_container_subtitle}>{noticias[currentSlide]?.subtitle}</span>
         <span className={styles.bannerSlider_container_data}>Por&nbsp;
           <Link className={styles.bannerSlider_container_autor} to={`/search/${format(noticias[currentSlide]?.info.autor)}`}>
