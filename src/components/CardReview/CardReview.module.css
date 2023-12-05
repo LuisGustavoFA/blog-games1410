@@ -43,6 +43,7 @@
   color: var(--theme-color);
   background-color: var(--main-color);
   background-image: linear-gradient(to right, var(--main-color), rgba(0, 0, 0, .3));
+  transition: transform .1s ease-in-out;
 }
 
 .cardReview_container_icon:hover{

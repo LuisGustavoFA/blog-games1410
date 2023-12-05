@@ -63,13 +63,14 @@
 }
 
 .card-list-data-footer-info a{
-  border-bottom: 2px solid var(--text-color);
-  color: var(--text-color);
+  border-bottom: 1px solid transparent;
+  color: var(--subtext-color);
   text-decoration: none;
-  transition: border-width .2s ease-in-out;
+  transition: border-bottom .2s ease-in-out;
 }
 
 .card-list-data-footer-info a:hover{
+  color: var(--text-color);
   border-bottom: 4px solid var(--main-color);
 }
 

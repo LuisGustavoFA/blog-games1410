@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 import { getData } from "../../database/DataApi";
 import CardHorizontal from "../../components/CardHorizontal/CardHorizontal";
-import BannerSlider from "../../components/BannerSlider/BannerSlider";
 import ReviewSection from "../../components/ReviewSection/ReviewSection";
 import CardVertical from "../../components/CardVertical/CardVertical";
 import BannerSliderNew from "../../components/BannerSliderNew/BannerSliderNew";

@@ -36,6 +36,16 @@
   margin-top: 10px;
 }
 
+@media (max-width: 1300px){
+  .banner_title{
+    width: 90%;
+  }
+
+  .news{
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 1150px){
   .news{
     width: 95%;

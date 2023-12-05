@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./ArticlePage.css"
+import "./ArticlePage.css";
 import { findArticle } from "../../database/DataApi";
 import React from "react";
 import MoreArticles from "../../components/MoreArticles/MoreArticles";

@@ -19,10 +19,8 @@ function CardHorizontal({ data }) {
           <span className="card-data-link">{title}</span>
           <div className='card-data-footer'>
             <span className="card-data-footer-info">
-              Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>
+              Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(data.info?.time)}
             </span>
-            <span>|</span>
-            {calctime(data.info?.time)}
           </div>
         </div>
       </Link>

@@ -12,6 +12,7 @@ function BannerSliderNew() {
   const sliderSize = 5;
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
+  const radioSlides = [];
   // const [loadingWidth, setLoadingWidth] = useState(0);
 
   document.querySelectorAll('input[type=radio][name=slideRadio]').forEach(radio => {
@@ -53,6 +54,17 @@ function BannerSliderNew() {
     }
   };
 
+  for (let i=0; i<6; i++) {
+    radioSlides.push(
+      <>
+        <input type='radio' id={`slideRadio${i}`} name='slideRadio' value={i} checked={currentSlide == i} onClick={() => setCurrentSlide(i)}></input>
+        <label for={`slideRadio${i}`}>
+            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
+        </label>
+      </>
+    )
+  }
+
   // useEffect(() => {
   //   setLoadingWidth(0); // Zerar a largura da barra de carregamento ao mudar de slide
   //   const interval = setInterval(() => {
@@ -78,37 +90,8 @@ function BannerSliderNew() {
             {noticias[currentSlide]?.info.autor}</Link>, {calctime(noticias[currentSlide]?.info.time)}
         </span>
         <div className={styles.bannerSlider_container_radioCase}>
-          <input type='radio' id='slideRadio0' name='slideRadio' value='0' checked={currentSlide == 0} onClick={() => setCurrentSlide(0)}></input>
-          <label for='slideRadio0'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
-
-          <input type='radio' id='slideRadio1' name='slideRadio' value='1' checked={currentSlide == 1} onClick={() => setCurrentSlide(1)}></input>
-          <label for='slideRadio1'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
-
-          <input type='radio' id='slideRadio2' name='slideRadio' value='2' checked={currentSlide == 2} onClick={() => setCurrentSlide(2)}></input>
-          <label for='slideRadio2'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
-
-          <input type='radio' id='slideRadio3' name='slideRadio' value='3' checked={currentSlide == 3} onClick={() => setCurrentSlide(3)}></input>
-          <label for='slideRadio3'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
-
-          <input type='radio' id='slideRadio4' name='slideRadio' value='4' checked={currentSlide == 4} onClick={() => setCurrentSlide(4)}></input>
-          <label for='slideRadio4'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
-
-          <input type='radio' id='slideRadio5' name='slideRadio' value='5' checked={currentSlide == 5} onClick={() => setCurrentSlide(5)}></input>
-          <label for='slideRadio5'>
-            {/* <div style={{ width: `${loadingWidth}%` }} className={styles.loadingBar}></div> */}
-            </label>
+          {radioSlides}
         </div>
-
       </div>
     </section>
   )
