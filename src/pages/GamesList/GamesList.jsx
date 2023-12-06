@@ -7,6 +7,7 @@ import CardList from '../../components/CardList/CardList';
 import MoreArticles from '../../components/MoreArticles/MoreArticles';
 import { calctime } from '../../functions/calctime';
 import { format } from '../../functions/format';
+import { Tweet } from 'react-tweet';
 
 function GamesList() {
   window.scrollTo(0, 0);
@@ -14,6 +15,7 @@ function GamesList() {
   const { title } = useParams();
   const [article, setArticle] = useState([]);
   const [games, setGames] = useState([]);
+  const [tweet, setTweet] = useState('');
 
   document.title = article.title;
 
@@ -21,6 +23,7 @@ function GamesList() {
     findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
       setArticle(resp);
       resp.games ? setGames(resp.games) : setGames([]);
+      resp.social?.x && setTweet(resp.social.x);
     })
   }, [title])
 
@@ -35,13 +38,14 @@ function GamesList() {
         <span className={styles.banner_case_subtitle}>{article.subtitle}</span>
       </div>
       <div className={styles.content}>
-        <span className={styles.content_text} dangerouslySetInnerHTML={{ __html: article.text}}></span>
+        <span className={styles.content_text} dangerouslySetInnerHTML={{ __html: article.text }}></span>
         {games.map((game, index) => (
-          <CardList key={index} game={game}/>
+          <CardList key={index} game={game} />
         ))}
+        {tweet != '' && <Tweet id={tweet} />}
         <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
       </div>
-      <MoreArticles/>
+      <MoreArticles />
     </main>
   )
 }
