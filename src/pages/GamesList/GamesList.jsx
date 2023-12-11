@@ -34,21 +34,12 @@ function GamesList() {
   useEffect(() => {
     const post = article.social?.post;
     const video = article.social?.video;
-
-    if (post && article.text.includes('[socialPost]')) {
-      setPostIncluded(true);
-    }
-
-    if (video && article.text.includes('[socialVideo]')) {
-      setVideoIncluded(true);
-    }
-
+    if (post && article.text.includes('[socialPost]')) setPostIncluded(true);
+    if (video && article.text.includes('[socialVideo]')) setVideoIncluded(true);
     setArticleText(article.text);
-    console.log(articleText);
-
   }, [article]);
 
-  const renderContent = () => {
+  const renderText = () => {
     if (!postIncluded && !videoIncluded) {
       return articleText;
 
@@ -56,14 +47,14 @@ function GamesList() {
       let test = articleText.split('[socialPost]').map((part, index, array) => (
         <React.Fragment key={index}>
           {part}
-          {index !== array.length - 1 && <Tweet id={article.social?.post} />}
+          {index !== array.length - 1 && <Tweet id={article.social?.post}/>}
         </React.Fragment>
       ));
 
       let test2 = test[1].props.children[0].split('[socialVideo]').map((part, index, array) => (
         <React.Fragment key={index}>
           {part}
-          {index !== array.length - 1 && <YouTube style={{paddingTop: "16px"}} videoId={article.social?.video} />}
+          {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
         </React.Fragment>
       ));
 
@@ -85,13 +76,12 @@ function GamesList() {
       let test = articleText.split('[socialVideo]').map((part, index, array) => (
         <React.Fragment key={index}>
           {part}
-          {index !== array.length - 1 && <YouTube style={{paddingTop: "16px"}} videoId={article.social?.video} />}
+          {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
         </React.Fragment>
       ));
 
       return test;
     }
-    
   };
 
   return (
@@ -106,14 +96,14 @@ function GamesList() {
       </div>
       <div className={styles.content}>
         <span className={styles.content_text}>
-          {renderContent()}
+          {renderText()}
         </span>
         {games.map((game, index) => (
           <CardList key={index} game={game} />
         ))}
         <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
       </div>
-      <MoreArticles />
+      <MoreArticles/>
     </main>
   )
 }
