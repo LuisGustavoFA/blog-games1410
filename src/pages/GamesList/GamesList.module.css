@@ -53,6 +53,7 @@
 
 .content_text{
   color: var(--text-color);
+  text-shadow: none;
 }
 
 .content_subtext{
