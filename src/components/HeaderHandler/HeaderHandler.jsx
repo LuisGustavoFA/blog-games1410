@@ -1,23 +1,9 @@
-import { useState, useEffect } from "react";
 import HeaderMobile from "../HeaderMobile/HeaderMobile";
 import Header from "../Header/Header";
+import IsMobileHandler from "../IsMobileHandler/IsMobileHandler";
 
 function HeaderHandler() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
-
-  const handleResize = () => {
-    const it = setInterval(() => {
-      setIsMobile(window.innerWidth < 900);
-      clearInterval(it);
-    }, 100);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const isMobile = IsMobileHandler();
 
   return (
     <>

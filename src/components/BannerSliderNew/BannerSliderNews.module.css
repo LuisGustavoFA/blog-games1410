@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 40%;
-  background: linear-gradient(to top, var(--theme-color) 20%, transparent 80%);
+  background: linear-gradient(to top, var(--theme-color) 5%, transparent 95%);
 }
 
 .bannerSlider_container{
@@ -117,14 +117,14 @@
 
   .bannerSlider_filter{
     bottom: -1px;
-    height: 50%;
-    background: linear-gradient(to top, var(--theme-color) 20%, transparent 80%);
+    height: 40%;
+    background: linear-gradient(to top, var(--theme-color) 10%, transparent 90%);
   }
 
   .bannerSlider_container{
     width: 90%;
     height: 90%;
-    gap: 10px;
+    gap: 6px;
   }
 
   .bannerSlider_container_radioCase{

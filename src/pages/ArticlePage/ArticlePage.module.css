@@ -30,8 +30,7 @@
 }
 
 .banner_case_title,
-.banner_case_subtitle,
-.content_text{
+.banner_case_subtitle{
   font-weight: bold;
   text-shadow: 1px 1px var(--theme-color);
 }
@@ -49,11 +48,6 @@
 .content{
   width: 50%;
   margin-left: 10%;
-}
-
-.content_text{
-  color: var(--text-color);
-  text-shadow: none;
 }
 
 .content_subtext{

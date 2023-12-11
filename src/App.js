@@ -8,7 +8,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import ListPage from './pages/ListPage/ListPage';
 import Tag from './pages/Tag/Tag';
-import GamesList from './pages/GamesList/GamesList';
+import ArticlePage from './pages/ArticlePage/ArticlePage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route element={<HomePage/>} path=''/>
           <Route element={<HomePage/>} path='/home'/>
-          <Route element={<GamesList/>} path='/article/:title'/>
+          <Route element={<ArticlePage/>} path='/article/:title'/>
           <Route element={<ListPage/>} path='/list/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
           <Route element={<Tag/>} path='/tag/:tag'/>

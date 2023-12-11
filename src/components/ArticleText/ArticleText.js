@@ -1,35 +1,13 @@
-import styles from './GamesList.module.css';
-import parse from 'html-react-parser';
-import YouTube from 'react-youtube';
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { findArticle } from '../../database/DataApi';
-import TagsCase from '../../components/TagsCase/TagsCase';
-import CardList from '../../components/CardList/CardList';
-import MoreArticles from '../../components/MoreArticles/MoreArticles';
-import { calctime } from '../../functions/calctime';
-import { format } from '../../functions/format';
+import './ArticleText.css';
+import YouTube from 'react-youtube';
 import { Tweet } from 'react-tweet';
+import { useEffect, useState } from 'react';
 
-function GamesList() {
-  window.scrollTo(0, 0);
-
-  const { title } = useParams();
-  const [article, setArticle] = useState([]);
-  const [games, setGames] = useState([]);
+function ArticleText({article}) {
   const [articleText, setArticleText] = useState('');
   const [postIncluded, setPostIncluded] = useState(false);
   const [videoIncluded, setVideoIncluded] = useState(false);
-
-  document.title = article.title;
-
-  useEffect(() => {
-    findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
-      resp.games ? setGames(resp.games) : setGames([]);
-      setArticle(resp);
-    })
-  }, [title])
 
   useEffect(() => {
     const post = article.social?.post;
@@ -85,27 +63,10 @@ function GamesList() {
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.banner_image} style={{ backgroundImage: `url('${article.banner}')` }}>
-        <div className={styles.filter}></div>
-      </div>
-      <div className={styles.banner_case}>
-        <TagsCase tags={article.tags} />
-        <span className={styles.banner_case_title}>{article.title}</span>
-        <span className={styles.banner_case_subtitle}>{article.subtitle}</span>
-      </div>
-      <div className={styles.content}>
-        <span className={styles.content_text}>
-          {renderText()}
-        </span>
-        {games.map((game, index) => (
-          <CardList key={index} game={game} />
-        ))}
-        <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
-      </div>
-      <MoreArticles/>
-    </main>
+    <span className='article-text'>
+      {renderText()}
+    </span>
   )
 }
 
-export default GamesList;
+export default ArticleText
