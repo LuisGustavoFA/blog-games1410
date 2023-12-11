@@ -25,11 +25,13 @@ function BannerSliderNew() {
 
   const nextSlide = () => {
     currentSlide >= sliderSize ? setCurrentSlide(Number(0)) : setCurrentSlide(Number(currentSlide) + 1);
+    setTouchStartX(0); setTouchEndX(0);
     // setLoadingWidth(0);
   }
 
   const lastSlide = () => {
     currentSlide === 0 ? setCurrentSlide(Number(sliderSize)) : setCurrentSlide(Number(currentSlide) - 1);
+    setTouchStartX(0); setTouchEndX(0);
   }
 
   useEffect(() => {
@@ -48,7 +50,7 @@ function BannerSliderNew() {
   
   const handleTouch = () => {
     const difference = touchStartX - touchEndX;
-    if (Math.abs(difference) > 50) {
+    if (touchStartX !== 0 && touchEndX !== 0 && Math.abs(difference) > 100) {
       if (difference > 0) nextSlide();
       else lastSlide();
     }
