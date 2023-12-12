@@ -11,16 +11,12 @@ const changeTheme = (theme, text, subtext) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+window.statusbar.visible = false;
+
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-<>
-  <meta name="theme-color" content="#057391"></meta>
-  <meta name="msapplication-navbutton-color" content="#057391"></meta>
-  <meta name="apple-mobile-web-app-status-bar-style" content="#057391"></meta>
-</>
 
 export default changeTheme;
