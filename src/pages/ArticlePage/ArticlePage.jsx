@@ -48,10 +48,7 @@ function ArticlePage() {
       <div className={styles.banner_image} onClick={() => {isMobile && setImgOpen(!imgOpen)}} style={{ backgroundImage: `url('${article.banner}')` }}>
         <div className={styles.filter}></div>
       </div>
-      {imgOpen && isMobile ? 
-        <FloatImage image={article.banner}/>
-        : ""
-      }
+      <FloatImage image={article.banner} isOpen={imgOpen}/>
       <div className={styles.banner_case}>
         <TagsCase tags={article.tags} />
         <span className={styles.banner_case_title}>{article.title}</span>

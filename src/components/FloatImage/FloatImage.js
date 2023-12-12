@@ -1,9 +1,13 @@
 import "./FloatImage.css";
 
-function FloatImage({image}) {
+function FloatImage({image, isOpen}) {
   
   return (
-    <div className="float-image" style={{ backgroundImage: `url('${image}')` }}></div>
+    <>
+      {isOpen && 
+        <div className="float-image" style={{ backgroundImage: `url('${image}')` }}></div>
+      }
+    </>
   )
 }
 
