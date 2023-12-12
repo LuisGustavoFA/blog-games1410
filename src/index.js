@@ -11,8 +11,6 @@ const changeTheme = (theme, text, subtext) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-window.statusbar.visible = false;
-
 root.render(
   <React.StrictMode>
     <App />
