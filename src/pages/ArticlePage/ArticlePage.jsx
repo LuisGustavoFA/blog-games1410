@@ -31,24 +31,12 @@ function ArticlePage() {
     })
   }, [title])
 
-  useEffect(() => {
-    const closeImg = () => {
-      if (window.scrollY > 1) {
-        setImgOpen(false);
-      }
-    }
-    window.addEventListener("scroll", closeImg);
-    return () => {
-      window.removeEventListener("scroll", closeImg);
-    }
-  })
-
   return (
     <main className={styles.main}>
       <div className={styles.banner_image} onClick={() => {isMobile && setImgOpen(!imgOpen)}} style={{ backgroundImage: `url('${article.banner}')` }}>
         <div className={styles.filter}></div>
       </div>
-      <FloatImage image={article.banner} isOpen={imgOpen}/>
+      <FloatImage image={article.banner} isOpen={imgOpen} setOpen={setImgOpen}/>
       <div className={styles.banner_case}>
         <TagsCase tags={article.tags} />
         <span className={styles.banner_case_title}>{article.title}</span>
