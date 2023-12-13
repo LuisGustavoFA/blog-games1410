@@ -21,6 +21,7 @@ function ArticlePage() {
   const [games, setGames] = useState([]);
   const [imgOpen, setImgOpen] = useState(false);
   const isMobile = IsMobileHandler();
+  const [img, setImg] = useState('');
 
   document.title = article.title;
 
@@ -28,15 +29,16 @@ function ArticlePage() {
     findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
       resp.games ? setGames(resp.games) : setGames([]);
       setArticle(resp);
+      setImg(resp.banner);
     })
   }, [title])
 
   return (
     <main className={styles.main}>
-      <div className={styles.banner_image} onClick={() => {isMobile && setImgOpen(!imgOpen)}} style={{ backgroundImage: `url('${article.banner}')` }}>
+      <div className={styles.banner_image} onClick={() => {setImg(article.banner); if (isMobile) {setImgOpen(!imgOpen)}}} style={{ backgroundImage: `url('${article.banner}')` }}>
         <div className={styles.filter}></div>
       </div>
-      <FloatImage image={article.banner} isOpen={imgOpen} setOpen={setImgOpen}/>
+      <FloatImage image={img} isOpen={imgOpen} setOpen={setImgOpen}/>
       <div className={styles.banner_case}>
         <TagsCase tags={article.tags} />
         <span className={styles.banner_case_title}>{article.title}</span>
@@ -45,7 +47,7 @@ function ArticlePage() {
       <div className={styles.content}>
         <ArticleText article={article}/>
         {games.map((game, index) => (
-          <CardList key={index} game={game} />
+          <CardList key={index} game={game} setImg={setImg} isOpen={imgOpen} setImgOpen={setImgOpen}/>
         ))}
         <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
       </div>

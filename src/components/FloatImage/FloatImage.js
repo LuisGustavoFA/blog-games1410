@@ -2,6 +2,7 @@ import "./FloatImage.css";
 import { RxCross1 } from "react-icons/rx";
 
 function FloatImage({ image, isOpen, setOpen }) {
+  
   if (isOpen) {
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
   } else {
