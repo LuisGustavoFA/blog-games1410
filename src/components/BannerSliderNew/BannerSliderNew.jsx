@@ -50,7 +50,7 @@ function BannerSliderNew() {
   
   const handleTouch = () => {
     const difference = touchStartX - touchEndX;
-    if (touchStartX !== 0 && touchEndX !== 0 && Math.abs(difference) > 100) {
+    if (touchStartX !== 0 && touchEndX !== 0 && Math.abs(difference) > 20) {
       if (difference > 0) nextSlide();
       else lastSlide();
     }

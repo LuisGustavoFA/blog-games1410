@@ -1,7 +1,6 @@
 import styles from './CardList.module.css';
 
 function CardList({game}) {
-
   const {title, banner, text} = game;
   
   return (
