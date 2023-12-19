@@ -1,9 +1,9 @@
 import "./FloatImage.css";
 import { RxCross1 } from "react-icons/rx";
 
-function FloatImage({ image, isOpen, setOpen }) {
+function FloatImage({ image, imgOpen, setImgOpen }) {
   
-  if (isOpen) {
+  if (imgOpen) {
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
   } else {
     document.getElementsByTagName('body')[0].style.overflow = 'visible';
@@ -11,9 +11,9 @@ function FloatImage({ image, isOpen, setOpen }) {
 
   return (
     <>
-      {isOpen &&
+      {imgOpen &&
         <>
-          <RxCross1 className="cross" size={32} onClick={() => setOpen(false)} />
+          <RxCross1 className="cross" size={32} onClick={() => setImgOpen(false)} />
           <div className="float-image" style={{backgroundImage: `url('${image}')`}}></div>
         </>
       }

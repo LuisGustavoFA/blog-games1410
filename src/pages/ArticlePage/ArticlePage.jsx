@@ -14,31 +14,39 @@ import FloatImage from '../../components/FloatImage/FloatImage';
 import ArticleText from '../../components/ArticleText/ArticleText';
 
 function ArticlePage() {
-  window.scrollTo(0, 0);
-  
   const { title } = useParams();
   const [article, setArticle] = useState([]);
   const [games, setGames] = useState([]);
   const [imgOpen, setImgOpen] = useState(false);
-  const isMobile = IsMobileHandler();
   const [img, setImg] = useState('');
-
+  const isMobile = IsMobileHandler();
+  
   document.title = article.title;
+
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  }, [title]);
 
   useEffect(() => {
     findArticle(title.replace(/-{2,}/g, ' ').replace(/-/g, " ")).then((resp) => {
       resp.games ? setGames(resp.games) : setGames([]);
       setArticle(resp);
-      setImg(resp.banner);
     })
   }, [title])
 
+  const openImage = (img) => {
+    if (isMobile) {
+      setImg(img);
+      setImgOpen(true);
+    }
+  }
+
   return (
     <main className={styles.main}>
-      <div className={styles.banner_image} onClick={() => {setImg(article.banner); if (isMobile) {setImgOpen(!imgOpen)}}} style={{ backgroundImage: `url('${article.banner}')` }}>
+      <div className={styles.banner_image} onClick={() => openImage(article.banner)} style={{ backgroundImage: `url('${article.banner}')` }}>
         <div className={styles.filter}></div>
       </div>
-      <FloatImage image={img} isOpen={imgOpen} setOpen={setImgOpen}/>
+      <FloatImage image={img} imgOpen={imgOpen} setImgOpen={setImgOpen}/>
       <div className={styles.banner_case}>
         <TagsCase tags={article.tags} />
         <span className={styles.banner_case_title}>{article.title}</span>
@@ -47,7 +55,7 @@ function ArticlePage() {
       <div className={styles.content}>
         <ArticleText article={article}/>
         {games.map((game, index) => (
-          <CardList key={index} game={game} setImg={setImg} isOpen={imgOpen} setImgOpen={setImgOpen}/>
+          <CardList key={index} game={game} openImage={openImage}/>
         ))}
         <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
       </div>
