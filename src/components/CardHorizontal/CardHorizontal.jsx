@@ -10,7 +10,7 @@ function CardHorizontal({ data }) {
 
   return (
     <>
-      <Link className="card" to={`/${data.itens ? "list" : "article"}/${title_url}`}>
+      <Link className="card" to={`/article/${title_url}`}>
         <div className="card-banner" alt="banner da notícia" style={{ backgroundImage: `url(${banner})` }}></div>
         <div className='card-data'>
           <div className='card-data-header'>

@@ -10,7 +10,7 @@ function CardVertical({ data, hasBanner = false }) {
 
   return (
     <>
-      <Link className={`${"card-list"} ${hasBanner? " hasBanner" : ""}`} to={`/${data.itens ? "list" : "article"}/${title_url}`}>
+      <Link className={`${"card-list"} ${hasBanner? " hasBanner" : ""}`} to={`/article/${title_url}`}>
         <div className={`${"card-list-banner"} ${hasBanner? " hasBanner" : ""}`} alt="banner da notícia" style={{ backgroundImage: `url(${banner})` }}></div>
         <div className='card-list-data' >
           <div className='card-list-data-header'>

@@ -68,6 +68,15 @@
   border-bottom: 4px solid var(--main-color);
 }
 
+@media (max-width: 1300px) {
+  .banner_case{
+    width: 90%;
+  }
+  .content {
+    margin-left: 5%;
+  }
+}
+
 @media (max-width: 900px) {
   .banner_image{
     margin-top: 64px;
@@ -79,7 +88,6 @@
   }
 
   .banner_case {
-    width: 90%;
     margin-top: 20px;
     margin-bottom: 40px;
   }
