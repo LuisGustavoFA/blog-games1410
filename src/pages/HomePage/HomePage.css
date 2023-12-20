@@ -31,16 +31,6 @@
   text-wrap: nowrap;
 }
 
-.home-horizontal-ad{
-  width: 100%;
-  aspect-ratio: auto 412 / 152;
-  background-image: url('https://bannerboo.com/upload/medialibrary/13a/851x315_b7f147f2ad77f-_15_.gif');
-  background-size: cover;
-  background-position: center;
-  background-color: gray;
-  margin: 24px 0;
-}
-
 .home-content-secondary{
   width: 30%;
   display: flex;
@@ -72,9 +62,5 @@
 
   .home-content {
     width: 95%;
-  }
-
-  .home-vertical-ad {
-    display: none;
   }
 }

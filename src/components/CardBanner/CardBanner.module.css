@@ -1,7 +1,7 @@
 .cardBanner{
-  width: 65%;
+  width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
   text-decoration: none;
 }
@@ -9,9 +9,9 @@
 .cardBanner_image{
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
-  transition: .5s;
+  background-repeat: no-repeat;
 }
 
 /* .cardBanner_image:hover{
@@ -33,16 +33,14 @@
   color: #FFF;
   text-shadow: 2px 2px #000;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-@media screen and (max-width: 1150px){
+@media (max-width: 900px){
   .cardBanner{
     width: 100vw;
     border-radius: 0;
     margin-left: -2.6%;
+    /* margin-top: -3.2%; */
   } 
-
-  .cardBanner_title{
-    text-align: center;
-  }
 }

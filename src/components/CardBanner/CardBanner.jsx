@@ -3,7 +3,7 @@ import styles from './CardBanner.module.css';
 import { format } from '../../functions/format';
 
 function CardBanner({ data }) {
-  const { banner, title, info, tags } = data;
+  const { banner, title } = data;
 
   return (
     <Link className={styles.cardBanner} to={`/${data.itens ? "list" : "article"}/${format(title)}`}>

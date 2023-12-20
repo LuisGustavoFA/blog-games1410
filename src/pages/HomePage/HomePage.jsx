@@ -5,6 +5,7 @@ import CardHorizontal from "../../components/CardHorizontal/CardHorizontal";
 import ReviewSection from "../../components/ReviewSection/ReviewSection";
 import CardVertical from "../../components/CardVertical/CardVertical";
 import BannerSliderNew from "../../components/BannerSliderNew/BannerSliderNew";
+import AdCase from '../../components/AdCase/AdCase';
 
 function HomePage() {
   window.scrollTo(0, 0);
@@ -27,7 +28,6 @@ function HomePage() {
 
   return (
     <main className="home">
-      {/* <BannerSlider/> */}
       <BannerSliderNew/>
       <ReviewSection/>
       <section className="home-content">
@@ -39,7 +39,7 @@ function HomePage() {
               return (
                 <React.Fragment key={id}>
                   <CardHorizontal data={noticia} key={id}/>
-                  {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>}
+                  {((id - 1) % 3 === 0) && <AdCase/>}
                 </React.Fragment>
               )
             }

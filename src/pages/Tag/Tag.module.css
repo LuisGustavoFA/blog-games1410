@@ -3,16 +3,72 @@
   justify-content: center;
   align-items: center;
   margin-top: 80px;
-  height: 80px;
+  height: 60px;
   width: 100%;
-  background-color: #025268;
+  background-color: var(--main-color);
+  filter: saturate(40%);
+}
+
+.banner_content{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .banner_title{
   display: flex;
-  justify-content: start;
   align-items: center;
-  width: 80%;
+  gap: 4px;
+}
+
+.banner_viewMore{
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.banner_viewMore_content{
+  position: absolute;
+  width: 200px;
+  left: -105%;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  transition: .2s ease-in-out;
+}
+
+.banner_viewMore_content_tags{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 6px;
+  height: 100%;
+  width: 100%;
+  transition: .2s ease-in-out;
+}
+
+.banner_viewMore_content_tag{
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 1.5px 1.5px 1px #000;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: .1s ease-in-out;
+}
+
+.banner_viewMore_content_tag:hover{
+  background-color: var(--main-color);
+  filter: brightness(130%);
 }
 
 .banner_title_icon,
@@ -29,19 +85,35 @@
 
 .news{
   display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 12px auto;
+  min-height: 100vh;
+  gap: 8px;
+}
+
+.news_main{
+  width: 70%;
+  display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 80%;
-  margin: auto;
-  margin-top: 10px;
+}
+
+.news_secondary{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media (max-width: 1300px){
-  .banner_title{
+  .news{
     width: 90%;
   }
+}
 
-  .news{
+@media screen and (max-width: 1300px){
+  .banner_content{
     width: 90%;
   }
 }
@@ -49,17 +121,41 @@
 @media screen and (max-width: 1150px){
   .news{
     width: 95%;
-    margin-top: 0;
   } 
 }
 
 @media screen and (max-width: 900px){
   .banner{
-    height: 64px;
+    height: 52px;
     margin-top: 64px;
   }
 
-  .banner_title{
-    width: 90%;
+  .banner_content{
+    width: 95%;
+  }
+
+  .banner_viewMore_content_tags{
+    gap: 5px;
+  }
+
+  .banner_viewMore_content_tag{
+    background-color: var(--main-color);
+    filter: brightness(130%);
+    font-size: 1.4rem;
+    text-shadow: 1.5px 1.5px 1px #000;
+  }
+
+  .news{
+    width: 95%;
+    margin-top: 0;
+  }
+
+  .news_main{
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .news_secondary{
+    display: none;
   }
 }

@@ -5,9 +5,9 @@ import DarkToggle from '../DarkToggle/DarkToggle';
 function QuickMenu() {
   return (
     <ul className={styles.quickMenuCase}>
-      <Link className={styles.quickMenuLinks} to={"/search/noticia"}>Notícias</Link>
-      <Link className={styles.quickMenuLinks} to={"/search/review"}>Reviews</Link>
-      <Link className={styles.quickMenuLinks} to={"/search/lista"}>Listas</Link>
+      <Link className={styles.quickMenuLinks} to={"/tag/noticia"}>Notícias</Link>
+      <Link className={styles.quickMenuLinks} to={"/tag/review"}>Reviews</Link>
+      <Link className={styles.quickMenuLinks} to={"/tag/lista"}>Listas</Link>
       <DarkToggle mobile/>
     </ul>
   )
