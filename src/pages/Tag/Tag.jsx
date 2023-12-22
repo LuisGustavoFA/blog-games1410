@@ -78,13 +78,13 @@ function Tag() {
     <main>
       <div className={styles.banner}>
         <div className={styles.banner_content}>
-          <div className={styles.banner_content_leftHand}>
+          <div className={styles.banner_content_leftHand} onMouseEnter={()=> openViewMore()} onMouseLeave={()=> closeViewMore()} onClick={()=> handleViewMore()}>
             <div className={styles.banner_title}>
               {tag == 'sony' ? <FaPlaystation className={styles.banner_title_icon} /> : <IoGameController className={styles.banner_title_icon} />}
               <span className={styles.banner_title_span}>{tag.toUpperCase()}</span>
             </div>
-            <span className={styles.banner_viewMore} onMouseLeave={()=> closeViewMore()} onClick={()=> handleViewMore()}>
-              <MdOutlineExpandMore className={styles.banner_viewMore_icon} size={isMobile ? 28 : 32} onMouseEnter={()=> openViewMore()}/>
+            <span className={styles.banner_viewMore}>
+              <MdOutlineExpandMore className={styles.banner_viewMore_icon} size={isMobile ? 28 : 32} />
               <div className={styles.banner_viewMore_content} style={{height: `${open ? "auto" : "0px"}`}}>
                 <div className={styles.banner_viewMore_content_tags} style={{display: `${open ? "flex" : "none"}`}}>
                   {tags.sort().map((tag)=>
