@@ -12,8 +12,19 @@
 .banner_content{
   width: 80%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.banner_content_leftHand{
+  display: flex;
+  width: 300px;
+  gap: 4px;
+  padding: 0 8px;
+  justify-content: space-between;
+  border-radius: 32px;
+  background-color: var(--main-color);
+  filter: brightness(130%);
+  position: relative;
 }
 
 .banner_title{
@@ -22,48 +33,60 @@
   gap: 4px;
 }
 
-.banner_viewMore{
+.banner_viewMore_icon{
   color: #FFF;
+  filter: drop-shadow(2px 2px #000);
   cursor: pointer;
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-shadow: 2px 2px 1px #000;
+  margin-top: 6px;
+  border-radius: 50%;
+  transition: .2s ease-in-out;
+}
+
+.banner_viewMore_icon:hover {
+  backdrop-filter: brightness(130%);
 }
 
 .banner_viewMore_content{
   position: absolute;
-  width: 200px;
-  left: -105%;
-  border-radius: 8px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  border-radius: 32px;
   background-color: var(--main-color);
-  cursor: default;
   display: flex;
   justify-content: center;
-  transition: .2s ease-in-out;
 }
 
 .banner_viewMore_content_tags{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  margin: 6px;
+  margin: 12px;
+  margin-top: 46px;
   height: 100%;
   width: 100%;
   transition: .2s ease-in-out;
 }
 
 .banner_viewMore_content_tag{
-  margin: 0;
   font-size: 1.2rem;
   font-weight: 400;
-  text-align: center;
   text-shadow: 1.5px 1.5px 1px #000;
   width: 100%;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 16px;
+  padding-left: 12px;
   transition: .1s ease-in-out;
+  text-decoration: none;
+  color: #FFF;
+  position: relative;
+}
+
+.banner_viewMore_content_tagCount{
+  position: absolute;
+  right: 0;
+  margin-right: 12px;
 }
 
 .banner_viewMore_content_tag:hover{
@@ -134,15 +157,16 @@
     width: 95%;
   }
 
-  .banner_viewMore_content_tags{
-    gap: 5px;
+  .banner_content_leftHand{
+    width: 260px;
   }
 
-  .banner_viewMore_content_tag{
-    background-color: var(--main-color);
-    filter: brightness(130%);
-    font-size: 1.4rem;
-    text-shadow: 1.5px 1.5px 1px #000;
+  .banner_viewMore_icon:hover {
+    backdrop-filter: none;
+  }
+
+  .banner_viewMore_content_tags{
+    gap: 4px;
   }
 
   .news{
