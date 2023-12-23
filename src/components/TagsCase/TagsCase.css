@@ -29,5 +29,5 @@
 }
 
 .tag:hover{
-  filter: brightness(80%);
+  background-color: var(--secondary-color);
 }

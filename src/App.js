@@ -6,7 +6,7 @@ import ThemeHandler from './components/ThemeHandler/ThemeHandler';
 import HomePage from './pages/HomePage/HomePage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import SearchPage from './pages/SearchPage/SearchPage';
-import Tag from './pages/Tag/Tag';
+import TagPage from './pages/TagPage/TagPage';
 import ArticlePage from './pages/ArticlePage/ArticlePage';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route element={<HomePage/>} path='/home'/>
           <Route element={<ArticlePage/>} path='/article/:title'/>
           <Route element={<SearchPage/>} path='/search/:search'/>
-          <Route element={<Tag/>} path='/tag/:tag'/>
+          <Route element={<TagPage/>} path='/tag/:tag'/>
           <Route element={<ErrorPage/>} path='*'/>
         </Routes>
       <Footer/>
