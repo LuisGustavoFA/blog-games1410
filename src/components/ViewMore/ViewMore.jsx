@@ -8,10 +8,10 @@ import isMobileHandler from '../../components/IsMobileHandler/IsMobileHandler';
 import { useState } from 'react';
 
 
-function ViewMore({ currentName, contentArray, linkTo, icon = false, countFunction = "none"}) {
-  const hasCount = countFunction != "none";
+function ViewMore({ currentName, contentArray, linkTo, icon = false, ordered = false}) {
   const isMobile = isMobileHandler();
-  const [open, setOpen] = useState(false);  
+  const isCurrent = (tag) => format(tag[0]) === format(currentName);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={styles.viewMore} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)} onClick={() => setOpen(!open)}>
@@ -23,10 +23,11 @@ function ViewMore({ currentName, contentArray, linkTo, icon = false, countFuncti
         <MdOutlineExpandMore className={styles.viewMore_content_icon} size={isMobile ? 28 : 32} />
         <div className={styles.viewMore_content_open} style={{ height: `${open ? "auto" : "0px"}` }}>
           <div className={styles.viewMore_content_open_tags} style={{ display: `${open ? "flex" : "none"}` }}>
-            {contentArray.sort().map((tag) =>
-              <Link className={styles.viewMore_content_open_tag} to={`${linkTo}${format(tag)}`}>
-                {tag}
-                {hasCount && <span className={styles.viewMore_content_open_tagCount}>{countFunction(tag)}</span>}
+            {contentArray.map((tag) =>
+              !isCurrent(tag) &&
+              <Link className={styles.viewMore_content_open_tag} to={`${linkTo}${ordered ? format(tag[0]) : format(tag)}`}>
+                {ordered ? tag[0] : tag}
+                {ordered && <span className={styles.viewMore_content_open_tagCount}>{tag[1]}</span>}
               </Link>
             )}
           </div>

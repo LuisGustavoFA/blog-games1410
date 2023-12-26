@@ -7,13 +7,13 @@ import CardBanner from '../../components/CardBanner/CardBanner';
 import AdCase from '../../components/AdCase/AdCase';
 import ViewMore from '../../components/ViewMore/ViewMore';
 import { getData } from '../../database/DataApi';
+import { handletags } from '../../functions/handletags';
 
 function TagPage() {
   const { tag } = useParams();
   const [noticias, setNoticias] = useState([]);
   const [banner, setBanner] = useState([]);
-  const [tags, setTags] = useState([]);
-  const [data, setData] = useState({});
+  const [viewMoreTags, setViewMoreTags] = useState([]);
 
   useEffect(() => {
     findByTag(tag).then((resp) => {
@@ -23,44 +23,18 @@ function TagPage() {
     window.scrollTo(0, 0);
   }, [tag]);
 
-  const extractTags = (data) => {
-    const allTags = data.reduce((tags, item) => {
-      tags.push(...item.tags);
-      if (item.games) {
-        item.games.forEach(game => {
-          if (game.tags) {
-            tags.push(...game.tags);
-          }
-        });
-      }
-      return tags;
-    }, []);
-
-    const uniqueTags = [...new Set(allTags)];
-    return uniqueTags;
-  }
-
   useEffect(() => {
     getData().then((resp) => {
-      const extTags = extractTags(resp);
-      setTags(extTags);
-      setData(resp);
+      const formattedTags = handletags(resp);
+      setViewMoreTags(formattedTags);
     });
   }, [tag]);
-
-  const countTag = (tag) => {
-    let count = 0;
-    for (const item of data) {
-      if (item.tags.includes(tag)) count += 1;
-    }
-    return count;
-  }
   
   return (
     <main>
       <div className={styles.banner}>
         <div className={styles.banner_content}>
-          <ViewMore currentName={tag} contentArray={tags} linkTo={"/tag/"} icon countFunction={countTag}/>
+          <ViewMore currentName={tag} contentArray={viewMoreTags} linkTo={"/tag/"} icon ordered />
           {/* <ViewMore currentName={"José"} contentArray={["José", "Henrique", "Luis", "Jonas", "Pedro"]} linkTo={"/"}/> */}
         </div>
       </div>

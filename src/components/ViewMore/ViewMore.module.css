@@ -60,6 +60,8 @@
 }
 
 .viewMore_content_open_tag{
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 400;
   text-shadow: 1.5px 1.5px 1px #000;
@@ -71,6 +73,11 @@
   text-decoration: none;
   color: #FFF;
   position: relative;
+}
+
+.viewMore_content_open_tagIcon{
+  filter: drop-shadow(2px 2px #000);
+  margin-left: 8px;
 }
 
 .viewMore_content_open_tagCount{
