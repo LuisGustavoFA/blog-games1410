@@ -1,6 +1,6 @@
 .footer {
   background: var(--main-color);
-  height: 72px;
+  height: 140px;
 }
 
 .footer ul {
@@ -21,6 +21,7 @@
   padding: 2px 12px;
   gap: 6px;
   padding: 0;
+  margin-top: 16px;
   text-decoration: none;
 }
 
@@ -30,6 +31,7 @@
   font-size: 1.3rem;
   text-shadow: 2px 2px #000;
   font-weight: bold;
+  margin: 0;
 }
 
 .footer-text::after {
@@ -57,10 +59,6 @@
 }
 
 @media (max-width: 650px) {
-  .footer {
-    height: 64px;
-  }
-
   .footer ul {
     width: 100%;
   }

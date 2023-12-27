@@ -6,20 +6,19 @@ import ReviewSection from "../../components/ReviewSection/ReviewSection";
 import CardVertical from "../../components/CardVertical/CardVertical";
 import BannerSliderNew from "../../components/BannerSliderNew/BannerSliderNew";
 import AdCase from '../../components/AdCase/AdCase';
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import PageButtons from "../../components/PageButtons/PageButtons";
 
 function HomePage() {
-  window.scrollTo(0, 0);
   document.title = "Blog";
-  
   const [noticias, setNoticias] = useState([]);
   const [lists, setLists] = useState([]);
   const [page, setPage] = useState(1);
-
+  
   useEffect(() => {
     getData('news').then((resp) => {
       setNoticias(resp);
     })
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -34,7 +33,7 @@ function HomePage() {
       <ReviewSection/>
       <section className="home-content">
         <section className="home-content-main">
-          <h2 className="home-content-title">ÚLTIMAS NOTÍCIAS</h2>
+          <h2 id="title" className="home-content-title">ÚLTIMAS NOTÍCIAS</h2>
           {noticias.slice(((page - 1) * 10), (page * 10)).map((noticia, id) => {
               return (
                 <React.Fragment key={id}>
@@ -43,12 +42,8 @@ function HomePage() {
                 </React.Fragment>
               )
           })}
-          
-          <div className="home-content-main-pageButtons">
-            <FaArrowLeft onClick={()=> page > 1 ? setPage(page - 1) : ""}/>
-            <div>{`${page}`}</div>             
-            <FaArrowRight onClick={()=> page < Math.ceil(noticias.length / 10) ? setPage(page + 1) : ""}/>
-          </div>
+
+          <PageButtons page={page} setPage={setPage} maxPages={Math.ceil(noticias.length / 10)} scrollto={document.getElementById("title")}/>
 
         </section>
 
