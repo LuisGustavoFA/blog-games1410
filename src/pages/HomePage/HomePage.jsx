@@ -15,13 +15,11 @@ function HomePage() {
   const [noticias, setNoticias] = useState([]);
   const [lists, setLists] = useState([]);
   const [page, setPage] = useState(1);
-  const [maxPages, setMaxPages] = useState(0);
 
   useEffect(() => {
     getData('news').then((resp) => {
       setNoticias(resp);
     })
-    setMaxPages(Math.ceil(noticias.length / 10));
   }, []);
 
   useEffect(() => {
@@ -49,7 +47,7 @@ function HomePage() {
           <div className="home-content-main-pageButtons">
             <FaArrowLeft onClick={()=> page > 1 ? setPage(page - 1) : ""}/>
             <div>{`${page}`}</div>             
-            <FaArrowRight onClick={()=> page < maxPages ? setPage(page + 1) : ""}/>
+            <FaArrowRight onClick={()=> page < Math.ceil(noticias.length / 10) ? setPage(page + 1) : ""}/>
           </div>
 
         </section>
