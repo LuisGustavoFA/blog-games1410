@@ -6,13 +6,12 @@ import ReviewSection from "../../components/ReviewSection/ReviewSection";
 import CardVertical from "../../components/CardVertical/CardVertical";
 import BannerSliderNew from "../../components/BannerSliderNew/BannerSliderNew";
 import AdCase from '../../components/AdCase/AdCase';
-import PageButtons from "../../components/PageButtons/PageButtons";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   document.title = "Blog";
   const [noticias, setNoticias] = useState([]);
   const [lists, setLists] = useState([]);
-  const [page, setPage] = useState(1);
   
   useEffect(() => {
     getData('news').then((resp) => {
@@ -33,8 +32,8 @@ function HomePage() {
       <ReviewSection/>
       <section className="home-content">
         <section className="home-content-main">
-          <h2 id="title" className="home-content-title">ÚLTIMAS NOTÍCIAS</h2>
-          {noticias.slice(((page - 1) * 10), (page * 10)).map((noticia, id) => {
+          <h2 className="home-content-title">ÚLTIMAS NOTÍCIAS</h2>
+          {noticias.slice(0, 7).map((noticia, id) => {
               return (
                 <React.Fragment key={id}>
                   <CardHorizontal data={noticia} key={id}/>
@@ -42,14 +41,15 @@ function HomePage() {
                 </React.Fragment>
               )
           })}
-
-          <PageButtons page={page} setPage={setPage} maxPages={Math.ceil(noticias.length / 10)} scrollto={document.getElementById("title")}/>
+          <Link className="home-content-more" to={"/tag/noticia"}>+ VER MAIS</Link>
 
         </section>
 
         <section className="home-content-secondary">
           <h2 className="home-content-title">ÚLTIMAS LISTAS</h2>
-          {lists.map((lists, id) => <CardVertical data={lists} key={id}/>)}
+          {lists.slice(0, 3).map((lists, id) => <CardVertical data={lists} key={id}/>)}
+          <Link className="home-content-more" to={"/tag/lista"}>+ VER MAIS</Link>
+
         </section>
 
       </section>

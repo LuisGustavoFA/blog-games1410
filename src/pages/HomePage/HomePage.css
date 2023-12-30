@@ -17,8 +17,16 @@
   width: 69%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   gap: 16px;
+}
+
+.home-content-more{
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: underline 4px var(--main-color);
 }
 
 .home-content-title {

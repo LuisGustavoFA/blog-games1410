@@ -1,8 +1,8 @@
 .pageButtons{
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
-  padding: 4px 0;
   justify-content: space-between;
   background-color: rgb(128, 128, 128, 0.2);
   border-radius: 8px;
@@ -12,11 +12,16 @@
   color: var(--main-color);
   filter: drop-shadow(1px 1px #000);
   cursor: pointer;
-  margin: 0 12px;
+  margin: 0 8px;
+  transition: .2s ease-in-out;
 }
 
 .pageButtons-arrows:hover{
   color: var(--secondary-color);
+}
+
+.pageButtons-arrows.faded{
+  filter: drop-shadow(0px 0px #000) opacity(25%);
 }
 
 .pageButtons-numbers{
@@ -26,31 +31,27 @@
 }
 
 .pageButtons-number{
-  background-color: var(--main-color);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  height: 24px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--main-color);
+  padding: 0 4px;
+  text-align: center;
   width: 24px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-shadow: 1px 1px 1px #000;
   cursor: pointer;
-  text-shadow: 1.5px 1.5px 1px #000;
-  filter: drop-shadow(2px 2px #000);
+  transition: .2s ease-in-out;
 }
 
 .pageButtons-number:hover{
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.pageButtons-number.active{
+  filter: opacity(25%);
 }
 
 @media (max-width: 900px) {
-  .pageButtons-arrows:hover{
+  .pageButtons-arrows:hover, .pageButtons-number:hover{
     color: var(--main-color);
-  }
-
-  .pageButtons-number:hover{
-    background-color: var(--main-color);
   }
 }

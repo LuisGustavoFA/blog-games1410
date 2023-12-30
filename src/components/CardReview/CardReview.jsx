@@ -7,11 +7,10 @@ function CardReview({data, viewMore = false}) {
   const isViewMore = viewMore;
   const navigate = useNavigate();
 
-
   return (
     <>
       {isViewMore ? (
-        <div className={styles.cardReview} onClick={() => navigate("/search/review")}>
+        <div className={styles.cardReview} onClick={() => navigate("/tag/review")}>
           <div className={styles.cardReview_container}>
             <CiSquarePlus className={styles.cardReview_container_icon}/>
           </div>

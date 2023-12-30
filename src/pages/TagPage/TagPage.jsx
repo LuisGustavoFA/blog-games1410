@@ -8,12 +8,15 @@ import AdCase from '../../components/AdCase/AdCase';
 import ViewMore from '../../components/ViewMore/ViewMore';
 import { getData } from '../../database/DataApi';
 import { handletags } from '../../functions/handletags';
+import PageButtons from "../../components/PageButtons/PageButtons";
 
 function TagPage() {
   const { tag } = useParams();
   const [noticias, setNoticias] = useState([]);
   const [banner, setBanner] = useState([]);
   const [viewMoreTags, setViewMoreTags] = useState([]);
+  const [page, setPage] = useState(1);
+  const newsPerPage = 6;
 
   useEffect(() => {
     findByTag(tag).then((resp) => {
@@ -40,15 +43,15 @@ function TagPage() {
       </div>
       <div className={styles.news}>
         <div className={styles.news_main}>
-          <CardBanner data={banner} />
-          {noticias.map((noticia, id) => {
+          <CardBanner data={banner}/>
+          {noticias.slice(((page - 1) * newsPerPage), (page * newsPerPage)).map((noticia, id) => {
             return (
               <React.Fragment key={id}>
-                {id !== 0 && <CardHorizontal data={noticia} key={id} />}
-                {/* {((id - 1) % 3 === 0) && <div className="home-horizontal-ad" alt="Advertisement"></div>} */}
+                {id !== 0 && <CardHorizontal data={noticia} key={id}/>}
               </React.Fragment>
             );
           })}
+          <PageButtons page={page} setPage={setPage} maxPages={Math.ceil(noticias.length / newsPerPage)}/>
         </div>
         <div className={styles.news_secondary}>
           <AdCase/>
