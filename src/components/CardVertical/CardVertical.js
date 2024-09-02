@@ -19,7 +19,7 @@ function CardVertical({ data, hasBanner = false }) {
           <span className="card-list-data-link">{title}</span>
           <div className='card-list-data-footer'>
             <span className="card-list-data-footer-info">
-              Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(data.info?.time)}
+              Por <Link to={`/search/${format(info.author)}`}>{info.author}</Link>, {calctime(data.info?.time)}
             </span>
           </div>
         </div>

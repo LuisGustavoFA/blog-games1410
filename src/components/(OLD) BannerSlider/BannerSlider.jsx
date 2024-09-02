@@ -56,9 +56,9 @@ function BannerSlider() {
         {/* tags */}
         <TagsCase tags={noticias[currentSlide]?.tags} banner/>
 
-        {/* autor */}
+        {/* author */}
         <span className="banner-info">
-          Por <Link to={`/search/${format(noticias[currentSlide]?.info.autor)}`}>{noticias[currentSlide]?.info.autor}</Link>, {calctime(noticias[currentSlide]?.info.time)}
+          Por <Link to={`/search/${format(noticias[currentSlide]?.info.author)}`}>{noticias[currentSlide]?.info.author}</Link>, {calctime(noticias[currentSlide]?.info.time)}
         </span>
 
         {/* botões/imagens */}

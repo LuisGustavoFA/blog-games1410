@@ -39,7 +39,7 @@
 .bannerSlider_container_title,
 .bannerSlider_container_subtitle,
 .bannerSlider_container_data,
-.bannerSlider_container_autor{
+.bannerSlider_container_author{
   font-weight: bold;
   color: var(--text-color);
   text-shadow: 1px 1px var(--theme-color);
@@ -56,19 +56,19 @@
 }
 
 .bannerSlider_container_data,
-.bannerSlider_container_autor{
+.bannerSlider_container_author{
   font-size: .9rem;
   color: var(--subtext-color);
   text-decoration: none;
 }
 
-.bannerSlider_container_autor{
+.bannerSlider_container_author{
   border-bottom: 1px solid transparent;
   cursor: pointer;
   transition: border-bottom .2s ease-in-out;
 }
 
-.bannerSlider_container_autor:hover{
+.bannerSlider_container_author:hover{
   color: var(--text-color);
   border-bottom: 4px solid var(--main-color);
 }

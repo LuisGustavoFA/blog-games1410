@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 function CardHorizontal({ data }) {
   const { banner, title, info, tags } = data;
   const title_url = format(title);
-
   return (
     <>
       <Link className="card" to={`/article/${title_url}`}>
@@ -19,7 +18,7 @@ function CardHorizontal({ data }) {
           <span className="card-data-link">{title}</span>
           <div className='card-data-footer'>
             <span className="card-data-footer-info">
-              Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(data.info?.time)}
+              Por <Link to={`/search/${format(info.author)}`}>{info.author}</Link>, {calctime(data.info?.time)}
             </span>
           </div>
         </div>

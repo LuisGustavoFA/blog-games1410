@@ -42,7 +42,7 @@ function ListPage() {
               )
             })}
           </div>
-          <h5>Por {list?.info?.autor}, {calctime(list.info?.time)}.</h5>
+          <h5>Por {list?.info?.author}, {calctime(list.info?.time)}.</h5>
         </section>
         <section className='list-subcontent'>
           <AdCase/>

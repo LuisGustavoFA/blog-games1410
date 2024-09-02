@@ -88,8 +88,8 @@ function BannerSliderNew() {
         <Link className={styles.bannerSlider_container_title} to={`/article/${format(noticias[currentSlide]?.title)}`}>{noticias[currentSlide]?.title}</Link>
         <span className={styles.bannerSlider_container_subtitle}>{noticias[currentSlide]?.subtitle}</span>
         <span className={styles.bannerSlider_container_data}>Por&nbsp;
-          <Link className={styles.bannerSlider_container_autor} to={`/search/${format(noticias[currentSlide]?.info.autor)}`}>
-            {noticias[currentSlide]?.info.autor}</Link>, {calctime(noticias[currentSlide]?.info.time)}
+          <Link className={styles.bannerSlider_container_author} to={`/search/${format(noticias[currentSlide]?.info.author)}`}>
+            {noticias[currentSlide]?.info.author}</Link>, {calctime(noticias[currentSlide]?.info.time)}
         </span>
         <div className={styles.bannerSlider_container_radioCase}>
           {radioSlides}
