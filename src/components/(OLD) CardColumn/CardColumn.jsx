@@ -16,7 +16,7 @@ function CardColumn({ data }) {
           <TagsCase tags={tags}/>
           <span className={styles.cardTitle}>{title}</span>
           <span className={styles.cardInfo}>
-            Por <Link to={`/search/${format(info.autor)}`}>{info.autor}</Link>, {calctime(info.time)}
+            Por <Link to={`/search/${format(info.author)}`}>{info.author}</Link>, {calctime(info.time)}
           </span>
         </div>
       </Link>

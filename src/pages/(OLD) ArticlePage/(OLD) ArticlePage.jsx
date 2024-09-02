@@ -41,7 +41,7 @@ function ArticlePage() {
           <div className="article-horizontal-ad"></div>
           <div className="article-content-main">
             <p>{article.text}</p>
-            <h5>Por {article?.info?.autor}, {calctime(article.info?.time)}.</h5>
+            <h5>Por {article?.info?.author}, {calctime(article.info?.time)}.</h5>
           </div>
         </section>
         <MoreArticles/>

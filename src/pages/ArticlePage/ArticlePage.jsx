@@ -57,7 +57,7 @@ function ArticlePage() {
         {games.map((game, index) => (
           <CardList key={index} game={game} openImage={openImage}/>
         ))}
-        <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.autor)}`}>{article.info?.autor}</Link>, {calctime(article.info?.time)}.</h5>
+        <h5 className={styles.content_subtext} >Por <Link className={styles.content_link} to={`/search/${format(article.info?.author)}`}>{article.info?.author}</Link>, {calctime(article.info?.time)}.</h5>
       </div>
       <MoreArticles/>
     </main>
