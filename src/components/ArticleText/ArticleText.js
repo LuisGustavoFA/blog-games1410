@@ -19,7 +19,7 @@ function ArticleText({article}) {
 
   const renderText = () => {
     if (videoIncluded) {
-      return = articleText.split('[socialVideo]').map((part, index, array) => (
+      return articleText.split('[socialVideo]').map((part, index, array) => (
         <React.Fragment key={index}>
           {part}
           {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
