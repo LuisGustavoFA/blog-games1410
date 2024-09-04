@@ -11,7 +11,7 @@ function ArticleText({article}) {
 
   useEffect(() => {
     //const post = article.social?.post;
-    const video = article.social?.video;
+    const video = article.social?.youtube;
     //if (post && article.text.includes('[socialPost]')) setPostIncluded(true);
     if (video && article.text.includes('[youtube]')) setVideoIncluded(true);
     setArticleText(article.text);
