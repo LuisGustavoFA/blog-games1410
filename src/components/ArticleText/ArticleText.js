@@ -25,7 +25,7 @@ function ArticleText({article}) {
           {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
         </React.Fragment>
       ));
-    } eles {
+    } else {
       return articleText;
     }
   }
