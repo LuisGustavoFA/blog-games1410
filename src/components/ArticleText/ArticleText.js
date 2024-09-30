@@ -1,23 +1,35 @@
 import React from 'react';
 import './ArticleText.css';
 import YouTube from 'react-youtube';
-import { Tweet } from 'react-tweet';
+//import { Tweet } from 'react-tweet';
 import { useEffect, useState } from 'react';
 
 function ArticleText({article}) {
   const [articleText, setArticleText] = useState('');
-  const [postIncluded, setPostIncluded] = useState(false);
+  //const [postIncluded, setPostIncluded] = useState(false);
   const [videoIncluded, setVideoIncluded] = useState(false);
 
   useEffect(() => {
-    const post = article.social?.post;
+    //const post = article.social?.post;
     const video = article.social?.video;
-    if (post && article.text.includes('[socialPost]')) setPostIncluded(true);
+    //if (post && article.text.includes('[socialPost]')) setPostIncluded(true);
     if (video && article.text.includes('[socialVideo]')) setVideoIncluded(true);
     setArticleText(article.text);
   }, [article]);
 
   const renderText = () => {
+    if (videoIncluded) {
+      return = articleText.split('[socialVideo]').map((part, index, array) => (
+        <React.Fragment key={index}>
+          {part}
+          {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
+        </React.Fragment>
+      ));
+    } else {
+      return articleText;
+    }
+  }
+  /*const renderText = () => {
     if (!postIncluded && !videoIncluded) {
       return articleText;
 
@@ -60,7 +72,7 @@ function ArticleText({article}) {
 
       return test;
     }
-  };
+  };*/
 
   return (
     <span className='article-text'>
@@ -69,4 +81,4 @@ function ArticleText({article}) {
   )
 }
 
-export default ArticleText
+export default ArticleText;
