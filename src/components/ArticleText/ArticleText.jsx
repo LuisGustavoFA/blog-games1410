@@ -11,18 +11,18 @@ function ArticleText({article}) {
 
   useEffect(() => {
     //const post = article.social?.post;
-    const video = article.social?.video;
+    const video = article.social?.youtube;
     //if (post && article.text.includes('[socialPost]')) setPostIncluded(true);
-    if (video && article.text.includes('[socialVideo]')) setVideoIncluded(true);
+    if (video && article.text.includes('[youtube]')) setVideoIncluded(true);
     setArticleText(article.text);
   }, [article]);
 
   const renderText = () => {
     if (videoIncluded) {
-      return = articleText.split('[socialVideo]').map((part, index, array) => (
+      return articleText.split('[youtube]').map((part, index, array) => (
         <React.Fragment key={index}>
           {part}
-          {index !== array.length - 1 && <YouTube videoId={article.social?.video} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
+          {index !== array.length - 1 && <YouTube videoId={article.social?.youtube} style={{paddingTop: "16px" , aspectRatio: 16/9}} opts={{width: "100%", height: "100%"}}/>}
         </React.Fragment>
       ));
     } else {
