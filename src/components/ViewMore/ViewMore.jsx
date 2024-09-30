@@ -10,8 +10,8 @@ import { useState } from 'react';
 
 function ViewMore({ currentName, contentArray, linkTo, icon = false, ordered = false}) {
   const isMobile = isMobileHandler();
-  const isCurrent = (tag) => format(tag[0]) === format(currentName);
   const [open, setOpen] = useState(false);
+  const isCurrent = (tag) => format(tag[0]) === format(currentName);
 
   return (
     <div className={styles.viewMore} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)} onClick={() => setOpen(!open)}>

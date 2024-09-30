@@ -42,7 +42,7 @@ export const findByTag = async (selected_tag) => {
     const data = await getData('');
 
     const dataWithTag = data.filter((item) =>
-      item['tags'].some((tag) => tag.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() === selected_tag)
+      item['tags'].some((tag) => tag.replace(/,/g, "").replace(/ /g, "-").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() === selected_tag)
     );
 
     return dataWithTag;
